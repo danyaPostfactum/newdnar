@@ -1,0 +1,136 @@
+@import "bootstrap/bootstrap.less";
+@import "dnarvariables.less";
+
+// Main structure
+body {
+	padding-top: @navbar-height;
+}
+// Navigations
+.navbar {
+	a {
+		text-transform: uppercase;
+	}
+	a, .btn {
+		font-size: @nav-font-size;
+	}
+}
+.navbar-default {
+	background-color: @nav-bg;
+}
+
+.nav-pills {
+	text-transform: uppercase;
+	font-size: @nav-font-size;
+	letter-spacing: 1px;
+	white-space: nowrap;
+}
+// Tabs
+.tab-content {
+	margin-top: 30px;
+}
+
+// Jumbotron
+.jumbotron {
+	h1 {
+		text-transform: uppercase;
+		margin-bottom: @jumbo-heading-margin-bottom;
+		font-weight: @jumbotron-heading-weight;
+	}
+	p {
+		font-weight: @jumbotron-text-weight;
+	}
+}
+
+
+// Buttons
+.btn-default {
+	color: @btn-clr;
+	border: @btn-border-width solid @btn-clr;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+// Search
+.input-border {
+	border: @input-border-width solid @input-border-color;
+	border-radius: @input-border-radius;
+}
+.form-control {
+	.input-border;
+	line-height: 25px;
+	font-size: @font-size-large;
+	font-weight: @input-font-weight;
+}
+.main-search-input {
+	padding: @main-input-ver-padding @main-input-hor-padding;
+	border-right: none;
+}
+.input-group-btn {
+	& > .btn {
+		color: @btn-clr;
+		background: white;
+		font-size: 23px;
+		.input-border;
+		height: (@main-input-ver-padding + @input-border-width) * 2;
+		transition: all .2s ease-in-out;
+	}
+	&:hover > .btn {
+		border-left: none;
+		color: lighten(@btn-clr, 10%);
+		font-size: 28px;
+	}
+}
+.search-stuff-wrapper {
+	margin-bottom: @search-row-margin-bottom;
+	margin-top: @search-row-margin-top;
+}
+
+// Pricelist
+.price-list-column {
+	.price-list-price {
+		font-weight: 600;
+		&>a {color: black;}
+		@media (min-width: 992px) {
+			margin-right: 15px;
+		}
+	}
+	&:last-child .price-list-price {
+		@media (min-width: 992px) {
+			margin-right: 0;
+		}	
+	}
+}
+.price-list-item {
+	h4 {
+		text-transform: lowercase;
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+}
+
+// Featurettes
+.registration-rules {
+	margin-top: 40px;
+	h3 {
+		margin-top: 0;
+	}
+}
+.square-featurette {
+	padding: 15px 20px;
+	color: @main-bg;
+	width: 45%;
+	float: left;
+	margin-right: 5%;
+	&:last-child { 
+		margin-right: 0;
+	}
+	&:nth-child(2n+1) {
+		background-color: @brand-secondary;
+	}
+	&:nth-child(2n) {
+		background-color: @brand-primary-helper;
+	}
+}
+.big-feature-icon {
+	font-size: 50px;
+}

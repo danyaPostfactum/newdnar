@@ -5,9 +5,9 @@
 
 .jumbotron {
   padding: @jumbotron-padding;
-  margin-bottom: @jumbotron-padding;
+  margin-bottom: @jumbotron-margin;
   color: @jumbotron-color;
-  background-color: @jumbotron-bg;
+  background-color: @brand-bg-primary;
 
   h1,
   .h1 {
@@ -15,7 +15,7 @@
   }
   p {
     margin-bottom: (@jumbotron-padding / 2);
-    font-size: @jumbotron-font-size;
+    //font-size: @jumbotron-font-size;
     font-weight: 200;
   }
 
@@ -32,8 +32,8 @@
   }
 
   @media screen and (min-width: @screen-sm-min) {
-    padding-top:    (@jumbotron-padding * 1.6);
-    padding-bottom: (@jumbotron-padding * 1.6);
+    padding-top:    ceil(@jumbotron-padding * 1.6);//58
+    padding-bottom: ceil(@jumbotron-padding * 1.6) - 3;//55
 
     .container & {
       padding-left:  (@jumbotron-padding * 2);
@@ -42,7 +42,7 @@
 
     h1,
     .h1 {
-      font-size: (@font-size-base * 4.5);
+      font-size: ceil(@font-size-base * 3.3);
     }
   }
 }
