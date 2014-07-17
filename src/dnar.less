@@ -1,5 +1,6 @@
 @import "bootstrap/bootstrap.less";
 @import "dnarvariables.less";
+@import 'loading.less';
 
 // Main structure
 body {
@@ -16,6 +17,11 @@ body {
 }
 .navbar-default {
 	background-color: @nav-bg;
+	border: none;
+	.navbar-brand {
+		color: @text-color;
+		font-weight: @navbar-brand-weight; 
+	}
 }
 
 .nav-pills {
@@ -28,7 +34,14 @@ body {
 .tab-content {
 	margin-top: 30px;
 }
-
+.main-tab-content {
+	.tab-pane {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+}
 // Jumbotron
 .jumbotron {
 	h1 {
@@ -40,16 +53,32 @@ body {
 		font-weight: @jumbotron-text-weight;
 	}
 }
-
+.jumbotron-brand {
+	background-color: @brand-bg-primary;
+	color: @main-bg;
+}
 
 // Buttons
+.btn {
+	background-color: transparent;
+}
 .btn-default {
 	color: @btn-clr;
 	border: @btn-border-width solid @btn-clr;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 }
-
+.btn-primary {
+	color: @btn-primary-color;
+	border: @btn-primary-border-width solid @btn-primary-border-color;
+}
+.btn-wide {
+	width: 100%;
+}
+.btn-full {
+	color: @text-inverse;
+	background-color: @brand-primary;
+}
 // Search
 .input-border {
 	border: @input-border-width solid @input-border-color;
@@ -60,6 +89,25 @@ body {
 	line-height: 25px;
 	font-size: @font-size-large;
 	font-weight: @input-font-weight;
+	&:focus {
+		box-shadow: none;
+		-webkit-box-shadow: none;
+	}
+	// add red border for error
+	&.main-search-input.error,
+	&:focus.main-search-input.error {
+		border-color: @brand-danger;
+		border-width: 2px;
+		+ .input-group-btn {
+			button {
+				border: 2px solid @brand-danger;
+				border-left: none;
+			}
+			.btn {
+				height: 62px;
+			}
+		}
+	}
 }
 .main-search-input {
 	padding: @main-input-ver-padding @main-input-hor-padding;
@@ -72,17 +120,36 @@ body {
 		font-size: 23px;
 		.input-border;
 		height: (@main-input-ver-padding + @input-border-width) * 2;
-		transition: all .2s ease-in-out;
+		transition: color .2s ease-in-out;
 	}
 	&:hover > .btn {
 		border-left: none;
-		color: lighten(@btn-clr, 10%);
-		font-size: 28px;
+		color: @gray-lighter; //lighten(@btn-clr, 10%);
+		// font-size: 28px;
 	}
 }
 .search-stuff-wrapper {
 	margin-bottom: @search-row-margin-bottom;
 	margin-top: @search-row-margin-top;
+}
+
+// Whois results
+.tld-cards {
+	margin-top: 30px;
+}
+.list-group-item.domain-item {
+	border-radius: @domain-item-radius;
+}
+
+.domain-item-taken {
+	color: @domain-taken;
+}
+.domain-item-free {
+	color: @domain-free;
+}
+
+.more-whois-content {
+	display: none;
 }
 
 // Pricelist
@@ -117,7 +184,7 @@ body {
 }
 .square-featurette {
 	padding: 15px 20px;
-	color: @main-bg;
+	color: @text-inverse;
 	width: 45%;
 	float: left;
 	margin-right: 5%;
@@ -130,7 +197,118 @@ body {
 	&:nth-child(2n) {
 		background-color: @brand-primary-helper;
 	}
+	.featurette-heading {
+		margin: 15px 0;
+	}
+}
+.square-featurette-text {
+	line-height: 1.6;
 }
 .big-feature-icon {
 	font-size: 50px;
+}
+
+// Hostings
+.card-wrapper {
+	width: 100%;
+	box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.1);
+	padding: 15px;
+	margin-bottom: 20px;
+
+}
+
+.tarif-name {
+	position: relative;
+	padding-left: 24px;
+}
+.hoster-icon {
+	position: absolute;
+	left: 0;
+}
+.tarif-price {
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-weight: @hosting-price-weight;
+	text-transform: none;
+}
+.tarif-specs-list {
+	list-style: none;
+	padding: 0;
+}
+// settings
+.settings-card {
+	h1, h2, h3, h4 {
+		text-transform: none;
+	}
+}
+
+.order-settings-header {
+	margin-top: 5px;
+	padding-bottom: 10px;
+	font-weight: 400;
+	border-bottom: 1px dotted @gray-lighter;
+}
+
+.interval-input {
+	display: inline-block;
+	width: 30%;
+}
+
+// Footer
+footer {
+	color: @text-subtle-color;
+	padding-bottom: 15px;
+}
+
+.footer-line {
+	margin-top: 70px;
+}
+
+.payment-icons-row {
+	float: right;
+	img {
+		margin-left: 25px;
+	}
+}
+
+
+// Modal dialog
+.modal-dialog {
+	width: 280px;
+	.btn {
+		font-size: @nav-font-size;
+	}
+}
+.modal-content {
+	border-radius: @general-radius;
+}
+.modal-body {
+	padding: 25px;
+}
+.modal-footer {
+	padding: 25px;
+	padding-top: 0;
+	text-align: left;
+	border: none;
+}
+.modal-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 10px;
+	color: @link-color;
+	margin-right: 5px;
+	margin-top: 5px;
+	&:hover {
+		cursor: pointer;
+		color: @link-hover-color;
+	}
+}
+.modal-backdrop.in {
+	opacity: .2;
+}
+.forgot-link {
+	font-weight: @input-font-weight;
+	line-height: 32px;
 }

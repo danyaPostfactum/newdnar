@@ -2,21 +2,36 @@
 
 // Colors
 @main-bg: #fff;
-@btn-clr: @brand-primary;
 
+@text-inverse: @main-bg;
 @base-font-color: #343437;
+
+@domain-taken: @brand-danger;
+@domain-free: @brand-success;
 
 // Navigation bar
 @nav-bg: @main-bg;
 @nav-font-size: 11px;
 
+// Radius
+@general-radius: 0;
+@domain-item-radius: 0;
+@btn-radius: 2;
+
 // Buttons
+@btn-bg: transparent;
+
+@btn-clr: @brand-primary;
 @btn-border-width: 2px;
+
+@btn-primary-color: @main-bg;
+@btn-primary-border-width: 2px;
+@btn-primary-border-color: @btn-primary-color;
 
 // Inputs
 @input-border-width: 1px;
 @input-border-color: @gray-lighter;
-@input-border-radius: 0;
+@input-border-radius: @general-radius;
 @main-input-ver-padding: 29px;
 @main-input-hor-padding: 20px;
 
@@ -31,3 +46,5 @@
 // Font-weights 
 @jumbotron-text-weight: 300;
 @jumbotron-heading-weight: 200;
+@navbar-brand-weight: 600;
+@hosting-price-weight: 600;

@@ -190,21 +190,21 @@ whoisSearchObj.init({
 });
 
 // Initialize move domain search
-var moveDomainSearchObj = Object.create(WhoisSearch);
-moveDomainSearchObj.init({
-	searchType: 'moveDomain',
-	domainBtn: $("#checkDomainMoveBtn"),
-	searchField: $('#domainMove'),
-	btnProgressName: ".progress-inner",
-	btnStaticClass: "notransition",
-	btnSuccessClass: "state-success",
-	btnProgressStyleName: "width",
-	tldCardTemplate: $("#tld-move-card-template").html(),
-	tldCardWrapperTemplate: $("#tld-move-wrapper-template").html(),
-	tldPrefix: 'tldMove-',
-	tldCards: $('#moveDomainsWrapper').find('.tld-cards'),
-	domainErrorTemplate: $('#error-move-template'),
-	domainErrorContainer: $('.error-holder'),
-	domains: domains,
-	limitTo: 8
-});
+// var moveDomainSearchObj = Object.create(WhoisSearch);
+// moveDomainSearchObj.init({
+// 	searchType: 'moveDomain',
+// 	domainBtn: $("#checkDomainMoveBtn"),
+// 	searchField: $('#domainMove'),
+// 	btnProgressName: ".progress-inner",
+// 	btnStaticClass: "notransition",
+// 	btnSuccessClass: "state-success",
+// 	btnProgressStyleName: "width",
+// 	tldCardTemplate: $("#tld-move-card-template").html(),
+// 	tldCardWrapperTemplate: $("#tld-move-wrapper-template").html(),
+// 	tldPrefix: 'tldMove-',
+// 	tldCards: $('#moveDomainsWrapper').find('.tld-cards'),
+// 	domainErrorTemplate: $('#error-move-template'),
+// 	domainErrorContainer: $('.error-holder'),
+// 	domains: domains,
+// 	limitTo: 8
+// });

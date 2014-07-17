@@ -36,6 +36,7 @@
 @body-bg:               #fff;
 //** Global text color on `<body>`.
 @text-color:            @gray-dark;
+@text-subtle-color:     @gray-light;
 
 //** Global textual link color.
 @link-color:            @brand-primary;
@@ -107,9 +108,9 @@
 @line-height-large:         1.33;
 @line-height-small:         1.5;
 
-@border-radius-base:        4px;
+@border-radius-base:        3px; // was 4px
 @border-radius-large:       6px;
-@border-radius-small:       3px;
+@border-radius-small:       2px;
 
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    #000; //#fff;
@@ -474,8 +475,8 @@
 
 @jumbotron-padding:              36px;
 @jumbotron-margin:               25px;
-@jumbotron-color:                @main-bg;
-@jumbotron-bg:                   @gray-lighter;
+@jumbotron-color:                @gray-dark;
+@jumbotron-bg:                   #f7f4f5;
 @jumbotron-heading-color:        inherit;
 @jumbotron-font-size:            ceil((@font-size-base * 1.5));
 

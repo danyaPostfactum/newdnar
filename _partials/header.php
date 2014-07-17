@@ -34,6 +34,38 @@
 	</head>
 
 	<body>
+		<!-- Modal -->
+		<div class="modal fade" id="dnarLoginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-body">
+				<form name="tjf" role="form" action="http://domain.dnar.ru" method="post">
+					<input type=hidden name='wizard_domain2' value=''>
+					<input type=hidden name='auid' value=''>
+					<input type=hidden name='htid' value=''>
+					<input type=hidden name=action value=1>
+					<div class="form-group">
+						<!-- <label for="name">Email address</label> -->
+						<input name="login" type="text" class="form-control" id="name" placeholder="Логин">
+					</div>
+					<div class="form-group">
+						<!-- <label for="passwd">Password</label> -->
+						<input name="passwd" type="password" class="form-control" id="passwd" placeholder="Пароль">
+					</div>
+
+					<button type="submit" class="btn btn-default btn-wide">Войти на сайт</button>
+				</form>
+
+			  </div>
+			  <div class="modal-footer">
+			  	<a href="http://domain.dnar.ru/forgot.khtml" class="forgot-link">Забыли пароль?</a>
+				<a href="http://domain.dnar.ru/OFFERTA/offerta_add_select_type.khtml" class="btn btn-default btn-full pull-right">Регистрация</a>
+				<!-- <button type="button" class="btn btn-default modal-close" data-dismiss="modal">Close</button> -->
+				<span data-dismiss="modal" class="modal-close"><span class="glyphicon glyphicon-remove"></span></span>
+			  </div>
+			</div>
+		  </div>
+		</div> <!-- End Modal -->
 
 		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container">
@@ -44,21 +76,24 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">Dnar</a>
+					<a class="navbar-brand" href="#">Dnar.ru</a>
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="#">Домены</a></li>
-						<li><a href="#">SSL Сертификаты</a></li>
-						<li><a href="#">Хостинги</a></li>
-						<li><a href="#">Анализ сайтов</a></li>
-						<li><a href="#">Гарант сделок</a></li>
-						<li><a href="#">Поддержка сайтов</a></li>
+
+						<li <?php if ($page_title == 'domains') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>">Домены</a></li>
+						<li <?php if ($page_title == 'ssl') { ?>class="active"<?php } ?>><a href="#about">SSL сертификаты</a></li>
+						<li <?php if ($page_title == 'hostings') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>hostings.php">Хостинги</a></li>
+						<li <?php if ($page_title == 'analyze') { ?>class="active"<?php } ?>><a href="#about">Анализ сайтов</a></li>
+						<li <?php if ($page_title == 'garant') { ?>class="active"<?php } ?>><a href="#about">Гарант сделок</a></li>
+						<li <?php if ($page_title == 'support') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>support.php">Поддержка сайтов</a></li>
 
 					</ul>
 					<form class="navbar-form navbar-left pull-right" role="search">
-						<button class="btn btn-default">Войти</button>
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#dnarLoginModal">Войти</button>
 					</form>
+					
+
 				</div><!--/.navbar-collapse -->
 			</div>
 		</div>
