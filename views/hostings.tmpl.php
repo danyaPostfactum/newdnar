@@ -167,9 +167,7 @@ $hostings['R01'] = array(
 			</ul>
 		</aside>
 	</div>
-</div>
 
-<!-- container is closed in the footer.php -->
 
 <?php include("_partials/footer.php") ?>
 

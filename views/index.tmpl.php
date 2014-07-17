@@ -137,7 +137,13 @@
 
 							<div class="row">
 								<div class="col-md-12">
-									<h3>Тарифы</h3>
+									<h3 class="pricetable-heading">
+										Тарифы 
+										<div class="yashare-auto-init yandex-sharing-icons-row" data-yashareL10n="ru" 
+																	   data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,moimir,gplus" 
+																	   data-yashareTheme="counter"
+																	   data-yasharetype="small"></div>
+									</h3>
 								</div>
 							</div>
 

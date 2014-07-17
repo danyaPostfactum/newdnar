@@ -1,3 +1,7 @@
+			<div class="scroll-top">
+				<a href="http://help.dnar.ru" target="_blank" class="btn btn-default scroll-btn">Задать вопрос</a>
+				<span class="scroll-top-item"><span class="glyphicon glyphicon-chevron-up"></span></span>
+			</div>
 			<hr class="footer-line">
 
 			<footer>
@@ -41,7 +45,28 @@
 			$('#mainTabs').find('a').click(function (e) {
 			  e.preventDefault();
 			  $(this).tab('show');
-			})
+			});
+
+			// scroll-top
+			(function() {
+				var $scrollElement = $('.scroll-top-item');
+				$(window).scroll(function () {
+					if ($(this).scrollTop() > 100) {
+						$scrollElement.fadeIn().css('display', 'inline-block');
+					} else {
+						$scrollElement.fadeOut();
+					}
+				});
+
+				$scrollElement.click(function () {
+					$("html, body").animate({
+						scrollTop: 0
+					}, 300);
+					return false;
+				});
+			})();
 		</script>
+		<script type="text/javascript" src="//yandex.st/share/share.js"
+		charset="utf-8"></script>
 	</body>
 </html>

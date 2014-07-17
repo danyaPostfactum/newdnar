@@ -6394,6 +6394,14 @@ body {
   margin-top: 0;
   margin-bottom: 10px;
 }
+.pricetable-heading {
+  position: relative;
+}
+.yandex-sharing-icons-row {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+}
 .registration-rules {
   margin-top: 40px;
 }
@@ -6516,4 +6524,33 @@ footer {
 .forgot-link {
   font-weight: 300;
   line-height: 32px;
+}
+.scroll-top {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+}
+.scroll-top .scroll-top-item {
+  position: absolute;
+  bottom: 39px;
+  right: 0;
+  display: inline-block;
+  display: none;
+  border: 2px solid #0095fb;
+  border-radius: 3px;
+  width: 34px;
+  height: 34px;
+  font-size: 15px;
+  padding: 5px 8px;
+  background: transparent;
+  color: #0095fb;
+  transition: background-color 0.3s linear;
+}
+.scroll-top .scroll-top-item:hover {
+  background-color: rgba(146, 202, 225, 0.48);
+  cursor: pointer;
+}
+.scroll-top .scroll-btn {
+  margin-top: -5px;
+  height: 34px;
 }
