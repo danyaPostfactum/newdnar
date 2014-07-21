@@ -31,16 +31,20 @@
 		<script src="js/handlebars-v1.3.0.js"></script>
 		<script src="js/punycode.min.js"></script>
 		<!-- <script src="js/jquery-ui-1.10.4.custom.min.js"></script> -->
-		<?php if (isset($page_title) && $page_title == 'hostings') { ?>
-		<script src="js/jquery.mixitup.min.js"></script>
-		<script>
-			$(function(){
-				// Instantiate MixItUp:
-				$('#Container').mixItUp();
-			});
-		</script>
+		<?php if (isset($page_name) && $page_name == 'hostings') { ?>
+			<script src="js/jquery.mixitup.min.js"></script>
+			<script>
+				$(function(){
+					// Instantiate MixItUp:
+					$('#Container').mixItUp();
+				});
+			</script>
 		<?php } ?>
 		<script src="js/whois.js"></script>
+		<?php if (isset($need_form) && $need_form) { ?>
+			<script src="js/sendform.js"></script>
+			<script src="js/dropzone.js"></script>
+		<?php } ?>
 		<script>
 			$('#mainTabs').find('a').click(function (e) {
 			  e.preventDefault();
@@ -63,6 +67,19 @@
 						scrollTop: 0
 					}, 300);
 					return false;
+				});
+			})();
+
+			// Toggle payment information
+			(function() {
+				$('.payment-type-switch').find('input').on('click', function() {
+					console.log('clicked');
+					if ( $(this).is(":checked") ) {
+						var showPayment = $(this).val();
+						$(".payment-type").hide();
+						$('#' + showPayment).show();	
+					}
+					
 				});
 			})();
 		</script>

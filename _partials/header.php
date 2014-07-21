@@ -14,10 +14,10 @@
 		<link href="dist/css/main.css" rel="stylesheet">
 
 		<!-- Fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500,900&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
 
-		<!-- Custom styles for this template -->
-		<link href="jumbotron.css" rel="stylesheet">
+		<!-- Icons -->
+		<link rel="stylesheet" href="dist/assets/fonts/icomoons.css">
 
 		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
 		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -81,12 +81,12 @@
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
 
-						<li <?php if ($page_title == 'domains') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>">Домены</a></li>
-						<li <?php if ($page_title == 'ssl') { ?>class="active"<?php } ?>><a href="#about">SSL сертификаты</a></li>
-						<li <?php if ($page_title == 'hostings') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>hostings.php">Хостинги</a></li>
-						<li <?php if ($page_title == 'analyze') { ?>class="active"<?php } ?>><a href="#about">Анализ сайтов</a></li>
-						<li <?php if ($page_title == 'garant') { ?>class="active"<?php } ?>><a href="#about">Гарант сделок</a></li>
-						<li <?php if ($page_title == 'support') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>support.php">Поддержка сайтов</a></li>
+						<li <?php if ($page_name == 'domains') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>">Домены</a></li>
+						<li <?php if ($page_name == 'ssl') { ?>class="active"<?php } ?>><a href="#about">SSL сертификаты</a></li>
+						<li <?php if ($page_name == 'hostings') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>hostings.php">Хостинги</a></li>
+						<li <?php if ($page_name == 'analyze') { ?>class="active"<?php } ?>><a href="#about">Анализ сайтов</a></li>
+						<li <?php if ($page_name == 'garant') { ?>class="active"<?php } ?>><a href="#about">Гарант сделок</a></li>
+						<li <?php if ($page_name == 'support') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>support.php">Поддержка сайтов</a></li>
 
 					</ul>
 					<form class="navbar-form navbar-left pull-right" role="search">

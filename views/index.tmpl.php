@@ -1,6 +1,6 @@
 <?php include(ROOT_PATH . '_partials/header.php'); ?>
 		<!-- Main jumbotron for a primary marketing message or call to action -->
-		<div class="jumbotron <?php if ($page_title == 'domains') { echo 'jumbotron-brand'; } ?>">
+		<div class="jumbotron <?php if ($page_name == 'domains') { echo 'jumbotron-brand'; } ?>">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-7">
@@ -18,7 +18,7 @@
 
 		<div class="container">
 			<!-- Example row of columns -->
-			<div class="row tabs-menu">
+			<div class="row tabs-wrapper">
 				<nav class="col-sm-12">
 					<ul class="nav nav-pills nav-justified" id="mainTabs">
 					  <li class="active"><a href="#tabs-1" role="tab" data-toggle="tab">Поиск и проверка домена</a></li>
@@ -32,8 +32,8 @@
 			
 			<div id="mainTabsContent" class="main-tab-content">
 				<article id="tabs-1" class="tab-pane active">
-					<div class="row">
-						<div class="col-sm-12 search-stuff-wrapper" id="searchWhoisWrapper">
+					<div class="row search-stuff-wrapper">
+						<div class="col-sm-12" id="searchWhoisWrapper">
 							<form action="index.php" method="GET" id="checkDomainForm" class="domain-form-wrapper">
 								<div class="input-group domain-search">
 									<input type="text" name="q" placeholder="Введите название домена"
@@ -140,7 +140,7 @@
 									<h3 class="pricetable-heading">
 										Тарифы 
 										<div class="yashare-auto-init yandex-sharing-icons-row" data-yashareL10n="ru" 
-																	   data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,moimir,gplus" 
+																	   data-yashareQuickServices="yaru,vkontakte,facebook,twitter,gplus" 
 																	   data-yashareTheme="counter"
 																	   data-yasharetype="small"></div>
 									</h3>
@@ -171,7 +171,7 @@
 							<div class="row registration-rules heading-section">
 								<div class="col-sm-6">
 									<figure class="square-featurette">
-										<span class="big-feature-icon"><span class="glyphicon glyphicon-tree-deciduous"></span></span>
+										<span class="big-feature-icon"><span class="icon-ruble"></span></span>
 										<h3 class="featurette-heading">Лучшие цены</h3>
 										<p class="square-featurette-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit nulla veritatis aliquid dolor, impedit magnam.</p>
 									</figure>

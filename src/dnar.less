@@ -1,6 +1,7 @@
 @import "bootstrap/bootstrap.less";
 @import "dnarvariables.less";
-@import 'loading.less';
+@import "mixins.less";
+
 
 // Main structure
 body {
@@ -30,7 +31,16 @@ body {
 	letter-spacing: 1px;
 	white-space: nowrap;
 }
+// Typography
+.subheader {
+	font-weight: @subheader-weight;
+	text-transform: none;
+}
 // Tabs
+.tabs-wrapper {
+	margin-top: @tabs-wrapper-margin-t;
+	margin-bottom: @tabs-wrapper-margin-b;
+}
 .tab-content {
 	margin-top: 30px;
 }
@@ -68,9 +78,27 @@ body {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 }
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+	background-color: @btn-clr;
+	border-color: @btn-clr;
+	color: @text-inverse;
+ }
 .btn-primary {
 	color: @btn-primary-color;
 	border: @btn-primary-border-width solid @btn-primary-border-color;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+	color: @btn-clr;
+	background-color: @btn-primary-border-color;
+	border-color: @btn-primary-border-color;
 }
 .btn-wide {
 	width: 100%;
@@ -79,6 +107,38 @@ body {
 	color: @text-inverse;
 	background-color: @brand-primary;
 }
+.btn-full:hover,
+.btn-full:focus,
+.btn-full:active,
+.btn-full.active {
+	background-color: @gray-lighter;
+	border-color: @gray-lighter;
+}
+
+// Forms
+.feedback-form {
+	position: relative;
+	width: 100%;
+	max-width: @max-form-width;
+	padding: 30px !important;
+	@media (min-width: 650px) {
+		&:after {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			width: 118px;
+			height: 157px;
+			right: -118px;
+			top: 20px;
+			background: url("../assets/img/send-plane.png") no-repeat;
+		}
+	}
+}
+
+.help-block-attach {
+	margin-top: 20px;
+}
+
 // Search
 .input-border {
 	border: @input-border-width solid @input-border-color;
@@ -108,6 +168,22 @@ body {
 			}
 		}
 	}
+}
+.form-control.error {
+	border: @input-border-width solid @brand-danger;
+}
+.form-success-text {
+	display: none;
+	position: absolute;
+	background: #FFF;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	padding: 50px;
+}
+.address-input {
+	display: none;
 }
 .main-search-input {
 	padding: @main-input-ver-padding @main-input-hor-padding;
@@ -150,6 +226,14 @@ body {
 
 .more-whois-content {
 	display: none;
+}
+
+// Move domains
+.move-domain-heading {
+	margin-top: -(@tabs-wrapper-margin-b * 0.6);
+}
+.move-domain-intro {
+	margin-bottom: (@tabs-wrapper-margin-b * 0.7);
 }
 
 // Pricelist
@@ -216,10 +300,41 @@ body {
 	font-size: 50px;
 }
 
+// Payment Info
+.payment-types-toggle {
+	text-align: center;
+}
+.payment-method-paragraph {
+	position: relative;
+	// padding-left: 140px;
+	.payment-icons {
+		// position: absolute;
+		// display: inline-block;
+		float: left;
+		top: 7px;
+		left: 0;
+		width: 120px;
+		height: 100px;
+	}
+}
+.bank-cards-icons {
+	background: url('../assets/img/payment/payment_icons_visa.png'), url('../assets/img/payment/payment_icons_master.png');
+	background-repeat: no-repeat, no-repeat;
+	background-position: 0 0, 29px 17px;
+}
+.electronic-money-icons {
+	background: url('../assets/img/payment/electronic_money/yandex-money.png'),
+				url('../assets/img/payment/electronic_money/webmoney.png'),
+				url('../assets/img/payment/electronic_money/rbk-money.png'),
+				url('../assets/img/payment/electronic_money/qiwi.png');
+	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+	background-position: 0 0, 55px 0px, 0 42px, 55px 42px;
+}
+
 // Hostings
 .card-wrapper {
 	width: 100%;
-	box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.1);
+	.box-shadow();
 	padding: 15px;
 	margin-bottom: 20px;
 
@@ -244,6 +359,22 @@ body {
 	list-style: none;
 	padding: 0;
 }
+.tarif-spec-item.unavailable {
+	color: lighten(@gray-light, 10%);
+}
+.tarif-spec-item-table {
+	margin-bottom: 0;
+	width: 300px;
+	td:first-child {
+		width: 150px;
+	}
+	> tbody > tr > td {
+		border: none;
+		padding: 0;
+		line-height: 1.6;
+	}
+}
+
 // settings
 .settings-card {
 	h1, h2, h3, h4 {
@@ -261,6 +392,54 @@ body {
 .interval-input {
 	display: inline-block;
 	width: 30%;
+}
+
+// Sidebar
+.side-nav {
+	font-weight: @sidenav-weight;
+	.box-shadow();
+	padding: 15px 20px;
+	.subheader {
+		margin-bottom: 15px;
+	}
+}
+.sidebar-link-group {
+	padding: 0;
+}
+.sidebar-link-item {
+	list-style: none;
+	> a {
+		display: inline-block;
+		padding: 5px 0;
+	}
+	&.active > a {
+		color: @text-color;
+	}
+	&.active:hover > a {
+		text-decoration: none;	
+	}
+	&.active > a:before {
+		content: "\e127";
+		.content-glyphicon();
+		font-size: 1.3em;
+		margin-right: 4px;
+		position: relative;
+		top: 2px;
+	}
+}
+
+// Tables
+.table {
+	> thead > tr > th {
+	  vertical-align: bottom;
+	  border-bottom: none;
+	  font-size: @thead-font-size;
+	  font-weight: @thead-weight;
+	  color: @thead-color;
+	}
+	> tbody > tr > td {
+		font-size: @tbody-font-size;
+	}
 }
 
 // Footer
@@ -355,3 +534,11 @@ footer {
 	}
 }
 
+
+
+// Icomoon
+.icon-ruble {
+	display: inline-block;
+	position: relative;
+	bottom: -1px;
+}

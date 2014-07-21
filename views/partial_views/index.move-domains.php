@@ -1,8 +1,8 @@
 	<!-- Перенос доменов -->
 	<article id="tabs-5" class="row tab-pane">
 		<div class="col-sm-12 search-stuff-wrapper" id="moveDomainsWrapper">
-			<h3>Перенос домена</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus at, fugit assumenda laboriosam cupiditate tempora asperiores culpa ipsum temporibus, eveniet, debitis corporis fuga modi, provident.</p>
+			<h3 class="move-domain-heading">Перенос домена</h3>
+			<p class="move-domain-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus at, fugit assumenda laboriosam cupiditate tempora asperiores culpa ipsum temporibus, eveniet, debitis corporis fuga modi, provident.</p>
 			<form action="index.php" method="GET" class="domain-form-wrapper">
 				<div class="input-group domain-search">
 					<input type="text" name="q" placeholder="Перенести домен"
@@ -10,7 +10,7 @@
 						   class="form-control main-search-input" id="domainMove" />
 					<span class="input-group-btn">
 
-						<button type="submit" class="btn btn-search progress-button" data-style="bottom-line" data-horizontal id="checkDomainBtn">
+						<button type="submit" class="btn btn-search progress-button" data-style="bottom-line" data-horizontal id="checkDomainMoveBtn">
 							<span class="glyphicon glyphicon-search"></span>
 						</button>
 

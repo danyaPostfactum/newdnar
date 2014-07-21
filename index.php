@@ -1,6 +1,6 @@
 <?php 
-$page_title = 'domains';
-$page_name = 'Домены';
+$page_name = 'domains';
+$page_title = 'Домены';
 require_once('config.php');
 require('functions.php');
 
