@@ -7108,6 +7108,8 @@ body {
 .hoster-icon {
   position: absolute;
   left: 0;
+  width: 16px;
+  height: 16px;
 }
 .tarif-price {
   position: absolute;
@@ -7123,14 +7125,44 @@ body {
 .tarif-spec-item.unavailable {
   color: #919191;
 }
-.tarif-spec-item-table {
+.tarif-features-section {
+  margin: 15px 0;
+}
+.tarif-specs-table {
   margin-bottom: 0;
   width: 300px;
+  white-space: nowrap;
 }
-.tarif-spec-item-table td:first-child {
+.tarif-specs-table td:first-child {
   width: 150px;
+  padding-left: 20px;
+  position: relative;
 }
-.tarif-spec-item-table > tbody > tr > td {
+.tarif-specs-table td:first-child:before {
+  content: "\e013";
+}
+.tarif-specs-table td:first-child:before {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  color: #5cb85c;
+}
+.tarif-specs-table .unavailable > td:first-child:before {
+  content: "\e014";
+}
+.tarif-specs-table .unavailable > td:first-child:before {
+  color: #d9534f;
+}
+.tarif-specs-table > tbody > tr > td {
   border: none;
   padding: 0;
   line-height: 1.6;
@@ -7140,6 +7172,10 @@ body {
 .settings-card h3,
 .settings-card h4 {
   text-transform: none;
+}
+.settings-card button {
+  white-space: pre-wrap;
+  margin-bottom: 10px;
 }
 .order-settings-header {
   margin-top: 5px;
@@ -7240,7 +7276,7 @@ footer {
   right: 0;
   font-size: 10px;
   color: #0095fb;
-  margin-right: 5px;
+  margin-right: 7px;
   margin-top: 5px;
 }
 .modal-close:hover {
@@ -7276,7 +7312,8 @@ footer {
   transition: background-color 0.3s linear;
 }
 .scroll-top .scroll-top-item:hover {
-  background-color: rgba(146, 202, 225, 0.48);
+  background-color: #0095fb;
+  color: #ffffff;
   cursor: pointer;
 }
 .scroll-top .scroll-btn {

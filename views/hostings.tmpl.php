@@ -33,7 +33,7 @@ $pricing_options = array(
 			'webspace' => 12,
 			'domain_amount' => 24,
 			'test_period' => false,
-			'scripts_available' => true,
+			'scripts_available' => false,
 			'OS' => 'Unix'
 			),
 		'price' => 407.5, 
@@ -48,7 +48,7 @@ $pricing_options = array(
 			'webspace' => 4,
 			'domain_amount' => 7,
 			'test_period' => false,
-			'scripts_available' => true,
+			'scripts_available' => false,
 			'OS' => 'Windows'
 			),
 		'price' => 410, 
@@ -118,6 +118,9 @@ $pricing_options = array(
 				$webspace = $pricing_option['features']['webspace'];
 				$ddos_safe = $pricing_option['features']['ddos_safe'];
 				$domain_amount = $pricing_option['features']['domain_amount'];
+				$test_period = $pricing_option['features']['test_period'];
+				$scripts_available = $pricing_option['features']['scripts_available'];
+				$hostingOS = $pricing_option['features']['OS'];
 				?>
 				<div class="card-wrapper hosting-card mix" data-priceorder='<?php echo $price ?>' data-webspace='<?php echo $webspace; ?>' data-domainamount='<?php echo $domain_amount; ?>'>
 					<!-- <div class="col-sm-3">
@@ -138,40 +141,54 @@ $pricing_options = array(
 
 					<!-- Табличка параметров тарифа -->
 					<div class="row">
-						<div class="col-sm-7">
-							<ul class="tarif-specs-list">
-								<li class="tarif-spec-item">
-									<table class="table tarif-spec-item-table">
-										<tr>
+						<div class="col-sm-12 tarif-features-section">
+							<div class="row">
+								<div class="col-sm-6 specs-table-wrapper">
+									<table class="table tarif-specs-table">
+										<tr class="tarif-spec-item">
 											<td>Хранилище:</td>
 											<td><?php echo $webspace ?> Gb</td>
 										</tr>
-									</table>
-								</li>
-								<li class="tarif-spec-item <?php if ( !$ddos_safe ) { echo "unavailable"; } ?>">
-									<table class="table tarif-spec-item-table">
-										<tbody>
-											<tr>
-												<td>Защита от DDoS:</td>
+										<tr class="tarif-spec-item <?php if ( !$ddos_safe ) { echo "unavailable"; } ?>">
+											<td>Защита от DDOS:</td>
 											<?php if ( $ddos_safe ) { ?>
 												<td>Есть</td>
 											<?php } else { ?>
 												<td>Нет</td>
 											<?php } ?>
-											</tr>
-										</tbody>
-									</table>
-								</li>
-								
-								<li class="tarif-spec-item">
-									<table class="table tarif-spec-item-table">
-										<tr>
+										</tr>
+										<tr class="tarif-spec-item">
 											<td>Количество сайтов:</td>
 											<td><?php echo $domain_amount; ?></td>
 										</tr>
 									</table>
-								</li>
-							</ul>
+								</div>
+								<div class="col-sm-6 specs-table-wrapper">
+									<table class="table tarif-specs-table">
+										<tr class="tarif-spec-item <?php if ( !$test_period ) { echo "unavailable"; } ?>">
+											<td>Тестовый период:</td>
+											<?php if ( $test_period ) { ?>
+												<td>Есть</td>
+											<?php } else { ?>
+												<td>Нет</td>
+											<?php } ?>
+										</tr>
+										<tr class="tarif-spec-item <?php if ( !$scripts_available ) { echo "unavailable"; } ?>">
+											<td>Скрипты php/perl/python:&nbsp;</td>
+											<?php if ( $scripts_available ) { ?>
+												<td>Есть</td>
+											<?php } else { ?>
+												<td>Нет</td>
+											<?php } ?>
+										</tr>
+										<tr class="tarif-spec-item">
+											<td>Операционная система:</td>
+											<td><?php echo $hostingOS; ?></td>
+										</tr>
+									</table>
+								</div>
+							</div>
+
 						</div>
 					</div> <!-- Конец таблички параметров тарифа -->
 
@@ -193,33 +210,32 @@ $pricing_options = array(
 				<button class="sort btn btn-default" data-sort="priceorder:asc">цене</button>
 				<!-- <button class="sort btn btn-default" data-sort="priceorder:desc">По убыванию</button> -->
 				
-				<h4>Упорядочить по</h4>
+				<!-- <h4>Упорядочить по</h4> -->
 				<!-- <button class="sort btn btn-default" data-sort="webspace:asc">По возрастанию</button> -->
 				<button class="sort btn btn-default" data-sort="webspace:desc">дисковому пространству</button>
 
-				<h4>Упорядочить по</h4>
+				<!-- <h4>Упорядочить по</h4> -->
 				<!-- <button class="sort btn btn-default" data-sort="domainamount:asc">По возрастанию</button> -->
 				<button class="sort btn btn-default" data-sort="domainamount:desc">количеству доменов</button>
 
 			</section>
 
-			<section class="card-wrapper settings-card">
+			<section class="card-wrapper settings-card range-filter" data-filtername="priceorder">
 				<h3 class="order-settings-header">Диапазон цен</h3>
-				<input class="interval-input" type="text"> — <input class="interval-input" type="text">
+				<input class="interval-input lower-range" type="text"> —
+				<input class="interval-input upper-range" type="text">
+			</section>
+			<section class="card-wrapper settings-card range-filter" data-filtername="webspace">
+				<h3 class="order-settings-header">Дисковое пространство, Gb</h3>
+				<input class="interval-input lower-range" type="text"> —
+				<input class="interval-input upper-range" type="text">
+			</section>
+			<section class="card-wrapper settings-card range-filter" data-filtername="domainamount">
+				<h3 class="order-settings-header">Количество сайтов</h3>
+				<input class="interval-input lower-range" type="text"> —
+				<input class="interval-input upper-range" type="text">
 			</section>
 
-			
-
-			
-			
-			<br>
-			<br>
-			<br>
-			<br>
-			<ul class="hosting-options" >
-				<p><i>TODO:</i></p>
-				<li><span class="option"><a href="">Кол-во баз данных</a></span></li>
-			</ul>
 		</aside>
 	</div>
 

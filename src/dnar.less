@@ -347,6 +347,8 @@ body {
 .hoster-icon {
 	position: absolute;
 	left: 0;
+	width: 16px;
+	height: 16px;
 }
 .tarif-price {
 	position: absolute;
@@ -362,11 +364,35 @@ body {
 .tarif-spec-item.unavailable {
 	color: lighten(@gray-light, 10%);
 }
-.tarif-spec-item-table {
+
+.tarif-features-section {
+	margin: 15px 0;
+}
+
+.tarif-specs-table {
 	margin-bottom: 0;
 	width: 300px;
+	white-space: nowrap;
 	td:first-child {
 		width: 150px;
+		padding-left: 20px;
+
+		position: relative;
+		.glyphicon-ok;
+		&:before {
+			.glyphicon;
+			position: absolute;
+			top: 3px;
+			left: 0;
+			// get another color if insinde ".unavailable"
+			color: @brand-success;
+		}
+	}
+	.unavailable > td:first-child {
+		.glyphicon-remove;
+		&:before {
+			color: @brand-danger;
+		}
 	}
 	> tbody > tr > td {
 		border: none;
@@ -375,10 +401,24 @@ body {
 	}
 }
 
+// @media (min-width: 580px) {
+// 	.specs-table-wrapper {
+// 		margin-right: 20px;
+// 		max-width: 40%;
+// 		&:last-child {
+// 			margin: 0;
+// 		}
+// 	}
+// }
+
 // settings
 .settings-card {
 	h1, h2, h3, h4 {
 		text-transform: none;
+	}
+	button { 
+		white-space: pre-wrap;
+		margin-bottom: 10px;
 	}
 }
 
@@ -485,7 +525,7 @@ footer {
 	right: 0;
 	font-size: 10px;
 	color: @link-color;
-	margin-right: 5px;
+	margin-right: 7px;
 	margin-top: 5px;
 	&:hover {
 		cursor: pointer;
@@ -511,17 +551,18 @@ footer {
 		right: 0;
 		display: inline-block;
 		display: none;
-		border: 2px solid @link-color;
+		border: 2px solid @btn-clr;
 		border-radius: 3px;
 		width: 34px;
 		height: 34px;
 		font-size: 15px;
 		padding: 5px 8px;
 		background: transparent;
-		color: @link-color;
+		color: @btn-clr;
 		transition: background-color .3s linear;
 		&:hover {
-			background-color: lighten(@scroll-bg, 10%);
+			background-color: @btn-clr;
+			color: @text-inverse;
 			cursor: pointer;
 		}
 	}

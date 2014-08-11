@@ -37,13 +37,39 @@
 				$(function(){
 					// Instantiate MixItUp:
 					$('#Container').mixItUp();
+
+					var mix = $(".mix");
+					var rangeFilter = function() {
+						console.log('keyup!');
+						var wrapper = $(this);
+						var minValue = parseInt(wrapper.find(".lower-range").val(), 10) || 0;
+						var maxValue = parseInt(wrapper.find(".upper-range").val(), 10) || 0;
+						var filterName = wrapper.data().filtername;
+						$.each(mix, function(index, element) {
+							var elem = $(element);
+							elem.show();
+							if (parseInt(elem.data()[filterName], 10) < minValue) {
+								elem.hide();
+							} else {
+								if (maxValue > minValue && parseInt(elem.data()[filterName], 10) > maxValue) {
+									elem.hide();
+								}
+							}
+
+						});
+					};
+					$(".range-filter").on('keyup', rangeFilter);
 				});
 			</script>
 		<?php } ?>
+
+		<?php if (isset($page_name) && $page_name == 'domains') { ?>
 		<script src="js/whois.js"></script>
+		<?php } ?>
+		
 		<?php if (isset($need_form) && $need_form) { ?>
 			<script src="js/sendform.js"></script>
-			<script src="js/dropzone.js"></script>
+			<!-- // <script src="js/dropzone.js"></script> -->
 		<?php } ?>
 		<script>
 			$('#mainTabs').find('a').click(function (e) {
