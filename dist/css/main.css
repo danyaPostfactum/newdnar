@@ -6820,6 +6820,9 @@ body {
   color: #343437;
   font-weight: 700;
 }
+.lower-shadow {
+  box-shadow: 0 1px 17px 3px rgba(0, 0, 0, 0.55);
+}
 .nav-pills {
   text-transform: uppercase;
   font-size: 11px;
@@ -7000,6 +7003,7 @@ body {
   color: #5cb85c;
 }
 .more-whois-content {
+  color: #343437;
   display: none;
 }
 .move-domain-heading {
