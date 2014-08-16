@@ -54,7 +54,11 @@
 							{{/if_unknown}}
 							<p class="item-description">
 								{{#if_free regrinfo.registered}}<a href="http://domain.dnar.ru">Зарегистрировать</a>
-								{{else}}Домен зарегистрирован. <a href="#" class="more-info">Перенести к нам</a>
+								{{else}}Домен зарегистрирован. <a href="#" class="more-whois-info">Перенести к нам</a>
+								<div class="more-whois-content">
+									<p>Регистратор домена: <strong><code style="color: #328bf4">{{regyinfo.registrar}}</code></strong>. Чтобы перенести домен к нам, нужно: <br>
+									--- Инструкция ---</p>
+								</div>
 								{{/if_free}}</p>
 						</li>
 					</ul>

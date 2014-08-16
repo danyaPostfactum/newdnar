@@ -106,6 +106,7 @@ var WhoisSearch = {
 		this.config.tldCards.append(html);
 	},
 	displayWhoisResults: function(whoisArray) {
+		console.log(whoisArray)
 		this.updateBtnProgress(this);
 		var domainName = whoisArray.regrinfo.domain.name;
 		var dotPos = domainName.lastIndexOf('.') ;
@@ -158,12 +159,11 @@ var WhoisSearch = {
 	},
 
 	attachBehavior: function(elem) {
-		console.log(elem[0]);
 		var moreWhoisLink = elem.find('.more-whois-info');
 		var moreWhoisContent = elem.find('.more-whois-content');
 		moreWhoisLink.on('click', function(e) {
 			e.preventDefault();
-			moreWhoisContent.slideToggle();
+			moreWhoisContent.slideToggle('fast');
 		});
 	}
 };

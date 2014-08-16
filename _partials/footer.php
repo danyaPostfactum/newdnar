@@ -80,7 +80,13 @@
 			// scroll-top
 			(function() {
 				var $scrollElement = $('.scroll-top-item');
+				var $navbar = $(".navbar");
 				$(window).scroll(function () {
+					if ($(this).scrollTop() > 50) {
+						$navbar.addClass('lower-shadow');
+					} else {
+						$navbar.removeClass('lower-shadow');
+					}
 					if ($(this).scrollTop() > 100) {
 						$scrollElement.fadeIn().css('display', 'inline-block');
 					} else {
