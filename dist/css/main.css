@@ -6805,6 +6805,9 @@ button.close {
 body {
   padding-top: 90px;
 }
+.navbar-brand {
+  margin-top: -9px;
+}
 .navbar a {
   text-transform: uppercase;
 }
@@ -6924,6 +6927,9 @@ body {
 .help-block-attach {
   margin-top: 20px;
 }
+.show-more-content-prices {
+  margin-top: 10px;
+}
 .input-border {
   border: 1px solid #d0d0cf;
   border-radius: 0;
@@ -7035,6 +7041,9 @@ body {
 }
 .pricetable-heading {
   position: relative;
+}
+.price_tld {
+  color: #000;
 }
 .yandex-sharing-icons-row {
   position: absolute;
