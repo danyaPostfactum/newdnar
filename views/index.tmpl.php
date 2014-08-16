@@ -82,9 +82,9 @@
 										{{/if_free}}
 											<p>
 												{{#if_free regrinfo.registered}}
-													<a href="http://domain.dnar.ru">Зарегистрировать</a>
+													Свободен   <span style="float:right;"><a href="#" data-toggle="modal" data-target="#dnarLoginModal">Зарегистрировать</a></span>
 												{{else}}
-													<a href="#" class="more-whois-info">Подробнее</a>
+													Занят    <span style="float:right;"><a href="#" class="more-whois-info">Подробнее</a></span>
 													<div class="more-whois-content">
 														{{#if regyinfo.referrer}}
 														<ul>
