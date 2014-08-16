@@ -5,8 +5,8 @@
 				<div class="row">
 					<div class="col-sm-7">
 						<h1>Регистрация<br/> доменных имен</h1>
-						<p>Мы работаем уже более 6 лет. За это время 6 500 клиентов зарегистрировали более 20 000 доменов. Мы предоставляем самые низкие цены на покупку доменов, более 40 способов оплаты и техническую поддержку ваших сайтов. Список наших услуг продолжает расти.</p>
-						<p><a class="btn btn-primary" role="button">Купить хостинг</a></p>
+						<p>Мы работаем уже более 6 лет. За это время 6 500 клиентов зарегистрировали более 20 000 доменов. Мы предоставляем самые низкие цены на покупку и продление доменов, более 40 способов оплаты, в том числе безналичный расчет для юридических лиц.</p>
+						<p><a class="btn btn-primary" role="button" href="http://domain.dnar.ru/OFFERTA/offerta_add_select_type.khtml">Зарегистрироваться</a></p>
 					</div>
 					<div class="hidden-xs col-sm-5">
 						<img src="dist/assets/img/earth_rocket.png"class="pull-right" alt="">
@@ -157,8 +157,8 @@
 											<div class="col-md-2 col-sm-4 price-list-column">
 											<?php foreach ( array_slice($TLDnames, $index, 4) as $tld ) { ?>
 												<section class="price-list-item">
-													<h4 style="display: inline-block;">.<?php if ($tld == 'xn--p1ai') { echo 'рф'; } else { echo $tld; } ?></h3>
-													<h4 class="price-list-price pull-right"><a class="price" href="#"><?php echo $TLDprices[$tld]['price']; ?> руб.</a></h4>
+													<h4 style="display: inline-block;"><a class="price_tld" href="#">.<?php if ($tld == 'xn--p1ai') { echo 'рф'; } else { echo $tld; } ?></a></h4>
+													<h4 class="price-list-price pull-right"><?php echo $TLDprices[$tld]['price']; ?> руб.</h4>
 												</section>
 											<?php } ?>
 											</div>
