@@ -6,7 +6,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="">
 		<meta name="author" content="">
-		<link rel="icon" href="../../favicon.ico">
+		
+		<link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+    	<link rel="icon" href="./favicon.png" type="image/x-icon" />
+
 
 		<title>Jumbotron Template for Bootstrap</title>
 
@@ -76,7 +79,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">Dnar.ru</a>
+					<a class="navbar-brand" href="<?php echo BASE_URL; ?>"><img src="dist/assets/img/logo.png"></a>
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
