@@ -1,4 +1,13 @@
+<?php 
+$title = 'Регистрация доменных имен';
+$description = 'test1';
+$keywords = 'test2';
+?>
+
 <?php include(ROOT_PATH . '_partials/header.php'); ?>
+
+
+
 		<!-- Main jumbotron for a primary marketing message or call to action -->
 		<div class="jumbotron <?php if ($page_name == 'domains') { echo 'jumbotron-brand'; } ?>">
 			<div class="container">

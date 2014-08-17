@@ -1,3 +1,9 @@
+<?php 
+$title = 'Выгодный хостинг';
+$description = 'test1';
+$keywords = 'test2';
+?>
+
 <?php include(ROOT_PATH . '_partials/header.php') ?>
 
 <!-- Количество баз данных, дисковое пространство, цена 

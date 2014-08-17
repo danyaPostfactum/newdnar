@@ -4,14 +4,14 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="">
+		
+		<title><?php echo $title; ?> - DNAR.RU</title>
+		<meta name="description" content="<?php echo $description; ?>">
+		<meta name="keywords" content="<?php echo $keywords; ?>">
 		<meta name="author" content="">
 		
 		<link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
     	<link rel="icon" href="./favicon.png" type="image/x-icon" />
-
-
-		<title>Jumbotron Template for Bootstrap</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="dist/css/main.css" rel="stylesheet">
