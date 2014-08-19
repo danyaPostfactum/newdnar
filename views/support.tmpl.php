@@ -1,4 +1,9 @@
-<?php include(ROOT_PATH . '_partials/header.php') ?>
+<?php 
+	$title = 'Техподдержка и сопровождение сайтов';
+	$description = 'test1';
+	$keywords = 'test2';
+	include(ROOT_PATH . '_partials/header.php') 
+?>
 
 <div class="jumbotron <?php if ($page_title == 'domains') { echo 'jumbotron-brand'; } ?>">
 	<div class="container">

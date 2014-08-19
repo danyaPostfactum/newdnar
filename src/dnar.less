@@ -543,7 +543,7 @@ footer {
 
 // Modal dialog
 .modal-dialog {
-	width: 280px;
+	width: 290px;
 	.btn {
 		font-size: @nav-font-size;
 	}
@@ -584,12 +584,12 @@ footer {
 // Scroll
 .scroll-top {
 	position: fixed;
-	right: 15px;
-	bottom: 15px;
+	right: -50px; //15px;
+	bottom: 100px; //15px;
 	.scroll-top-item {
 		position: absolute;
-		bottom: 39px;
-		right: 0;
+		bottom: 100px; //39px;
+		right: 60px; //0;
 		display: inline-block;
 		display: none;
 		border: 2px solid @btn-clr;
@@ -609,14 +609,14 @@ footer {
 	}
 	.btn {
 		// margin-right: 10px;
+		-webkit-transform: rotate(270deg);
+	 	transform: rotate(270deg);
 	}
 	.scroll-btn {
 		margin-top: -5px;
 		height: 34px;
 	}
 }
-
-
 
 // Icomoon
 .icon-ruble {

@@ -7282,7 +7282,7 @@ footer {
   margin-left: 25px;
 }
 .modal-dialog {
-  width: 280px;
+  width: 290px;
 }
 .modal-dialog .btn {
   font-size: 12px;
@@ -7321,13 +7321,13 @@ footer {
 }
 .scroll-top {
   position: fixed;
-  right: 15px;
-  bottom: 15px;
+  right: -50px;
+  bottom: 100px;
 }
 .scroll-top .scroll-top-item {
   position: absolute;
-  bottom: 39px;
-  right: 0;
+  bottom: 100px;
+  right: 60px;
   display: inline-block;
   display: none;
   border: 2px solid #0095fb;
@@ -7344,6 +7344,10 @@ footer {
   background-color: #0095fb;
   color: #ffffff;
   cursor: pointer;
+}
+.scroll-top .btn {
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
 }
 .scroll-top .scroll-btn {
   margin-top: -5px;

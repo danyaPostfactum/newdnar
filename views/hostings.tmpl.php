@@ -1,4 +1,9 @@
-<?php include(ROOT_PATH . '_partials/header.php') ?>
+<?php
+	$title = 'Выгодный хостинг';
+	$description = 'test1';
+	$keywords = 'test2';
+ 	include(ROOT_PATH . '_partials/header.php') 
+?>
 
 <!-- Количество баз данных, дисковое пространство, цена 
 	тестовый период (t/f), скрипты php/perl/python (t/f), платформа (radio Unix, Windows) -->

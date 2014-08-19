@@ -1,4 +1,10 @@
-<?php include(ROOT_PATH . '_partials/header.php'); ?>
+<?php
+	$title = 'Регистрация доменных имен';
+	$description = 'test1';
+	$keywords = 'test2';
+ 	include(ROOT_PATH . '_partials/header.php') 
+?>
+
 		<!-- Main jumbotron for a primary marketing message or call to action -->
 		<div class="jumbotron <?php if ($page_name == 'domains') { echo 'jumbotron-brand'; } ?>">
 			<div class="container">
@@ -82,9 +88,9 @@
 										{{/if_free}}
 											<p>
 												{{#if_free regrinfo.registered}}
-													<a href="http://domain.dnar.ru">Зарегистрировать</a>
+													Свободен   <span style="float:right;"><a href="#" data-toggle="modal" data-target="#dnarLoginModal">Зарегистрировать</a></span>
 												{{else}}
-													<a href="#" class="more-whois-info">Подробнее</a>
+													Занят    <span style="float:right;"><a href="#" class="more-whois-info">Подробнее</a></span>
 													<div class="more-whois-content">
 														{{#if regyinfo.referrer}}
 														<ul>
