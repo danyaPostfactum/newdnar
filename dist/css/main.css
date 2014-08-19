@@ -6849,6 +6849,22 @@ body {
 .main-tab-content .tab-pane.active {
   display: block;
 }
+#legal-entity {
+  display: none;
+}
+.show-more {
+  border-bottom: 1px dashed #0095fb;
+}
+.show-more,
+.show-more:hover {
+  text-decoration: none;
+}
+.show-more-question {
+  margin-top: 20px;
+}
+.show-more-content {
+  display: none;
+}
 .jumbotron h1 {
   text-transform: uppercase;
   margin-bottom: 22px;
@@ -6976,8 +6992,8 @@ body {
   display: none;
 }
 .main-search-input {
-  padding: 29px 20px;
   border-right: none;
+  height: 60px;
 }
 .input-group-btn > .btn {
   color: #0095fb;

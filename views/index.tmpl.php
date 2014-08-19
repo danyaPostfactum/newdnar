@@ -186,7 +186,12 @@
 									<h3>Правила регистрации доменов</h3>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea nihil eaque, a! Nobis architecto veritatis, harum asperiores ab soluta ducimus nemo est eius fugiat, adipisci ullam expedita totam nesciunt dolorum modi, fuga molestiae et repudiandae voluptatibus. Maxime voluptas, laudantium illum non, perspiciatis repellendus voluptatem ad dolorem ut a assumenda in voluptates</p>
 									<p>Neque eaque repudiandae cupiditate quae eius fuga atque deserunt excepturi numquam recusandae! Doloribus consequatur voluptates, corrupti nam itaque autem in, totam, sint exercitationem, reiciendis ipsa obcaecati! Reprehenderit deleniti, aperiam! Numquam qui deserunt et quia.</p>
-									<p><a href="#">Подробнее</a></p>
+									<p><a href="#" class="show-more">Подробнее</a></p>
+									<div class="show-more-content">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos dolores quibusdam maxime rerum ipsum nihil incidunt perferendis iste eligendi, suscipit odit atque necessitatibus mollitia praesentium.</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos dolores quibusdam maxime rerum.</p>
+									</div>
+										
 								</div>
 							</div>
 							

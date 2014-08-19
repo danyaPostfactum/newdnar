@@ -77,8 +77,8 @@
 			  $(this).tab('show');
 			});
 
-			// scroll-top
 			(function() {
+				// dynamic change on scroll events ================================
 				var $scrollElement = $('.scroll-top-item');
 				var $navbar = $(".navbar");
 				$(window).scroll(function () {
@@ -100,10 +100,8 @@
 					}, 300);
 					return false;
 				});
-			})();
 
-			// Toggle payment information
-			(function() {
+				// Toggle payment information ====================================
 				$('.payment-type-switch').find('input').on('click', function() {
 					console.log('clicked');
 					if ( $(this).is(":checked") ) {
@@ -112,6 +110,26 @@
 						$('#' + showPayment).show();	
 					}
 					
+				});
+
+				// position modal to be vertically centered ======================
+				$("button[data-toggle='modal']").on('click', function() {
+					var $modal = $(".modal-dialog");
+					var winHeight = ($(window).height());
+					var offsetDist = (winHeight / 2) - 180; // 180 is approximately half the height of the modal
+					offsetDist = (offsetDist < 10) ? 20 : offsetDist;
+					$modal.css({
+						'margin-top': offsetDist,
+						'margin-left': 'auto',
+						'margin-right': 'auto'
+					});
+					console.log('opening modal');
+				});
+
+				// show-more links ===============================================
+				$(".show-more").on('click', function(e) {
+					e.preventDefault();
+					$(this).parent().next().slideToggle('fast');
 				});
 			})();
 		</script>

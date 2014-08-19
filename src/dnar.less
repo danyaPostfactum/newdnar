@@ -61,6 +61,23 @@ body {
 		}
 	}
 }
+
+#legal-entity {
+	display: none;
+}
+// slide-open links
+.show-more {
+	&, &:hover {
+		text-decoration: none;
+	}
+	border-bottom: 1px dashed @link-color;
+}
+.show-more-question {
+	margin-top: 20px;
+}
+.show-more-content { // hide by default
+	display: none;
+}
 // Jumbotron
 .jumbotron {
 	h1 {
@@ -198,9 +215,11 @@ body {
 .address-input {
 	display: none;
 }
+
 .main-search-input {
-	padding: @main-input-ver-padding @main-input-hor-padding;
+	// padding: @main-input-ver-padding @main-input-hor-padding;
 	border-right: none;
+	height: @main-input-height;
 }
 .input-group-btn {
 	& > .btn {
