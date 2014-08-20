@@ -153,7 +153,7 @@
 								</div>
 							</div>
 
-							<div class="show-more-content show-more-content-prices">
+							<div class="show-more-content-prices">
 								<!-- pricelist "table" -->
 								<div class="row">
 									<?php 
