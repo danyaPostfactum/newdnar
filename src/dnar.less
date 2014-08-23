@@ -373,12 +373,27 @@ body {
 }
 
 // Hostings
+.filter-column {
+	.box-shadow();
+	padding-bottom: 40px;
+}
 .card-wrapper {
 	width: 100%;
-	.box-shadow();
+	// .box-shadow();
 	padding: 15px;
 	margin-bottom: 20px;
 
+}
+
+a.sort {
+	cursor: pointer;
+	border-bottom: 1px dashed @brand-primary;
+	display: inline-block;
+	margin-bottom: 10px;
+	text-transform: capitalize;
+	&:hover {
+		text-decoration: none;
+	}
 }
 
 .tarif-name {

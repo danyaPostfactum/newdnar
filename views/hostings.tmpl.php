@@ -121,13 +121,20 @@ $pricing_options = array(
 				$hoster_img = $pricing_option['hoster']['img'];
 
 				$webspace = $pricing_option['features']['webspace'];
-				$ddos_safe = $pricing_option['features']['ddos_safe'];
 				$domain_amount = $pricing_option['features']['domain_amount'];
-				$test_period = $pricing_option['features']['test_period'];
-				$scripts_available = $pricing_option['features']['scripts_available'];
 				$hostingOS = $pricing_option['features']['OS'];
+				$ddos_safe = $pricing_option['features']['ddos_safe']; // boolean
+				$test_period = $pricing_option['features']['test_period']; // boolean 
+				$scripts_available = $pricing_option['features']['scripts_available']; // boolean
 				?>
-				<div class="card-wrapper hosting-card mix" data-priceorder='<?php echo $price ?>' data-webspace='<?php echo $webspace; ?>' data-domainamount='<?php echo $domain_amount; ?>'>
+				<div class="card-wrapper hosting-card mix <?php foreach ($pricing_option['features'] as $key => $feature) {
+															if ($feature === true) {
+																echo 'filter-' . $key . ' ';
+															}
+														} ?>" 
+														data-priceorder='<?php echo $price ?>' 
+														data-webspace='<?php echo $webspace; ?>' 
+														data-domainamount='<?php echo $domain_amount; ?>'>
 					<!-- <div class="col-sm-3">
 						<h3 class="hoster-name"><a href="<?php echo $hoster_url; ?>"><?php echo $hoster_name; ?></a></h3>
 					</div> -->
@@ -208,20 +215,20 @@ $pricing_options = array(
 
 
 		</article>
-		<aside class="col-sm-3 col-sm-offset-1">
+		<aside class="filter-column col-sm-3 col-sm-offset-1">
 			<section class="card-wrapper settings-card">
 				<h3 class="order-settings-header">Параметры</h3>
 				<h4 class="setting-name">Упорядочить по</h4>
-				<button class="sort btn btn-default" data-sort="priceorder:asc">цене</button>
+				<a class="sort" href="#" data-sort="priceorder:asc">цене</a>
 				<!-- <button class="sort btn btn-default" data-sort="priceorder:desc">По убыванию</button> -->
 				
 				<!-- <h4>Упорядочить по</h4> -->
 				<!-- <button class="sort btn btn-default" data-sort="webspace:asc">По возрастанию</button> -->
-				<button class="sort btn btn-default" data-sort="webspace:desc">дисковому пространству</button>
+				<a class="sort" href="#" data-sort="webspace:desc">дисковому пространству</a>
 
 				<!-- <h4>Упорядочить по</h4> -->
 				<!-- <button class="sort btn btn-default" data-sort="domainamount:asc">По возрастанию</button> -->
-				<button class="sort btn btn-default" data-sort="domainamount:desc">количеству доменов</button>
+				<a class="sort" href="#" data-sort="domainamount:desc">количеству доменов</a>
 
 			</section>
 
@@ -240,6 +247,13 @@ $pricing_options = array(
 				<input class="interval-input lower-range" type="text"> —
 				<input class="interval-input upper-range" type="text">
 			</section>
+			
+			<div class="filter" data-filter=".all">All</div>
+			<?php foreach (array('ddos_safe', 'test_period', 'scripts_available') as $filter_key) { ?>
+				<div class="filter" data-filter=".<?php echo 'filter-' . $filter_key; ?>">
+					<?php echo $filter_key;  ?>
+				</div>
+			<?php } ?>
 
 		</aside>
 	</div>
