@@ -6818,6 +6818,22 @@ body {
 .navbar .btn {
   font-size: 12px;
 }
+.navbar-form {
+  paddiing: 0;
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .navbar-nav > li > a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-nav > li > a {
+    font-size: 11px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
 .navbar-default {
   background-color: #ffffff;
   border: none;
@@ -6841,7 +6857,7 @@ body {
 }
 .tabs-wrapper {
   margin-top: 25px;
-  margin-bottom: 55px;
+  margin-bottom: 0;
 }
 .tab-content {
   margin-top: 30px;
@@ -7013,7 +7029,7 @@ body {
 }
 .search-stuff-wrapper {
   margin-bottom: 0;
-  margin-top: 0;
+  margin-top: 55px;
 }
 .tld-cards {
   margin-top: 30px;
@@ -7046,11 +7062,6 @@ body {
 @media (min-width: 992px) {
   .price-list-column .price-list-price {
     margin-right: 15px;
-  }
-}
-@media (min-width: 992px) {
-  .price-list-column:last-child .price-list-price {
-    margin-right: 0;
   }
 }
 .price-list-item {
@@ -7104,6 +7115,7 @@ body {
   font-size: 50px;
 }
 .payment-types-toggle {
+  margin-top: 30px;
   text-align: center;
 }
 .payment-method-paragraph {

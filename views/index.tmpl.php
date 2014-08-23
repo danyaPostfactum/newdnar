@@ -155,7 +155,7 @@
 
 							<div class="show-more-content-prices">
 								<!-- pricelist "table" -->
-								<div class="row">
+								<!-- <div class="row">
 									<?php 
 									$index = 0;
 									foreach ($TLDnames as $smth) { 
@@ -163,14 +163,35 @@
 											<div class="col-md-2 col-sm-4 price-list-column">
 											<?php foreach ( array_slice($TLDnames, $index, 4) as $tld ) { ?>
 												<section class="price-list-item">
-													<h4 style="display: inline-block;"><a class="price_tld" href="#">.<?php if ($tld == 'xn--p1ai') { echo 'рф'; } else { echo $tld; } ?></a></h4>
+													<h4 style="display: inline-block;">
+														<a class="price_tld" href="#">.<?php if ($tld == 'xn--p1ai') { echo 'рф'; } else { echo $tld; } ?></a>
+													</h4>
 													<h4 class="price-list-price pull-right"><?php echo $TLDprices[$tld]['price']; ?> руб.</h4>
 												</section>
 											<?php } ?>
 											</div>
 										<?php } $index += 1; 
 									} ?>
-								</div>
+								</div> -->
+								<?php 
+								$index = 0;
+								foreach ($TLDnames as $smth) { 
+									if ($index % 6 == 0) { ?>
+										<div class="row">
+										<?php foreach ( array_slice($TLDnames, $index, 6) as $tld ) { ?>
+											<div class="col-md-2 col-sm-4 price-list-column">
+												<section class="price-list-item">
+													<h4 style="display: inline-block;">
+														<a class="price_tld" href="#">.<?php if ($tld == 'xn--p1ai') { echo 'рф'; } else { echo $tld; } ?></a>
+													</h4>
+													<h4 class="price-list-price pull-right"><?php echo $TLDprices[$tld]['price']; ?> руб.</h4>
+												</section>
+											</div>
+										<?php } ?>
+										</div>
+									<?php } $index += 1; 
+								} ?>
+
 
 							</div>
 

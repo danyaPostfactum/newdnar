@@ -27,6 +27,23 @@ body {
 		font-size: @nav-font-size;
 	}
 }
+.navbar-form {
+	paddiing: 0;
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+	.navbar-nav > li > a {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.navbar-nav > li > a {
+		font-size: 11px;
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+}
+
 .navbar-default {
 	background-color: @nav-bg;
 	border: none;
@@ -269,10 +286,10 @@ body {
 
 // Move domains
 .move-domain-heading {
-	margin-top: -(@tabs-wrapper-margin-b * 0.6);
+	margin-top: -(@search-row-margin-top * 0.6);
 }
 .move-domain-intro {
-	margin-bottom: (@tabs-wrapper-margin-b * 0.7);
+	margin-bottom: (@search-row-margin-top * 0.7);
 }
 
 // Pricelist
@@ -285,11 +302,11 @@ body {
 			margin-right: 15px;
 		}
 	}
-	&:last-child .price-list-price {
-		@media (min-width: 992px) {
-			margin-right: 0;
-		}	
-	}
+	// &:last-child .price-list-price {
+	// 	@media (min-width: 992px) {
+	// 		margin-right: 0;
+	// 	}	
+	// }
 }
 .price-list-item {
 	min-width: 140px;
@@ -350,6 +367,7 @@ body {
 
 // Payment Info
 .payment-types-toggle {
+	margin-top: 30px;
 	text-align: center;
 }
 .payment-method-paragraph {
