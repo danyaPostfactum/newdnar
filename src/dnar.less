@@ -7,6 +7,12 @@
 body {
 	padding-top: @navbar-height;
 }
+
+.container {
+	position: relative;
+	// padding-right: 60px;
+	// padding-left: 60px;
+}
 // Navigations
 
 .navbar-brand {
@@ -286,6 +292,7 @@ body {
 	}
 }
 .price-list-item {
+	min-width: 140px;
 	h4 {
 		text-transform: lowercase;
 		margin-top: 0;
@@ -624,13 +631,18 @@ footer {
 	}
 	.btn {
 		// margin-right: 10px;
-		-webkit-transform: rotate(270deg);
-	 	transform: rotate(270deg);
 	}
-	.scroll-btn {
-		margin-top: -5px;
-		height: 34px;
+}
+.scroll-btn {
+	&.absolutely {
+		position: fixed;
+		// right: 60px;
+		top: 100px;
 	}
+	margin-top: -5px;
+	height: 34px;
+	-webkit-transform: rotate(270deg);
+ 			transform: rotate(270deg);
 }
 
 // Icomoon

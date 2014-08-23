@@ -6805,6 +6805,9 @@ button.close {
 body {
   padding-top: 90px;
 }
+.container {
+  position: relative;
+}
 .navbar-brand {
   margin-top: -9px;
 }
@@ -7049,6 +7052,9 @@ body {
   .price-list-column:last-child .price-list-price {
     margin-right: 0;
   }
+}
+.price-list-item {
+  min-width: 140px;
 }
 .price-list-item h4 {
   text-transform: lowercase;
@@ -7358,13 +7364,15 @@ footer {
   color: #ffffff;
   cursor: pointer;
 }
-.scroll-top .btn {
+.scroll-btn {
+  margin-top: -5px;
+  height: 34px;
   -webkit-transform: rotate(270deg);
   transform: rotate(270deg);
 }
-.scroll-top .scroll-btn {
-  margin-top: -5px;
-  height: 34px;
+.scroll-btn.absolutely {
+  position: fixed;
+  top: 100px;
 }
 .icon-ruble {
   display: inline-block;

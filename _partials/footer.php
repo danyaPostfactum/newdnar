@@ -1,5 +1,5 @@
+			<a href="http://help.dnar.ru" target="_blank" class="btn btn-default scroll-top absolutely scroll-btn">Задать вопрос</a>
 			<div class="scroll-top">
-				<a href="http://help.dnar.ru" target="_blank" class="btn btn-default scroll-btn">Задать вопрос</a>
 				<span class="scroll-top-item"><span class="glyphicon glyphicon-chevron-up"></span></span>
 			</div>
 			<hr class="footer-line">
@@ -80,17 +80,33 @@
 			(function() {
 				// dynamic change on scroll events ================================
 				var $scrollElement = $('.scroll-top-item');
-				var $navbar = $(".navbar");
+				var $scrollQuestion = $('.scroll-btn');
+				var $navbar = $("#navbar");
+				var $jumbotron = $('.jumbotron')
+
+				var navbarHeight = $navbar.height();
+				var jumbotronHeight = $jumbotron.height() + parseInt($jumbotron.css('padding-top')) + parseInt($jumbotron.css('padding-bottom'));
+				var scrollQuestionOffset = navbarHeight + jumbotronHeight + 120;
+				$scrollQuestion.css({ 'top': scrollQuestionOffset });
+				console.log('heights', navbarHeight, jumbotronHeight);
+
 				$(window).scroll(function () {
-					if ($(this).scrollTop() > 50) {
+					var windowEl = $(this);
+					if (windowEl.scrollTop() > 50) {
 						$navbar.addClass('lower-shadow');
 					} else {
 						$navbar.removeClass('lower-shadow');
 					}
-					if ($(this).scrollTop() > 100) {
+					if (windowEl.scrollTop() > 100) {
 						$scrollElement.fadeIn().css('display', 'inline-block');
 					} else {
 						$scrollElement.fadeOut();
+					}
+
+					if (windowEl.scrollTop() > 70) {
+						$scrollQuestion.removeClass('absolutely').css({'bottom': 100, "top": ""});
+					} else {
+						$scrollQuestion.addClass('absolutely').css({ 'top': scrollQuestionOffset, "bottom": "" });
 					}
 				});
 
