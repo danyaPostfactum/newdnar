@@ -34,9 +34,10 @@ $pricing_options = array(
 	array(
 		'name' => 'Ультра',
 		'features' => array(
-			'ddos_safe' => false,
+			//'ddos_safe' => false,
 			'webspace' => 12,
 			'domain_amount' => 24,
+			'databases_amount' => 10,
 			'test_period' => false,
 			'scripts_available' => false,
 			'OS' => 'Unix'
@@ -49,9 +50,10 @@ $pricing_options = array(
 	array(
 		'name' => 'Something',
 		'features' => array(
-			'ddos_safe' => true,
+			//'ddos_safe' => true,
 			'webspace' => 4,
 			'domain_amount' => 7,
+			'databases_amount' => 6,
 			'test_period' => false,
 			'scripts_available' => false,
 			'OS' => 'Windows'
@@ -64,9 +66,10 @@ $pricing_options = array(
 	array(
 		'name' => 'Host-Lite',
 		'features' => array(
-			'ddos_safe' => true,
+			//'ddos_safe' => true,
 			'webspace' => 5,
 			'domain_amount' => 10,
+			'databases_amount' => 0,
 			'test_period' => false,
 			'scripts_available' => true,
 			'OS' => 'Windows'
@@ -79,9 +82,10 @@ $pricing_options = array(
 	array(
 		'name' => 'Базовый',
 		'features' => array(
-			'ddos_safe' => false,
+			//'ddos_safe' => false,
 			'webspace' => 2,
 			'domain_amount' => 9,
+			'databases_amount' => 3,
 			'test_period' => false,
 			'scripts_available' => true,
 			'OS' => 'Unix'
@@ -121,7 +125,7 @@ $pricing_options = array(
 			<!-- <h4>Упорядочить по</h4> -->
 			<!-- <button class="sort btn btn-default" data-sort="domainamount:asc">По возрастанию</button> -->
 			<a class="sort" href="#" data-sort="domainamount:desc">Количеству доменов</a>
-			<a class="sort" href="#" data-sort="domainamount:desc">Количеству баз данных</a>
+			<a class="sort" href="#" data-sort="databases:desc">Количеству баз данных</a>
 		</div>
 
 		<div class="col-sm-4">
@@ -150,8 +154,10 @@ $pricing_options = array(
 
 				$webspace = $pricing_option['features']['webspace'];
 				$domain_amount = $pricing_option['features']['domain_amount'];
+				$databases_amount = $pricing_option['features']['databases_amount'];
+
 				$hostingOS = $pricing_option['features']['OS'];
-				$ddos_safe = $pricing_option['features']['ddos_safe']; // boolean
+				//$ddos_safe = $pricing_option['features']['ddos_safe']; // boolean
 				$test_period = $pricing_option['features']['test_period']; // boolean 
 				$scripts_available = $pricing_option['features']['scripts_available']; // boolean
 				?>
@@ -171,7 +177,8 @@ $pricing_options = array(
 							} ?>" 
 							data-priceorder='<?php echo $price ?>' 
 							data-webspace='<?php echo $webspace; ?>' 
-							data-domainamount='<?php echo $domain_amount; ?>'>
+							data-domainamount='<?php echo $domain_amount; ?>'
+							data-databases='<?php echo $databases_amount; ?>'>
 					<!-- <div class="col-sm-3">
 						<h3 class="hoster-name"><a href="<?php echo $hoster_url; ?>"><?php echo $hoster_name; ?></a></h3>
 					</div> -->
@@ -209,6 +216,10 @@ $pricing_options = array(
 										<tr class="tarif-spec-item">
 											<td>Количество сайтов:</td>
 											<td><?php echo $domain_amount; ?></td>
+										</tr>
+										<tr class="tarif-spec-item">
+											<td>Количество баз:</td>
+											<td><?php echo $databases_amount; ?></td>
 										</tr>
 									</table>
 								</div>
