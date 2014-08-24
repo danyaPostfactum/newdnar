@@ -260,24 +260,24 @@ $pricing_options = array(
 				</section> -->
 
 				<section class="card-wrapper settings-card range-filter" data-filtername="priceorder">
-					<h4 class="order-settings-header">Ежемесячная плата (<i class="icon-ruble"></i>)</h4>
-					<input class="interval-input lower-range" type="text"> —
-					<input class="interval-input upper-range" type="text">
+					<h4 class="order-settings-header">Ежемесячная плата</h4>
+					от <input class="interval-input lower-range" type="text"> до
+					<input class="interval-input upper-range" type="text"> <i class="icon-ruble"></i>
 				</section>
 				<section class="card-wrapper settings-card range-filter" data-filtername="webspace">
-					<h4 class="order-settings-header">Дисковое пространство (Гб)</h4>
-					<input class="interval-input lower-range" type="text"> —
-					<input class="interval-input upper-range" type="text">
+					<h4 class="order-settings-header">Дисковое пространство</h4>
+					от <input class="interval-input lower-range" type="text"> до
+					<input class="interval-input upper-range" type="text"> Гб
 				</section>
 				<section class="card-wrapper settings-card range-filter" data-filtername="domainamount">
 					<h4 class="order-settings-header">Количество сайтов</h4>
-					<input class="interval-input lower-range" type="text"> —
-					<input class="interval-input upper-range" type="text">
+					от <input class="interval-input lower-range" type="text"> до
+					<input class="interval-input upper-range" type="text"> шт.
 				</section>
 				<section class="card-wrapper settings-card range-filter" data-filtername="databases">
 					<h4 class="order-settings-header">Количество баз данных</h4>
-					<input class="interval-input lower-range" type="text"> —
-					<input class="interval-input upper-range" type="text">
+					от <input class="interval-input lower-range" type="text"> до
+					<input class="interval-input upper-range" type="text"> шт.
 				</section>
 
 
