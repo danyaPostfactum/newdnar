@@ -110,6 +110,20 @@ $pricing_options = array(
 <div class="container">
 	<div class="row">
 		<article class="col-sm-8" id="Container">
+
+			<h4 class="setting-name">Упорядочить по</h4>
+			<a class="sort" href="#" data-sort="priceorder:asc">Цене</a>
+			<!-- <button class="sort btn btn-default" data-sort="priceorder:desc">По убыванию</button> -->
+			
+			<!-- <h4>Упорядочить по</h4> -->
+			<!-- <button class="sort btn btn-default" data-sort="webspace:asc">По возрастанию</button> -->
+			<a class="sort" href="#" data-sort="webspace:desc">Дисковому пространству</a>
+
+			<!-- <h4>Упорядочить по</h4> -->
+			<!-- <button class="sort btn btn-default" data-sort="domainamount:asc">По возрастанию</button> -->
+			<a class="sort" href="#" data-sort="domainamount:desc">Количеству доменов</a>
+			<a class="sort" href="#" data-sort="domainamount:desc">Количеству баз данных</a>
+
 			<?php foreach ($pricing_options as $pricing_option) { 
 				$price = $pricing_option['price'];
 				$tarif_url = $pricing_option['url'];
@@ -127,14 +141,20 @@ $pricing_options = array(
 				$test_period = $pricing_option['features']['test_period']; // boolean 
 				$scripts_available = $pricing_option['features']['scripts_available']; // boolean
 				?>
-				<div class="card-wrapper hosting-card mix <?php foreach ($pricing_option['features'] as $key => $feature) {
-															if ($feature === true) {
-																echo 'filter-' . $key . ' ';
-															}
-														} ?>" 
-														data-priceorder='<?php echo $price ?>' 
-														data-webspace='<?php echo $webspace; ?>' 
-														data-domainamount='<?php echo $domain_amount; ?>'>
+				<div class="card-wrapper 
+							hosting-card 
+							mix 
+							<?php echo 'filter-' . $hostingOS; ?> 
+							<?php foreach ($pricing_option['features'] as $key => $feature) {
+								if ($feature === true) {
+									echo 'filter-' . $key . ' ';
+								} else {
+									echo 'filter-' . 'no-' . $key . ' ';
+								}
+							} ?>" 
+							data-priceorder='<?php echo $price ?>' 
+							data-webspace='<?php echo $webspace; ?>' 
+							data-domainamount='<?php echo $domain_amount; ?>'>
 					<!-- <div class="col-sm-3">
 						<h3 class="hoster-name"><a href="<?php echo $hoster_url; ?>"><?php echo $hoster_name; ?></a></h3>
 					</div> -->
@@ -218,42 +238,63 @@ $pricing_options = array(
 		<aside class="filter-column col-sm-3 col-sm-offset-1">
 			<section class="card-wrapper settings-card">
 				<h3 class="order-settings-header">Параметры</h3>
-				<h4 class="setting-name">Упорядочить по</h4>
-				<a class="sort" href="#" data-sort="priceorder:asc">цене</a>
-				<!-- <button class="sort btn btn-default" data-sort="priceorder:desc">По убыванию</button> -->
-				
-				<!-- <h4>Упорядочить по</h4> -->
-				<!-- <button class="sort btn btn-default" data-sort="webspace:asc">По возрастанию</button> -->
-				<a class="sort" href="#" data-sort="webspace:desc">дисковому пространству</a>
-
-				<!-- <h4>Упорядочить по</h4> -->
-				<!-- <button class="sort btn btn-default" data-sort="domainamount:asc">По возрастанию</button> -->
-				<a class="sort" href="#" data-sort="domainamount:desc">количеству доменов</a>
 
 			</section>
 
 			<section class="card-wrapper settings-card range-filter" data-filtername="priceorder">
-				<h3 class="order-settings-header">Диапазон цен</h3>
+				<h4 class="order-settings-header">Ежемесячная плата (руб/мес)</h4>
 				<input class="interval-input lower-range" type="text"> —
 				<input class="interval-input upper-range" type="text">
 			</section>
 			<section class="card-wrapper settings-card range-filter" data-filtername="webspace">
-				<h3 class="order-settings-header">Дисковое пространство, Gb</h3>
+				<h4 class="order-settings-header">Дисковое пространство (Гб)</h4>
 				<input class="interval-input lower-range" type="text"> —
 				<input class="interval-input upper-range" type="text">
 			</section>
 			<section class="card-wrapper settings-card range-filter" data-filtername="domainamount">
-				<h3 class="order-settings-header">Количество сайтов</h3>
+				<h4 class="order-settings-header">Количество сайтов</h4>
 				<input class="interval-input lower-range" type="text"> —
 				<input class="interval-input upper-range" type="text">
 			</section>
+			<section class="card-wrapper settings-card range-filter" data-filtername="databases">
+				<h4 class="order-settings-header">Количество баз данных</h4>
+				<input class="interval-input lower-range" type="text"> —
+				<input class="interval-input upper-range" type="text">
+			</section>
+
+
 			
-			<div class="filter" data-filter=".all">All</div>
-			<?php foreach (array('ddos_safe', 'test_period', 'scripts_available') as $filter_key) { ?>
-				<div class="filter" data-filter=".<?php echo 'filter-' . $filter_key; ?>">
-					<?php echo $filter_key;  ?>
-				</div>
-			<?php } ?>
+			<!-- <div class="filter" data-filter=".mix">All</div> -->
+			<form id="Filters">
+				<?php foreach (array('ddos_safe' => 'Защита от DDOS', 
+									 'test_period' => "Наличие тестового периода", 
+									 'scripts_available' => "Скрипты php/perl/python") as $filter_key => $filter_name) { ?>
+					<fieldset>
+						<h5 class="category-name"><?php echo $filter_name; ?></h5>
+						<button type="button" class="btn btn-default filter" data-filter=".<?php echo 'filter-' . $filter_key; ?>">
+							<?php echo "Да"; ?>
+						</button>
+						<button type="button" class="btn btn-default filter" data-filter=".<?php echo 'filter-' . 'no-' . $filter_key; ?>">
+							<?php echo "Нет";  ?>
+						</button>
+
+					</fieldset>
+						
+				<?php } ?>
+
+				<fieldset>
+					<h5 class="category-name">Операционная система</h5>
+					<button type="button" class="btn btn-default filter" data-filter=".filter-Windows">
+						Windows
+					</button>
+					<button type="button" class="btn btn-default filter" data-filter=".filter-Unix">
+						Unix
+					</button>
+
+				</fieldset>
+
+			</form>
+				
 
 		</aside>
 	</div>

@@ -6914,6 +6914,17 @@ body {
   border-color: #0095fb;
   color: #ffffff;
 }
+.btn.filter:focus,
+.btn.filter:active {
+  background-color: transparent;
+  color: #0095fb;
+}
+.btn.filter.active:focus,
+.btn.filter.active:active {
+  background-color: #0095fb;
+  border-color: #0095fb;
+  color: #ffffff;
+}
 .btn-primary {
   color: #ffffff;
   border: 2px solid #ffffff;
@@ -7151,15 +7162,22 @@ body {
   padding: 15px;
   margin-bottom: 20px;
 }
+.mix {
+  display: none;
+}
 a.sort {
   cursor: pointer;
   border-bottom: 1px dashed #0095fb;
   display: inline-block;
   margin-bottom: 10px;
-  text-transform: capitalize;
+  margin-right: 15px;
+  text-transform: none;
 }
 a.sort:hover {
   text-decoration: none;
+}
+.category-name {
+  text-transform: none;
 }
 .tarif-name {
   position: relative;

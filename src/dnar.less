@@ -136,6 +136,19 @@ body {
 	border-color: @btn-clr;
 	color: @text-inverse;
  }
+.btn.filter:focus,
+.btn.filter:active {
+	background-color: transparent;
+	color: @btn-clr;
+}
+.btn.filter.active:focus,
+.btn.filter.active:active {
+	background-color: @btn-clr;
+	border-color: @btn-clr;
+	color: @text-inverse;
+}
+
+
 .btn-primary {
 	color: @btn-primary-color;
 	border: @btn-primary-border-width solid @btn-primary-border-color;
@@ -409,18 +422,23 @@ body {
 	margin-bottom: 20px;
 
 }
-
+.mix {
+	display: none;
+}
 a.sort {
 	cursor: pointer;
 	border-bottom: 1px dashed @brand-primary;
 	display: inline-block;
 	margin-bottom: 10px;
-	text-transform: capitalize;
+	margin-right: 15px;
+	text-transform: none;
 	&:hover {
 		text-decoration: none;
 	}
 }
-
+.category-name {
+	text-transform: none;
+}
 .tarif-name {
 	position: relative;
 	padding-left: 24px;

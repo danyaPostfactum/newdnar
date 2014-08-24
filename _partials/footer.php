@@ -32,20 +32,39 @@
 		<script src="js/punycode.min.js"></script>
 		<!-- <script src="js/jquery-ui-1.10.4.custom.min.js"></script> -->
 		<?php if (isset($page_name) && $page_name == 'hostings') { ?>
-			<script src="js/jquery.mixitup.min.js"></script>
+			<script src="js/jquery.mixitup.js"></script>
+			<script src="js/multi-dimensional-filter.js"></script>
 			<script>
 				$(function(){
-					// Instantiate MixItUp:
-					$('#Container').mixItUp();
+					    
+					// Initialize buttonFilter code
+					buttonFilter.init();
+					// Instantiate MixItUp
+					    
+					// $('#Container').mixItUp();
+					$('#Container').mixItUp({
+					  // controls: {
+					  //   enable: true // we won't be needing these
+					  // },
+					  callbacks: {
+					    onMixFail: function(){
+					      alert('No items were found matching the selected filters.');
+					    }
+					  }
+					}); 
 
-					var mix = $(".mix");
+					$(".sort").on('click', function(e) {
+						e.preventDefault();
+					});
+
+					var $mix = $(".mix");
 					var rangeFilter = function() {
 						console.log('keyup!');
 						var wrapper = $(this);
 						var minValue = parseInt(wrapper.find(".lower-range").val(), 10) || 0;
 						var maxValue = parseInt(wrapper.find(".upper-range").val(), 10) || 0;
 						var filterName = wrapper.data().filtername;
-						$.each(mix, function(index, element) {
+						$.each($mix, function(index, element) {
 							var elem = $(element);
 							elem.show();
 							if (parseInt(elem.data()[filterName], 10) < minValue) {
