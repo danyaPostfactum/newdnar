@@ -1,5 +1,5 @@
 <?php
-	$title = 'Регистрация доменных имен';
+	$title = 'Регистрация дешевых доменных имен';
 	$description = 'test1';
 	$keywords = 'test2';
  	include(ROOT_PATH . '_partials/header.php') 
