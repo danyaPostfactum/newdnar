@@ -43,8 +43,11 @@
 					    
 					// $('#Container').mixItUp();
 					$('#Container').mixItUp({
-					  // controls: {
-					  //   enable: true // we won't be needing these
+					  controls: {
+					    enable: false // we won't be needing these
+					  },
+					  // load: {
+					  // 	filter: false
 					  // },
 					  callbacks: {
 					    onMixFail: function(){
@@ -55,6 +58,13 @@
 
 					$(".sort").on('click', function(e) {
 						e.preventDefault();
+						var $clicked = $(this);
+
+						// $clicked.hasClass('active') ? $clicked.removeClass('active') : 
+						$clicked.addClass('active').siblings('.sort').removeClass('active');
+
+						var sortCategory = $clicked.data('sort');
+						$('#Container').mixItUp('sort', sortCategory);
 					});
 
 					var $mix = $(".mix");

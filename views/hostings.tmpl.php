@@ -108,9 +108,8 @@ $pricing_options = array(
 </div>
 
 <div class="container">
-	<div class="row">
-		<article class="col-sm-8" id="Container">
-
+	<div class="row controls-row">
+		<div class="col-sm-8">
 			<h4 class="setting-name">Упорядочить по</h4>
 			<a class="sort" href="#" data-sort="priceorder:asc">Цене</a>
 			<!-- <button class="sort btn btn-default" data-sort="priceorder:desc">По убыванию</button> -->
@@ -123,6 +122,21 @@ $pricing_options = array(
 			<!-- <button class="sort btn btn-default" data-sort="domainamount:asc">По возрастанию</button> -->
 			<a class="sort" href="#" data-sort="domainamount:desc">Количеству доменов</a>
 			<a class="sort" href="#" data-sort="domainamount:desc">Количеству баз данных</a>
+		</div>
+
+		<div class="col-col-sm-3 col-sm-offset-1">
+			<h4>
+				<div class="yashare-auto-init yandex-sharing-icons-row yand-sharing-hostings" data-yashareL10n="ru" 
+											   data-yashareQuickServices="yaru,vkontakte,facebook,twitter,gplus" 
+											   data-yashareTheme="counter"></div>
+			</h4>
+		</div>
+		
+	</div>
+	<div class="row">
+		<article class="col-sm-8" id="Container">
+
+			
 
 			<?php foreach ($pricing_options as $pricing_option) { 
 				$price = $pricing_option['price'];
@@ -235,65 +249,75 @@ $pricing_options = array(
 
 
 		</article>
-		<aside class="filter-column col-sm-3 col-sm-offset-1">
-			<section class="card-wrapper settings-card">
-				<h3 class="order-settings-header">Параметры</h3>
+		<aside class="col-sm-3 col-sm-offset-1">
+			<div class="filter-column">
+				<section class="card-wrapper settings-card">
+					<h3 class="order-settings-header">Параметры</h3>
 
-			</section>
+				</section>
 
-			<section class="card-wrapper settings-card range-filter" data-filtername="priceorder">
-				<h4 class="order-settings-header">Ежемесячная плата (руб/мес)</h4>
-				<input class="interval-input lower-range" type="text"> —
-				<input class="interval-input upper-range" type="text">
-			</section>
-			<section class="card-wrapper settings-card range-filter" data-filtername="webspace">
-				<h4 class="order-settings-header">Дисковое пространство (Гб)</h4>
-				<input class="interval-input lower-range" type="text"> —
-				<input class="interval-input upper-range" type="text">
-			</section>
-			<section class="card-wrapper settings-card range-filter" data-filtername="domainamount">
-				<h4 class="order-settings-header">Количество сайтов</h4>
-				<input class="interval-input lower-range" type="text"> —
-				<input class="interval-input upper-range" type="text">
-			</section>
-			<section class="card-wrapper settings-card range-filter" data-filtername="databases">
-				<h4 class="order-settings-header">Количество баз данных</h4>
-				<input class="interval-input lower-range" type="text"> —
-				<input class="interval-input upper-range" type="text">
-			</section>
+				<section class="card-wrapper settings-card range-filter" data-filtername="priceorder">
+					<h4 class="order-settings-header">Ежемесячная плата (руб/мес)</h4>
+					<input class="interval-input lower-range" type="text"> —
+					<input class="interval-input upper-range" type="text">
+				</section>
+				<section class="card-wrapper settings-card range-filter" data-filtername="webspace">
+					<h4 class="order-settings-header">Дисковое пространство (Гб)</h4>
+					<input class="interval-input lower-range" type="text"> —
+					<input class="interval-input upper-range" type="text">
+				</section>
+				<section class="card-wrapper settings-card range-filter" data-filtername="domainamount">
+					<h4 class="order-settings-header">Количество сайтов</h4>
+					<input class="interval-input lower-range" type="text"> —
+					<input class="interval-input upper-range" type="text">
+				</section>
+				<section class="card-wrapper settings-card range-filter" data-filtername="databases">
+					<h4 class="order-settings-header">Количество баз данных</h4>
+					<input class="interval-input lower-range" type="text"> —
+					<input class="interval-input upper-range" type="text">
+				</section>
 
 
-			
-			<!-- <div class="filter" data-filter=".mix">All</div> -->
-			<form id="Filters">
-				<?php foreach (array('ddos_safe' => 'Защита от DDOS', 
-									 'test_period' => "Наличие тестового периода", 
-									 'scripts_available' => "Скрипты php/perl/python") as $filter_key => $filter_name) { ?>
+				<form id="Filters" class="card-wrapper">
+					<?php foreach (array('ddos_safe' => 'Защита от DDOS', 
+										 'test_period' => "Наличие тестового периода", 
+										 'scripts_available' => "Скрипты php/perl/python") as $filter_key => $filter_name) { ?>
+						<fieldset>
+							<h5 class="category-name"><?php echo $filter_name; ?></h5>
+							<button type="button" class="btn btn-default filter" data-filter=".<?php echo 'filter-' . $filter_key; ?>">
+								<?php echo "Да"; ?>
+							</button>
+							<button type="button" class="btn btn-default filter" data-filter=".<?php echo 'filter-' . 'no-' . $filter_key; ?>">
+								<?php echo "Нет";  ?>
+							</button>
+
+						</fieldset>
+							
+					<?php } ?>
+
 					<fieldset>
-						<h5 class="category-name"><?php echo $filter_name; ?></h5>
-						<button type="button" class="btn btn-default filter" data-filter=".<?php echo 'filter-' . $filter_key; ?>">
-							<?php echo "Да"; ?>
+						<h5 class="category-name">Операционная система</h5>
+						<button type="button" class="btn btn-default filter" data-filter=".filter-Windows">
+							Windows
 						</button>
-						<button type="button" class="btn btn-default filter" data-filter=".<?php echo 'filter-' . 'no-' . $filter_key; ?>">
-							<?php echo "Нет";  ?>
+						<button type="button" class="btn btn-default filter" data-filter=".filter-Unix">
+							Unix
 						</button>
 
 					</fieldset>
-						
-				<?php } ?>
 
-				<fieldset>
-					<h5 class="category-name">Операционная система</h5>
-					<button type="button" class="btn btn-default filter" data-filter=".filter-Windows">
-						Windows
-					</button>
-					<button type="button" class="btn btn-default filter" data-filter=".filter-Unix">
-						Unix
-					</button>
+				</form>
+				
+			</div>
 
-				</fieldset>
 
-			</form>
+			<div class="hostings-description">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, obcaecati voluptatum porro optio dicta quasi assumenda illum labore sequi impedit eius, tenetur minus neque aliquid placeat nam deserunt accusamus veritatis. Aut similique eligendi eos quae, mollitia earum consectetur, expedita odit sit omnis autem quasi natus id? Excepturi dolores tempore illo magni impedit natus quidem soluta, quasi pariatur deserunt a, cum.</p>
+
+				<p><a href="#" class="show-more">Подробнее</a></p>
+
+				<p class="show-more-content">Lmollitia quam velit rerum dolorum eum neque atque ut fuga accusantium odio, blanditiis ea. Voluptas nihil laborum, modi fugit repellat nesciunt molestias earum accusantium, fuga facilis consequuntur quod quaerat saepe? Nesciunt blanditiis id eaque voluptates explicabo, voluptate fugit quos maiores culp</p>
+			</div>
 				
 
 		</aside>

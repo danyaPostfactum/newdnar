@@ -592,9 +592,9 @@
 				
 			self._execAction('_updateControls', 0, arguments);
 				
-			(command.filter === undf) && (output.filter = self._activeFilter);
+			// (command.filter === undf) && (output.filter = self._activeFilter);
 			(command.sort === undf) && (output.sort = self._activeSort);
-			(output.filter === self.selectors.target) && (output.filter = 'all');
+			// (output.filter === self.selectors.target) && (output.filter = 'all');
 			
 			for(var i = 0; i < 2; i++){
 				$el = self.controls.live ? $(self.selectors[type]) : self['_$'+type+'Buttons'];
