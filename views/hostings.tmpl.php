@@ -1,5 +1,5 @@
 <?php
-	$title = 'Выгодный хостинг';
+	$title = 'Подбор выгодного хостинга';
 	$description = 'test1';
 	$keywords = 'test2';
  	include(ROOT_PATH . '_partials/header.php') 
@@ -116,14 +116,7 @@ $pricing_options = array(
 		<div class="col-sm-8">
 			<h4 class="setting-name">Упорядочить по</h4>
 			<a class="sort" href="#" data-sort="priceorder:asc">Цене</a>
-			<!-- <button class="sort btn btn-default" data-sort="priceorder:desc">По убыванию</button> -->
-			
-			<!-- <h4>Упорядочить по</h4> -->
-			<!-- <button class="sort btn btn-default" data-sort="webspace:asc">По возрастанию</button> -->
 			<a class="sort" href="#" data-sort="webspace:desc">Дисковому пространству</a>
-
-			<!-- <h4>Упорядочить по</h4> -->
-			<!-- <button class="sort btn btn-default" data-sort="domainamount:asc">По возрастанию</button> -->
 			<a class="sort" href="#" data-sort="domainamount:desc">Количеству доменов</a>
 			<a class="sort" href="#" data-sort="databases:desc">Количеству баз данных</a>
 		</div>
@@ -350,4 +343,3 @@ $pricing_options = array(
 
 
 <?php include("_partials/footer.php") ?>
-
