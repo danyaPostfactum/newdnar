@@ -416,7 +416,11 @@ body {
 }
 
 .yand-sharing-hostings {
-	margin-top: 10px; // additional to h4 margin
+	margin-top: 15px; // additional to h4 margin
+	float: right;
+}
+.filter-column-wrapper {
+	padding-left: 60px;
 }
 .filter-column {
 	position: relative;
@@ -426,12 +430,21 @@ body {
 .card-wrapper {
 	width: 100%;
 	// .box-shadow();
-	padding: 15px;
-	margin-bottom: 20px;
-
+	padding: 15px 15px 0;
+	// margin-bottom: 15px;
+	
+	h4 {
+		font-size: 16px;
+	}
+}
+.filter-columnd {
+	.card-wrapper:first-child {
+		margin-bottom: -7px;
+	}
 }
 .hosting-card {
 	.box-shadow();
+	margin-bottom: 10px;
 }
 .hostings-description {
 	margin-top: 20px;
@@ -534,6 +547,7 @@ a.sort {
 
 // settings
 .settings-card {
+	border-bottom: 1px dotted @gray-lighter;
 	h1, h2, h3, h4 {
 		text-transform: none;
 	}
@@ -541,18 +555,18 @@ a.sort {
 		white-space: pre-wrap;
 		margin-bottom: 10px;
 	}
+	padding-bottom: 10px;
 }
 
 .order-settings-header {
 	margin-top: 5px;
 	padding-bottom: 10px;
 	font-weight: 400;
-	border-bottom: 1px dotted @gray-lighter;
 }
 
 .interval-input {
 	display: inline-block;
-	width: 30%;
+	width: 45%;
 }
 
 // Sidebar

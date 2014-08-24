@@ -38,7 +38,8 @@
 				$(function(){
 					    
 					// Initialize buttonFilter code
-					buttonFilter.init();
+					dropdownFilter.init();
+					// buttonFilter.init();
 					// Instantiate MixItUp
 					    
 					// $('#Container').mixItUp();

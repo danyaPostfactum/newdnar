@@ -124,9 +124,9 @@ $pricing_options = array(
 			<a class="sort" href="#" data-sort="domainamount:desc">Количеству баз данных</a>
 		</div>
 
-		<div class="col-col-sm-3 col-sm-offset-1">
+		<div class="col-sm-4">
 			<h4>
-				<div class="yashare-auto-init yandex-sharing-icons-row yand-sharing-hostings" data-yashareL10n="ru" 
+				<div class="yashare-auto-init yand-sharing-hostings" data-yashareL10n="ru" 
 											   data-yashareQuickServices="yaru,vkontakte,facebook,twitter,gplus" 
 											   data-yashareTheme="counter"></div>
 			</h4>
@@ -161,9 +161,12 @@ $pricing_options = array(
 							<?php echo 'filter-' . $hostingOS; ?> 
 							<?php foreach ($pricing_option['features'] as $key => $feature) {
 								if ($feature === true) {
-									echo 'filter-' . $key . ' ';
+									echo strtolower('filter-' . $key . ' ');
 								} else {
-									echo 'filter-' . 'no-' . $key . ' ';
+									if ($feature === false) {
+										echo strtolower('filter-' . 'no-' . $key . ' ');
+									}
+										
 								}
 							} ?>" 
 							data-priceorder='<?php echo $price ?>' 
@@ -195,14 +198,14 @@ $pricing_options = array(
 											<td>Хранилище:</td>
 											<td><?php echo $webspace ?> Gb</td>
 										</tr>
-										<tr class="tarif-spec-item <?php if ( !$ddos_safe ) { echo "unavailable"; } ?>">
+										<!-- <tr class="tarif-spec-item <?php if ( !$ddos_safe ) { echo "unavailable"; } ?>">
 											<td>Защита от DDOS:</td>
 											<?php if ( $ddos_safe ) { ?>
 												<td>Есть</td>
 											<?php } else { ?>
 												<td>Нет</td>
 											<?php } ?>
-										</tr>
+										</tr> -->
 										<tr class="tarif-spec-item">
 											<td>Количество сайтов:</td>
 											<td><?php echo $domain_amount; ?></td>
@@ -249,15 +252,15 @@ $pricing_options = array(
 
 
 		</article>
-		<aside class="col-sm-3 col-sm-offset-1">
+		<aside class="col-sm-4 filter-column-wrapper">
 			<div class="filter-column">
-				<section class="card-wrapper settings-card">
+				<!-- <section class="card-wrapper settings-card">
 					<h3 class="order-settings-header">Параметры</h3>
 
-				</section>
+				</section> -->
 
 				<section class="card-wrapper settings-card range-filter" data-filtername="priceorder">
-					<h4 class="order-settings-header">Ежемесячная плата (руб/мес)</h4>
+					<h4 class="order-settings-header">Ежемесячная плата (<i class="icon-ruble"></i>)</h4>
 					<input class="interval-input lower-range" type="text"> —
 					<input class="interval-input upper-range" type="text">
 				</section>
@@ -279,30 +282,41 @@ $pricing_options = array(
 
 
 				<form id="Filters" class="card-wrapper">
-					<?php foreach (array('ddos_safe' => 'Защита от DDOS', 
+					<?php foreach (array(
+										 // 'ddos_safe' => 'Защита от DDOS', 
 										 'test_period' => "Наличие тестового периода", 
 										 'scripts_available' => "Скрипты php/perl/python") as $filter_key => $filter_name) { ?>
 						<fieldset>
-							<h5 class="category-name"><?php echo $filter_name; ?></h5>
-							<button type="button" class="btn btn-default filter" data-filter=".<?php echo 'filter-' . $filter_key; ?>">
+							<h4 class="category-name"><?php echo $filter_name; ?></h4>
+							<select>
+							    <option value="">Неважно</option>
+							    <option value=".<?php echo strtolower('filter-' . $filter_key); ?>">Да</option>
+							    <option value=".<?php echo strtolower('filter-' . 'no-' . $filter_key); ?>">Нет</option>
+							</select>
+							<!-- <button type="button" class="btn btn-default filter" data-filter=".<?php echo strtolower('filter-' . $filter_key); ?>">
 								<?php echo "Да"; ?>
 							</button>
-							<button type="button" class="btn btn-default filter" data-filter=".<?php echo 'filter-' . 'no-' . $filter_key; ?>">
+							<button type="button" class="btn btn-default filter" data-filter=".<?php echo strtolower('filter-' . 'no-' . $filter_key); ?>">
 								<?php echo "Нет";  ?>
-							</button>
+							</button> -->
 
 						</fieldset>
 							
 					<?php } ?>
 
 					<fieldset>
-						<h5 class="category-name">Операционная система</h5>
-						<button type="button" class="btn btn-default filter" data-filter=".filter-Windows">
+						<h4 class="category-name">Операционная система</h4>
+						<!-- <button type="button" class="btn btn-default filter" data-filter=".filter-Windows">
 							Windows
 						</button>
 						<button type="button" class="btn btn-default filter" data-filter=".filter-Unix">
 							Unix
-						</button>
+						</button> -->
+						<select>
+							<option value="">Неважно</option>
+							<option value=".filter-Unix">Unix</option>							
+							<option value=".filter-Window">Windows</option>							
+						</select>
 
 					</fieldset>
 
