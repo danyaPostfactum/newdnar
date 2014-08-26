@@ -6240,7 +6240,7 @@ button.close {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   background-color: rgba(0, 0, 0, 0);
-  border: 2px solid rgba(0, 183, 229, 0.9);
+  border: 2px solid #0095fb;
   opacity: .9;
   border-top: 2px solid rgba(0, 0, 0, 0);
   border-left: 2px solid rgba(0, 0, 0, 0);
@@ -6263,7 +6263,7 @@ button.close {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   background-color: rgba(0, 0, 0, 0);
-  border: 2px solid rgba(0, 183, 229, 0.9);
+  border: 2px solid #0095fb;
   opacity: .9;
   border-top: 2px solid rgba(0, 0, 0, 0);
   border-left: 2px solid rgba(0, 0, 0, 0);
@@ -7003,15 +7003,12 @@ body {
 .form-control:focus.main-search-input.error {
   border-color: #d9534f;
   border-width: 2px;
+  border-right: none;
 }
 .form-control.main-search-input.error + .input-group-btn button,
 .form-control:focus.main-search-input.error + .input-group-btn button {
   border: 2px solid #d9534f;
   border-left: none;
-}
-.form-control.main-search-input.error + .input-group-btn .btn,
-.form-control:focus.main-search-input.error + .input-group-btn .btn {
-  height: 62px;
 }
 .form-control.error {
   border: 1px solid #d9534f;
