@@ -68,7 +68,7 @@
 
 				<button type="submit" class="btn btn-default btn-wide">Отправить сообщение</button>
 
-				<span class="help-block help-block-attach small text-center"><a href="#">Можно прикрепить файл</a></span>
+				<!-- <span class="help-block help-block-attach small text-center"><a href="#">Можно прикрепить файл</a></span> -->
 
 				<div class="form-success-text">
 					<p>Stuff</p>

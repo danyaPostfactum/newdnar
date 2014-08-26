@@ -1,5 +1,5 @@
 	<!-- FAQ -->
-	<article id="tabs-3" class="row tab-pane">
+	<article id="questions-and-answers" class="row tab-pane">
 		<div class="col-sm-9 col-lg-7 center-block q-and-a">
 			<h3>Вопросы и ответы</h3>
 			<h4 class="show-more-question"><a href="#" class="show-more">Вопрос 1</a>

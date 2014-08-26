@@ -28,10 +28,10 @@
 				<nav class="col-sm-12">
 					<ul class="nav nav-pills nav-justified" id="mainTabs">
 					  <li class="active"><a href="#tabs-1" role="tab" data-toggle="tab">Поиск и проверка домена</a></li>
-					  <li><a href="#tabs-2" role="tab" data-toggle="tab">Как оплатить</a></li>
-					  <li><a href="#tabs-3" role="tab" data-toggle="tab">Вопросы и ответы</a></li>
-					  <li><a href="#tabs-4" role="tab" data-toggle="tab">Почему DNAR</a></li>
-					  <li><a href="#tabs-5" role="tab" data-toggle="tab">Перенести домен к нам</a></li>
+					  <li><a href="#payment" role="tab" data-toggle="tab">Как оплатить</a></li>
+					  <li><a href="#questions-and-answers" role="tab" data-toggle="tab">Вопросы и ответы</a></li>
+					  <li><a href="#advantages" role="tab" data-toggle="tab">Почему DNAR</a></li>
+					  <li><a href="#move-domain" role="tab" data-toggle="tab">Перенести домен к нам</a></li>
 					</ul>
 				</nav>
 			</div>

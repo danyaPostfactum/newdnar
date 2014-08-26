@@ -102,10 +102,23 @@
 			<!-- // <script src="js/dropzone.js"></script> -->
 		<?php } ?>
 		<script>
-			$('#mainTabs').find('a').click(function (e) {
-			  e.preventDefault();
-			  $(this).tab('show');
-			});
+			(function() {
+				// tabs behavior (jquery-ui) ======================================
+				$tabsNav = $('#mainTabs');
+				var hash = window.location.hash;
+				if (hash) {
+					var $anchor = $tabsNav.find('a[href=' + hash + ']');
+					$anchor.tab('show');
+				}
+				$tabsNav.find('a').click(function (e) {
+				  // e.preventDefault();
+				  var $tab = $(this);
+				  // set window location
+				  window.location.hash = $tab.attr('href');
+				  console.log($tab.attr('href'));
+				  $tab.tab('show');
+				});
+			})();
 
 			(function() {
 				// dynamic change on scroll events ================================

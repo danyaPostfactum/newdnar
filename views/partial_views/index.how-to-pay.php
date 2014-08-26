@@ -1,4 +1,4 @@
-	<article id="tabs-2" class="row tab-pane how-to-pay">
+	<article id="payment" class="row tab-pane how-to-pay">
 		<div class="col-sm-12 payment-types-toggle">
 			<span class="switch-toggle switch-dnar payment-type-switch">
 				<input id="week" name="view" value="individual-person" type="radio" checked>

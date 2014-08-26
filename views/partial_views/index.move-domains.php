@@ -1,5 +1,5 @@
 	<!-- Перенос доменов -->
-	<article id="tabs-5" class="row tab-pane">
+	<article id="move-domain" class="row tab-pane">
 		<div class="col-sm-12 search-stuff-wrapper" id="moveDomainsWrapper">
 			<h3 class="move-domain-heading">Перенос домена</h3>
 			<p class="move-domain-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus at, fugit assumenda laboriosam cupiditate tempora asperiores culpa ipsum temporibus, eveniet, debitis corporis fuga modi, provident.</p>

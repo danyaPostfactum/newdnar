@@ -210,7 +210,7 @@ $pricing_options = array(
 											<td>Количество сайтов:</td>
 											<td><?php echo $domain_amount; ?></td>
 										</tr>
-										<tr class="tarif-spec-item">
+										<tr class="tarif-spec-item <?php if ( $databases_amount === 0 ) { echo "unavailable"; } ?>">
 											<td>Количество баз:</td>
 											<td><?php echo $databases_amount; ?></td>
 										</tr>

@@ -42,14 +42,34 @@ var WhoisSearch = {
 		});
 	},
 
+	inputProps: {
+		isRussian: false
+	},
+
+	checkForRussian: function(input) {
+		var self = this;
+		if (self.config.searchField.val().charCodeAt(0) > 1071) {
+			self.inputProps.isRussian = true;
+			return true;
+		} else {
+			self.inputProps.isRussian = false;
+			return false;
+		}
+	},
+
 	fetchQueryArray: function() {
 		var self = this;
+		var query = self.config.searchField.val();
+		if (self.checkForRussian(query)) {
+			query = punycode.toASCII(query);
+		}
 		$.ajax({
 			type: 'GET',
 			url: 'index.php',
 			data: {q: punycode.toASCII( self.config.searchField.val() )},
 			dataType: 'json',
 			success: function(domainArray) {
+				console.log('got smth', domainArray);
 				self.defineSearchTerms(self, domainArray);
 			}
 		});
@@ -71,8 +91,23 @@ var WhoisSearch = {
 		if (self.checkForError(self, domainArray)) {
 			return;
 		}
-		
-		if (domainArray.TLDisset) {
+
+		if (self.inputProps.isRussian) {
+			var domain = null;
+			if (domainArray.TLDisset) {
+				var domainString = domainArray.domain_name + domainArray.TLD;
+				domain = domainArray.TLD.slice(1);
+			} else {
+				var domainString = domainArray.domain_name + punycode.toASCII('.рф');
+				domain = punycode.toASCII("рф");
+			}
+			// search for russian domain
+			self.clearWhoisResults();
+			self.fetchDomainWhois(domainString);
+			self.createWrappers( {domains: [domain], name: domainArray.domain_name} );
+			this.initiateProgress(1);
+
+		} else if (domainArray.TLDisset) {
 			// search for one
 			var domainString = domainArray.domain_name + domainArray.TLD;
 			self.clearWhoisResults();
@@ -106,7 +141,6 @@ var WhoisSearch = {
 		this.config.tldCards.append(html);
 	},
 	displayWhoisResults: function(whoisArray) {
-		console.log(whoisArray)
 		this.updateBtnProgress(this);
 		var domainName = whoisArray.regrinfo.domain.name;
 		var dotPos = domainName.lastIndexOf('.') ;
@@ -126,7 +160,6 @@ var WhoisSearch = {
 			data: { domain_name: domainName },
 			dataType: 'json'
 		}).success(function(result) {
-			console.log('got it');
 			self.displayWhoisResults(result);
 		}).fail(function(result) {
 			console.log('failed to receive whois array');
@@ -143,7 +176,6 @@ var WhoisSearch = {
 		var self = theobj;
 		var progressLine = self.config.domainBtn.find(self.config.btnProgressName).removeClass(self.config.btnStaticClass);
 		this.currentProgressLength += this.progressStep;
-		console.log(this.currentProgressLength);
 		if ( Math.ceil(this.currentProgressLength) >= 100 ) {
 			progressLine.css(this.config.btnProgressStyleName, '100%');
 			progressLine.addClass(this.config.btnStaticClass);
@@ -168,7 +200,7 @@ var WhoisSearch = {
 	}
 };
 
-var domains = ['ru', 'com', 'su', 'net', 'org', 'xn--p1ai', 'biz', 'info', 'mobi', 'name', 'tv', 'in', 'mn', 'cc', 'ws', 'bz', 'asia', 'me', 'us', 'tel', 'kz'];
+var domains = ['ru', 'com', 'su', 'net', 'org', 'me', 'biz', 'info', 'mobi', 'name', 'tv', 'in', 'mn', 'cc', 'ws', 'bz', 'asia', 'xn--p1ai', 'us', 'tel', 'kz'];
 
 // Initialize whois search
 var whoisSearchObj = Object.create(WhoisSearch);
