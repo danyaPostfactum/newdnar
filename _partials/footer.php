@@ -5,8 +5,9 @@
 			<hr class="footer-line">
 
 			<footer>
-				<div class="col-md-3">
-					<p>&copy; 2008-2014 Dnar.Ru</p>
+				<div class="">
+					<p>&copy; 2008-<?php echo date('Y'); ?> Dnar.Ru<br>
+					<img style="margin: -3px 2px 0px -3px; border: 0;" src="http://www.gemagency.ru/rubin.png" alt="Креативное агентство Джем" /><a href="http://www.gemagency.ru/" target="_blank">Проект креативного агентства Джем</a></p>
 				</div>
 				<div class="col-sm-9">
 					<p class="payment-icons-row">
