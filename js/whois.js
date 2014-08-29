@@ -141,6 +141,7 @@ var WhoisSearch = {
 		this.config.tldCards.append(html);
 	},
 	displayWhoisResults: function(whoisArray) {
+		console.log(whoisArray);
 		this.updateBtnProgress(this);
 		var domainName = whoisArray.regrinfo.domain.name;
 		var dotPos = domainName.lastIndexOf('.') ;
@@ -240,3 +241,142 @@ moveDomainSearchObj.init({
 	domains: domains,
 	limitTo: 8
 });
+
+
+var registrarsObj = {
+  "101DOMAIN-REG-RF": {
+    "id": 598,
+    "short_name": "101DOMAIN-RU",
+    "url": "www.101domain.ru"
+  },
+  "AGAVA-REG-RF": {
+    "id": 599,
+    "short_name": "AGAVA-RU",
+    "url": "www.hosting.agava.ru/ domains/"
+  },
+  "AXELNAME-REG-RF": {
+    "id": 600,
+    "short_name": "AXELNAME-RU",
+    "url": "http://axelname.ru"
+  },
+  "ARDIS-REG-RF": {
+    "id": 601,
+    "short_name": "ARDIS-RU",
+    "url": "http://ardis.ru"
+  },
+  "BEELINE-REG-RF": {
+    "id": 602,
+    "short_name": "BEELINE-RU",
+    "url": "www.beeline.ru"
+  },
+  "DEMOS-REG-RF": {
+    "id": 603,
+    "short_name": "DEMOS-RU",
+    "url": "https://reg.demos.ru"
+  },
+  "WEBNAMES-REG-RF": {
+    "id": 604,
+    "short_name": "WEBNAMES-RU",
+    "url": "http://webnames.ru"
+  },
+  "CARAVAN-REG-RF": {
+    "id": 605,
+    "short_name": "CARAVAN-RU",
+    "url": "www.caravan.ru"
+  },
+  "CT-REG-RF": {
+    "id": 606,
+    "short_name": "CT-RU",
+    "url": "www.regplanet.ru"
+  },
+  "NAUNET-REG-RF": {
+    "id": 607,
+    "short_name": "NAUNET-RU",
+    "url": "www.naunet.ru"
+  },
+  "NETFOX-REG-RF": {
+    "id": 608,
+    "short_name": "NETFOX-RU",
+    "url": "www.netfox.ru"
+  },
+  "UNINIC-REG-RF": {
+    "id": 609,
+    "short_name": "UNINIC-RU",
+    "url": "http://uninic.ru/"
+  },
+  "CENTRALREG-REG-RF": {
+    "id": 610,
+    "short_name": "CENTRALREG-RU",
+    "url": "http://centralreg.ru/"
+  },
+  "REGGI-REG-RF": {
+    "id": 611,
+    "short_name": "REGGI-RU",
+    "url": "www.reggi.ru"
+  },
+  "RUCENTER-REG-RF": {
+    "id": 612,
+    "short_name": "RU-CENTER-RU",
+    "url": "www.nic.ru"
+  },
+  "REGRU-REG-RF": {
+    "id": 613,
+    "short_name": "REGRU-RU",
+    "url": "www.reg.ru"
+  },
+  "REGISTR1-REG-RF": {
+    "id": 614,
+    "short_name": "REGISTR1-RU",
+    "url": "http://registr1.ru/"
+  },
+  "REGISTRANT-RU": {
+    "id": 615,
+    "short_name": "",
+    "url": "www.registrant.ru"
+  },
+  "DOMENUS-REG-RF": {
+    "id": 616,
+    "short_name": "DOMENUS-RU",
+    "url": "www.domenus.ru"
+  },
+  "REGISTRATOR-REG-RF": {
+    "id": 617,
+    "short_name": "REGISTRATOR-RU",
+    "url": "www.mastername.ru"
+  },
+  "R01-REG-RF": {
+    "id": 618,
+    "short_name": "R01-RU",
+    "url": "www.r01.ru"
+  },
+  "REGTIME-REG-RF": {
+    "id": 619,
+    "short_name": "REGTIME-RU",
+    "url": "www.webnames.ru"
+  },
+  "RTCOMM-REG-RF": {
+    "id": 620,
+    "short_name": "RTCOMM-RU",
+    "url": "www.rtcomm.ru"
+  },
+  "RUNET-REG-RF": {
+    "id": 621,
+    "short_name": "RUNET-RU",
+    "url": "runetproekt.ru"
+  },
+  "SALENAMES-REG-RF": {
+    "id": 622,
+    "short_name": "SALENAMES-RU",
+    "url": "www.salenames.ru"
+  },
+  "REGFORMAT-REG-RF": {
+    "id": 623,
+    "short_name": "REGFORMAT-RU",
+    "url": "www.regformat.ru"
+  },
+  "ELVIS-REG-RF": {
+    "id": 624,
+    "short_name": "ELVIS-RU",
+    "url": "www.getname.ru"
+  }
+};

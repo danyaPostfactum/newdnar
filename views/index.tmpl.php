@@ -27,7 +27,7 @@
 			<div class="row tabs-wrapper">
 				<nav class="col-sm-12">
 					<ul class="nav nav-pills nav-justified" id="mainTabs">
-					  <li class="active"><a href="#tabs-1" role="tab" data-toggle="tab">Поиск и проверка домена</a></li>
+					  <li class="active"><a href="#main" role="tab" data-toggle="tab">Поиск и проверка домена</a></li>
 					  <li><a href="#payment" role="tab" data-toggle="tab">Как оплатить</a></li>
 					  <li><a href="#questions-and-answers" role="tab" data-toggle="tab">Вопросы и ответы</a></li>
 					  <li><a href="#advantages" role="tab" data-toggle="tab">Почему DNAR</a></li>
@@ -37,7 +37,7 @@
 			</div>
 			
 			<div id="mainTabsContent" class="main-tab-content">
-				<article id="tabs-1" class="tab-pane active">
+				<article id="main" class="tab-pane active">
 					<div class="row search-stuff-wrapper">
 						<div class="col-sm-12" id="searchWhoisWrapper">
 							<form action="index.php" method="GET" id="checkDomainForm" class="domain-form-wrapper">
@@ -155,26 +155,9 @@
 
 							<div class="show-more-content-prices">
 								<!-- pricelist "table" -->
-								<!-- <div class="row">
-									<?php 
-									$index = 0;
-									foreach ($TLDnames as $smth) { 
-										if ($index % 4 == 0) { ?>
-											<div class="col-md-2 col-sm-4 price-list-column">
-											<?php foreach ( array_slice($TLDnames, $index, 4) as $tld ) { ?>
-												<section class="price-list-item">
-													<h4 style="display: inline-block;">
-														<a class="price_tld" href="#">.<?php if ($tld == 'xn--p1ai') { echo 'рф'; } else { echo $tld; } ?></a>
-													</h4>
-													<h4 class="price-list-price pull-right"><?php echo $TLDprices[$tld]['price']; ?> руб.</h4>
-												</section>
-											<?php } ?>
-											</div>
-										<?php } $index += 1; 
-									} ?>
-								</div> -->
 								<?php 
 								$index = 0;
+								$d_id = 598;
 								foreach ($TLDnames as $smth) { 
 									if ($index % 6 == 0) { ?>
 										<div class="row">
@@ -182,12 +165,12 @@
 											<div class="col-md-2 col-sm-4 price-list-column">
 												<section class="price-list-item">
 													<h4 style="display: inline-block;">
-														<a class="price_tld" href="#">.<?php if ($tld == 'xn--p1ai') { echo 'рф'; } else { echo $tld; } ?></a>
+														<a class="price_tld" href="domain.php?id=<?php echo $d_id; ?>">.<?php if ($tld == 'xn--p1ai') { echo 'рф'; } else { echo $tld; } ?></a>
 													</h4>
 													<h4 class="price-list-price pull-right"><?php echo $TLDprices[$tld]['price']; ?> руб.</h4>
 												</section>
 											</div>
-										<?php } ?>
+										<?php $d_id += 1; } ?>
 										</div>
 									<?php } $index += 1; 
 								} ?>
