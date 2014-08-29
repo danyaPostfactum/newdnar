@@ -10,14 +10,10 @@
 					<img style="margin: -3px 2px 0px -3px; border: 0;" src="http://www.gemagency.ru/rubin.png" alt="Креативное агентство Джем" /><a href="http://www.gemagency.ru/" target="_blank">Проект креативного агентства Джем</a></p>
 				</div>
 				<div class="col-sm-9">
-					<p class="payment-icons-row">
-						<img src="dist/assets/img/payment/visa.png" alt="">
-						<img src="dist/assets/img/payment/mastercard.png" alt="">
-						<img src="dist/assets/img/payment/yandex-money.png" alt="">
-						<img src="dist/assets/img/payment/webmoney.png" alt="">
-						<img src="dist/assets/img/payment/robo.png" alt="">
-						<img src="dist/assets/img/payment/qiwi.png" alt="">
-						<img src="dist/assets/img/payment/paypal.png" alt="">
+					<p class="">
+					
+
+
 					</p>
 				</div>
 			</footer>

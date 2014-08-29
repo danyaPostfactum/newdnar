@@ -7366,12 +7366,6 @@ footer {
 .footer-line {
   margin-top: 70px;
 }
-.payment-icons-row {
-  float: right;
-}
-.payment-icons-row img {
-  margin-left: 25px;
-}
 .modal-dialog {
   width: 290px;
 }
@@ -7450,4 +7444,35 @@ footer {
   display: inline-block;
   position: relative;
   bottom: -1px;
+}
+.payment-icons-row {
+  background-color: #F2EFF1;
+  width: 100%;
+  float: right;
+  height: 60px;
+  padding-top: 16px;
+  margin-top: 5px;
+}
+.payment-icons-row img {
+  margin-left: 32px;
+}
+.payment-icons-row a {
+  color: #000;
+}
+.payment-icons-row span {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.payment-icons-row .payment-icons-row-desc {
+  margin-right: 10px;
+  margin-left: 15px;
+}
+.payment-icons-row .payment-icons-row-img {
+  text-align: center;
+}
+.payment-icons-row .payment-icons-row-link {
+  float: right;
+  margin-right: 15px;
+  margin-left: 10px;
+  margin-top: 5px;
 }
