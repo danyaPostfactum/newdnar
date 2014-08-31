@@ -3,13 +3,13 @@
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/handlebars-v1.3.0.js"></script>
-		<script src="js/punycode.min.js"></script>
+		<script src="<?php echo BASE_URL; ?>js/bootstrap.min.js"></script>
+		<script src="<?php echo BASE_URL; ?><?php echo BASE_URL; ?>js/handlebars-v1.3.0.js"></script>
+		<script src="<?php echo BASE_URL; ?>js/punycode.min.js"></script>
 		<!-- <script src="js/jquery-ui-1.10.4.custom.min.js"></script> -->
 		<?php if (isset($page_name) && $page_name == 'hostings') { ?>
-			<script src="js/jquery.mixitup.js"></script>
-			<script src="js/multi-dimensional-filter.js"></script>
+			<script src="<?php echo BASE_URL; ?>js/jquery.mixitup.js"></script>
+			<script src="<?php echo BASE_URL; ?>js/multi-dimensional-filter.js"></script>
 			<script>
 				$(function(){
 					    
@@ -70,11 +70,11 @@
 		<?php } ?>
 
 		<?php if (isset($page_name) && $page_name == 'domains') { ?>
-		<script src="js/whois.js"></script>
+		<script src="<?php echo BASE_URL; ?>js/whois.js"></script>
 		<?php } ?>
 		
 		<?php if (isset($need_form) && $need_form) { ?>
-			<script src="js/sendform.js"></script>
+			<script src="<?php echo BASE_URL; ?>js/sendform.js"></script>
 			<!-- // <script src="js/dropzone.js"></script> -->
 		<?php } ?>
 		<script>
