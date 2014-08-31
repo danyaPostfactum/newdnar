@@ -1,4 +1,4 @@
 RewriteEngine On
 RewriteRule ^(\w+)$ $1.php [NC]
 
-RewriteRule ^domain/(.*)$ domain.php?name=$1
+RewriteRule ^domains/(.*)$ domain.php?name=$1
