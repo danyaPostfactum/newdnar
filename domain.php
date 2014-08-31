@@ -1,60 +1,74 @@
 <?php 
-$page_name = 'domains';
+$page_name = 'domains_info';
 $page_title = 'Домены';
 require_once('config.php');
 require('functions.php');
 
 
 $domains_info = array(
-		'598' => array(
+		'ru' => array(
 				'name' => 'ru',
-				'description' => 'Домен .RU является официальным доменом России. Использование домена .RU рекомендуется для сайтов относящихся к России или содержащих подобную информацию, для компаний и частных лиц которые находятся в России, выходят на ее рынок и, естественно, всем кому подходит данная доменная зона.'
+				'description' => 'Домен .RU является официальным доменом России. Использование домена .RU рекомендуется для сайтов относящихся к России или содержащих подобную информацию, для компаний и частных лиц которые находятся в России, выходят на ее рынок и, естественно, всем кому подходит данная доменная зона.',
+				'restrictions' => 'Ограничения на регистрацию и использование доменного имени в зоне .RU отсутствуют' // лучше просто задать None или false
 			),
-		'599' => array(
+		'com' => array(
 				'name' => 'com',
-				'description' => "No description yet"
+				'description' => "Домен .COM международный домен верхнего уровня. Рекомендуется для организаций и частных лиц занимающихся коммерческой деятельностью.",
+				'restrictions' => false
 			),
-		'600' => array(
-				'name' => 'se',
-				'description' => "No description yet"
+		'su' => array(
+				'name' => 'su',
+				'description' => "Домен .SU является официальным доменом бывшего СССР. Использование домена .SU рекомендуется для сайтов относящихся к республикам бывшего СССР или содержащих подобную информацию, для компаний и частных лиц которые находятся на территории бывшего СССР, выходят на их рынок и, естественно, всем кому подходит данная доменная зона.",
+				'restrictions' => false
 			),
 
-		'601' => array(
+		'org' => array(
 				'name' => 'org',
-				'description' => "No description yet"
+				'description' => "Домен .ORG международный домен верхнего уровня. Рекомендуется для сайтов организаций и частных лиц занимающихся общественной деятельностью",
+				'restrictions' => false
 			),
-		'602' => array(
-				'name' => 'some domain',
-				'description' => "No description yet"
+		'net' => array(
+				'name' => 'net',
+				'description' => "Домен .NET международный домен верхнего уровня. Рекомендуется для телекоммуникационных компаний, а также для организаций и частных лиц имеющих отношение к сетевым технологиям.",
+				'restrictions' => false
 			),
-		'603' => array(
-				'name' => 'some domain',
-				'description' => "No description yet"
+		'info' => array(
+				'name' => 'info',
+				'description' => "Домен .INFO международный домен верхнего уровня. Рекомендуется для всех, кто желает разместить в Интернете информацию о себе, своем предприятиии, товаре или услуге.",
+				'restrictions' => false
 			),
-		'604' => array(
-				'name' => 'some domain',
-				'description' => "No description yet"
+		'me' => array(
+				'name' => 'me',
+				'description' => "Доменная зона .me принадлежит Черногории и была создана 24 сентября 2007 года. Администратором доменной зоны .me является Центр информационных систем университета Черногории (Centre of Information Systems, University of Montenegro)",
+				'restrictions' => false
 			),
 		'605' => array(
 				'name' => 'some domain',
-				'description' => "No description yet"
+				'description' => "No description yet",
+				'restrictions' => false
 			),
 		'606' => array(
 				'name' => 'some domain',
-				'description' => "No description yet"
+				'description' => "No description yet",
+				'restrictions' => false
 			),
 		'607' => array(
 				'name' => 'some domain',
-				'description' => "No description yet"
+				'description' => "No description yet",
+				'restrictions' => false
 			),
 		'608' => array(
 				'name' => 'some domain',
-				'description' => "No description yet"
+				'description' => "No description yet",
+				'restrictions' => false
 			)
 	);
 
-if ( isset($_GET['id']) ) {
-	$domain_id = $_GET['id'];
+if ( isset($_GET['name']) ) {
+	$have_domain = true;
+	$domain_name = $_GET['name'];
+} else {
+	$have_domain = false;
 }
 
 include("views/domain.tmpl.php");

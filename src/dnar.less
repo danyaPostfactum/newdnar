@@ -8,6 +8,7 @@ body {
 	padding-top: @navbar-height;
 }
 
+
 .container {
 	position: relative;
 	// padding-right: 60px;
@@ -18,7 +19,6 @@ body {
 .navbar-brand {
 	margin-top: -9px;
 }
-
 .navbar {
 	a {
 		text-transform: uppercase;
@@ -728,8 +728,18 @@ footer {
 }
 
 
-
+.payment-icons-row-wrapper {
+    margin-top: 50px;
+    & + hr {
+    	margin-top: 10px;
+    }
+}
 .payment-icons-row {
+    background-color: #F2EFF1;
+    width: 100%;
+    float: right;
+    height: 60px;
+    padding-top: 16px;
 	img {
 		margin-left: 32px; // 25px;
 	}
@@ -755,10 +765,4 @@ footer {
         margin-left: 10px;
         margin-top: 5px;
     }
-    background-color: #F2EFF1;
-    width: 100%;
-    float: right;
-    height: 60px;
-    padding-top: 16px;
-    margin-top: 5px;
 }

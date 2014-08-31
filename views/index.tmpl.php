@@ -157,7 +157,6 @@
 								<!-- pricelist "table" -->
 								<?php 
 								$index = 0;
-								$d_id = 598;
 								foreach ($TLDnames as $smth) { 
 									if ($index % 6 == 0) { ?>
 										<div class="row">
@@ -165,12 +164,12 @@
 											<div class="col-md-2 col-sm-4 price-list-column">
 												<section class="price-list-item">
 													<h4 style="display: inline-block;">
-														<a class="price_tld" href="domain.php?id=<?php echo $d_id; ?>">.<?php if ($tld == 'xn--p1ai') { echo 'рф'; } else { echo $tld; } ?></a>
+														<a class="price_tld" href="domain.php?name=<?php echo $tld; ?>">.<?php if ($tld == 'xn--p1ai') { echo 'рф'; } else { echo $tld; } ?></a>
 													</h4>
 													<h4 class="price-list-price pull-right"><?php echo $TLDprices[$tld]['price']; ?> руб.</h4>
 												</section>
 											</div>
-										<?php $d_id += 1; } ?>
+										<?php } ?>
 										</div>
 									<?php } $index += 1; 
 								} ?>
@@ -217,23 +216,5 @@
 				<?php include('views/partial_views/index.move-domains.php'); ?>
 			</div>
 
-        
-
-<div class="payment-icons-row">
-                    <span class="payment-icons-row-desc">Принимаем к оплате</span>
-					<span class="payment-icons-row-img">	
-					    <img src="dist/assets/img/payment/visa_logo.png" height="18px" alt="">
-						<img src="dist/assets/img/payment/mastercard_logo.png" height="27px" alt="">
-						<img src="dist/assets/img/payment/sberbank_logo.png" height="29px" alt="">
-						<img src="dist/assets/img/payment/yandex-money.png" alt="">
-						<img src="dist/assets/img/payment/webmoney.png" alt="">
-						<img src="dist/assets/img/payment/qiwi.png" style="margin-top:2px;" alt="">
-						<img src="dist/assets/img/payment/rbk_logo.png" height="29px" alt="">
-						<img src="dist/assets/img/payment/bank-icon.png" height="29px" alt="">
-					</span>	
-				    <span class="payment-icons-row-link"><a href="<?php echo BASE_URL; ?>/#payment">Все способы оплаты</a></span>
-</div>
-
-    
 
 <?php include(ROOT_PATH . '_partials/footer.php') ?>
