@@ -164,7 +164,7 @@
 											<div class="col-md-2 col-sm-4 price-list-column">
 												<section class="price-list-item">
 													<h4 style="display: inline-block;">
-														<a class="price_tld" href="domain.php?name=<?php echo $tld; ?>">.<?php if ($tld == 'xn--p1ai') { echo 'рф'; } else { echo $tld; } ?></a>
+														<a class="price_tld" href="domain/<?php echo $tld; ?>">.<?php if ($tld == 'xn--p1ai') { echo 'рф'; } else { echo $tld; } ?></a>
 													</h4>
 													<h4 class="price-list-price pull-right"><?php echo $TLDprices[$tld]['price']; ?> руб.</h4>
 												</section>
