@@ -4,7 +4,7 @@
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="<?php echo BASE_URL; ?>js/bootstrap.min.js"></script>
-		<script src="<?php echo BASE_URL; ?><?php echo BASE_URL; ?>js/handlebars-v1.3.0.js"></script>
+		<script src="<?php echo BASE_URL; ?>js/handlebars-v1.3.0.js"></script>
 		<script src="<?php echo BASE_URL; ?>js/punycode.min.js"></script>
 		<!-- <script src="js/jquery-ui-1.10.4.custom.min.js"></script> -->
 		<?php if (isset($page_name) && $page_name == 'hostings') { ?>
