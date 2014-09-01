@@ -14,7 +14,7 @@
     	<link rel="icon" href="./favicon.png" type="image/x-icon" />
 
 		<!-- Bootstrap core CSS -->
-		<link href="dist/css/main.css" rel="stylesheet">
+		<link href="<?php echo BASE_URL; ?>dist/css/main.css" rel="stylesheet">
 
 		<!-- Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500,900&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
