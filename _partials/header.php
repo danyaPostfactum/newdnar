@@ -10,8 +10,8 @@
 		<meta name="keywords" content="<?php echo $keywords; ?>">
 		<meta name="author" content="">
 		
-		<link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
-    	<link rel="icon" href="./favicon.png" type="image/x-icon" />
+		<link rel="shortcut icon" href="<?php echo BASE_URL; ?>favicon.png" type="image/x-icon" />
+    	<link rel="icon" href="<?php echo BASE_URL; ?>favicon.png" type="image/x-icon" />
 
 		<!-- Bootstrap core CSS -->
 		<link href="<?php echo BASE_URL; ?>dist/css/main.css" rel="stylesheet">
@@ -20,14 +20,14 @@
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500,900&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
 
 		<!-- Icons -->
-		<link rel="stylesheet" href="dist/assets/fonts/icomoons.css">
+		<link rel="stylesheet" href="<?php echo BASE_URL; ?>dist/assets/fonts/icomoons.css">
 
 		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
 		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-		<script src="dist/assets/js/ie-emulation-modes-warning.js"></script>
+		<script src="<?php echo BASE_URL; ?>dist/assets/js/ie-emulation-modes-warning.js"></script>
 
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-		<script src="dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+		<script src="<?php echo BASE_URL; ?>dist/assets/js/ie10-viewport-bug-workaround.js"></script>
 
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
@@ -79,7 +79,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="<?php echo BASE_URL; ?>"><img src="dist/assets/img/logo.png"></a>
+					<a class="navbar-brand" href="<?php echo BASE_URL; ?>"><img src="<?php echo BASE_URL; ?>dist/assets/img/logo.png"></a>
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
