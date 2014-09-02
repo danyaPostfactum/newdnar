@@ -24,6 +24,15 @@ var WhoisSearch = {
 				return opts.inverse(this);
 			}
 		});
+		
+		Handlebars.registerHelper('if_RuSuRf', function(tld, opts) {
+			if (tld === "ru" || tld == "su") {
+				return opts.fn(this)
+			} else {
+				return opts.inverse(this);
+			}
+		});
+
 
 		Handlebars.registerHelper('parseRf', function(domain_name) {
 			return punycode.toUnicode(domain_name);
@@ -143,7 +152,7 @@ var WhoisSearch = {
 	displayWhoisResults: function(whoisArray) {
 		console.log(whoisArray);
 		this.updateBtnProgress(this);
-		var domainName = whoisArray.regrinfo.domain.name;
+		var domainName = whoisArray.domain.name;
 		var dotPos = domainName.lastIndexOf('.') ;
 		var tld = domainName.slice(dotPos + 1);
 		// if ( tld == "xn--p1ai" ) { tld = "rf" };

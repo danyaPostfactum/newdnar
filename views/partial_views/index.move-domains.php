@@ -41,25 +41,29 @@
 				<!-- domain ready display -->			
 				<script type="text/x-handlebars-template" id="tld-move-card-template">
 					<ul class="list-group">
-						{{#if_free regrinfo.registered}}
+						{{#if available}}
 						<li class="list-group-item domain-item domain-item-free">
 						{{else}}
 						<li class="list-group-item domain-item domain-item-taken">
-						{{/if_free}}
-							<strong>{{parseRf regrinfo.domain.name}}</strong>
-							{{#if_unknown regrinfo.registered}}
+						{{/if}}
+							<strong>{{parseRf domain.name}}</strong>
+							{{#if_unknown available}}
 							<span class="domain-item-price pull-right">Unknown!!!</span>
 							{{else}}
 							<span class="domain-item-price pull-right">{{domain_price}} руб.</span>
 							{{/if_unknown}}
 							<p class="item-description">
-								{{#if_free regrinfo.registered}}<a href="http://domain.dnar.ru">Зарегистрировать</a>
+								{{#if available}}<a href="http://domain.dnar.ru">Зарегистрировать</a>
 								{{else}}Домен зарегистрирован. <a href="#" class="more-whois-info">Перенести к нам</a>
 								<div class="more-whois-content">
+									{{#if_RuSuRf domain.tld}}
 									<p>Регистратор домена: <strong><code style="color: #328bf4">{{regyinfo.registrar}}</code></strong>. Чтобы перенести домен к нам, нужно: <br>
-									--- Инструкция ---</p>
+									--- Инструкция для ru/su/рф ---</p>
+									{{else}}
+									<p>Инструкция для всех остальных доменов</p>
+									{{/if_RuSuRf}}
 								</div>
-								{{/if_free}}</p>
+								{{/if}}</p>
 						</li>
 					</ul>
 				</script>

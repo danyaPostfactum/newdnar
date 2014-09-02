@@ -78,19 +78,19 @@
 								<!-- domain ready display -->			
 								<script type="text/x-handlebars-template" id="tld-card-template">
 									<ul class="list-group">
-										{{#if_free regrinfo.registered}}
+										{{#if available}}
 										<li class="list-group-item domain-item domain-item-free">
-											<strong>{{parseRf regrinfo.domain.name}}</strong>
+											<strong>{{parseRf domain.name}}</strong>
 											<span class="domain-item-price pull-right">{{domain_price}} руб.</span>
 										{{else}}
 										<li class="list-group-item domain-item domain-item-taken">
-											<strong>{{parseRf regrinfo.domain.name}}</strong>
-										{{/if_free}}
+											<strong>{{parseRf domain.name}}</strong>
+										{{/if}}
 											<p>
-												{{#if_free regrinfo.registered}}
+												{{#if available}}
 													Свободен   <span style="float:right;"><a href="#" data-toggle="modal" data-target="#dnarLoginModal">Зарегистрировать</a></span>
 												{{else}}
-													Занят    <span style="float:right;"><a href="#" class="more-whois-info">Подробнее</a></span>
+													Занят <span style="float:right;"><a href="#" class="more-whois-info">Подробнее</a></span>
 													<div class="more-whois-content">
 														{{#if regyinfo.referrer}}
 														<ul>
@@ -103,37 +103,12 @@
 														</ul>
 														{{/if}}
 													</div>
-												{{/if_free}}
+												{{/if}}
 											</p>
 										</li>
 									</ul>
 								</script>
 							</div>
-							<?php if ( isset($search_value) ) { ?>
-								<?php if ( !empty($domain_error_message) ) { ?>
-									<span class="help-block"><?php echo "err: " . $domain_error_message; ?></span>
-								<?php } else { ?>
-									<div class="row">
-										<?php if ( isset($domainQueryArray) ) { 
-											if ( $domainQueryArray["TLDisset"] ) {
-												$whois = getDomainInfo($domainQueryArray["domain_name"] . $domainQueryArray["TLD"]); 
-												echo echoWhoisHtmlSpecs($whois);
-											} else {
-												$everyWhois = getAllDomains($domainQueryArray["domain_name"]);
-												$index = 0;
-												foreach ($everyWhois as $one_whois) {
-													$index = $index + 1;
-													echo echoWhoisHtmlSpecs($one_whois);
-													if ($index % 4 == 0) {
-														echo "</div><div class='row'>";
-													}
-												}
-											}
-										}?>
-
-									</div>
-								<?php } ?>
-							<?php } ?>
 						</div>
 					</div>
 

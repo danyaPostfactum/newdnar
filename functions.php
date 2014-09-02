@@ -35,7 +35,7 @@ function structure_domain_name($domain_name) {
 	return $domainArray;
 }
 
-function queryWhois($query_value) {
+function phpWhois($query_value) { // using phpwhois script
 	include_once('phpwhois/whois.main.php');
 	// include_once('phpwhois/whois.utils.php');
 
@@ -60,16 +60,46 @@ function queryWhois($query_value) {
 	return $whoisArray;
 }
 
+function queryWhoIs($query_value) { // using reg.ru whois script
+	include_once('php-whois/src/Phois/Whois/Whois.php');
+	$whois_info_array = array();
+
+	$whois_info = new Phois\Whois\Whois($query_value);
+	$whois_info_array['available'] = $whois_info->isAvailable();
+	$whois_info_array['regyinfo'] = array();
+	$whois_info_array['domain'] = array(
+			'name' => $whois_info->getDomain(),
+			'tld' => $whois_info->getTLDs()
+		);
+	$whois_answer = $whois_info->info();
+
+	// regex for registrar info for RU/SU/RF
+	$domain_TLD = $whois_info->getTLDs();
+	$matches = false;
+	if ($domain_TLD === "su" || $domain_TLD === "ru") {
+		preg_match("/registrar\s*:\s*(\S+)/", $whois_answer, $matches);
+		if ($matches) {
+			$whois_info_array['regyinfo']['registrar'] = $matches[1];
+		}
+	}
+
+
+	return $whois_info_array;
+}
+
 function getDomainInfo($domain_name) {
 	global $TLDprices;
+	$domain_array = queryWhoIs($domain_name);
+
+	// add price info to the resulting array:
 	$dotPos = strrpos($domain_name, '.');
 	$tld = substr($domain_name, $dotPos+1);
-	$domain_array = queryWhoIs($domain_name);
 	$domain_array['domain_price'] = $TLDprices[$tld]['price'];
 	return $domain_array;
 }
 
 function getAllDomains($domain_name) {
+	// this function is not really used now *********
 	global $TLDnames;
 	$allWhois = array();
 	foreach ($TLDnames as $TLD) {
@@ -79,6 +109,7 @@ function getAllDomains($domain_name) {
 }
 
 function echoWhoisHtmlSpecs($whois) {
+	// this function is not really used now *********
 	$output = '';
 	$output .= "<div class='col-sm-3'><ul class='list-group'><li class='list-group-item'>";
 	$output .= "<strong>Домен:</strong> " . $whois['regrinfo']['domain']['name'];
