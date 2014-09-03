@@ -70,6 +70,7 @@
 												  <div class="loading-ball1"></div>
 											    </div>
 											  	<p>Загрузка <b>{{../name}}.{{this}}</b></p>
+											  	<p>&nbsp;</p>
 											</li>
 										</ul>
 									</div>
@@ -86,25 +87,23 @@
 										<li class="list-group-item domain-item domain-item-taken">
 											<strong>{{parseRf domain.name}}</strong>
 										{{/if}}
-											<p>
-												{{#if available}}
-													Свободен   <span style="float:right;"><a href="#" data-toggle="modal" data-target="#dnarLoginModal">Зарегистрировать</a></span>
-												{{else}}
-													Занят <span style="float:right;"><a href="#" class="more-whois-info">Подробнее</a></span>
-													<div class="more-whois-content">
-														{{#if regyinfo.referrer}}
-														<ul>
-															<li>Referrer: {{regyinfo.referrer}}</li>
-															<li>Registrar: {{regyinfo.registrar}}</li>
-														</ul>
-														{{else}}
-														<ul>
-															<li>Не удалось получить точную информацию</li>
-														</ul>
-														{{/if}}
-													</div>
-												{{/if}}
-											</p>
+											{{#if available}}
+												<p>Свободен <span style="float:right;"><a href="#" data-toggle="modal" data-target="#dnarLoginModal">Зарегистрировать</a></span></p>
+											{{else}}
+												<p>Занят <span style="float:right;"><a href="#" class="more-whois-info">Подробнее</a></span></p>
+												<div class="more-whois-content">
+													{{#if regyinfo.referrer}}
+													<ul>
+														<li>Referrer: {{regyinfo.referrer}}</li>
+														<li>Registrar: {{regyinfo.registrar}}</li>
+													</ul>
+													{{else}}
+													<ul>
+														<li>Не удалось получить точную информацию</li>
+													</ul>
+													{{/if}}
+												</div>
+											{{/if}}
 										</li>
 									</ul>
 								</script>
