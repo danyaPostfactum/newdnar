@@ -87,7 +87,7 @@
 						<li <?php if ($page_name == 'domains') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>">Домены</a></li>
 						<li <?php if ($page_name == 'ssl') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>ssl">SSL сертификаты</a></li>
 						<li <?php if ($page_name == 'hostings') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>hostings">Хостинги</a></li>
-						<li <?php if ($page_name == 'analyze') { ?>class="active"<?php } ?>><a href="#about">Анализ сайтов</a></li>
+						<li <?php if ($page_name == 'analyze') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>check">Анализ сайтов</a></li>
 						<li <?php if ($page_name == 'garant') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>garant">Гарант сделок</a></li>
 						<li <?php if ($page_name == 'support') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>support">Поддержка сайтов</a></li>
 
