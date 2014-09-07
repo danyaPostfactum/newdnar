@@ -1,3 +1,8 @@
+AddDefaultCharset utf-8
+#Action php5.3-script  /cgi-bin/php5.3.cgi
+#AddType php5.3-script .php
+
+
 RewriteEngine On
 RewriteRule ^(\w+)$ $1.php [NC]
 
