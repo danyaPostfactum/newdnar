@@ -26,7 +26,7 @@ var WhoisSearch = {
 		});
 		
 		Handlebars.registerHelper('if_RuSuRf', function(tld, opts) {
-			if (tld === "ru" || tld == "su") {
+			if (tld === "ru" || tld == "su" || tld == 'xn--p1ai') {
 				return opts.fn(this)
 			} else {
 				return opts.inverse(this);

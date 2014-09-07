@@ -61,7 +61,7 @@ function phpWhois($query_value) { // using phpwhois script
 }
 
 function queryWhoIs($query_value) { // using reg.ru whois script
-	include_once('php-whois/src/Phois/Whois/Whois.php');
+	include_once('new-php-whois/src/Phois/Whois/Whois.php');
 	$whois_info_array = array();
 
 	$whois_info = new Phois\Whois\Whois($query_value);
@@ -76,7 +76,7 @@ function queryWhoIs($query_value) { // using reg.ru whois script
 	// regex for registrar info for RU/SU/RF
 	$domain_TLD = $whois_info->getTLDs();
 	$matches = false;
-	if ($domain_TLD === "su" || $domain_TLD === "ru") {
+	if ($domain_TLD === "su" || $domain_TLD === "ru" || $domain_TLD === 'xn--p1ai') {
 		preg_match("/registrar\s*:\s*(\S+)/", $whois_answer, $matches);
 		if ($matches) {
 			$whois_info_array['regyinfo']['registrar'] = $matches[1];
