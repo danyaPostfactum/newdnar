@@ -13,11 +13,12 @@ RewriteEngine On
 RewriteRule ^(\w+)$ $1.php [NC]
 
 RewriteRule ^domains/(.*)$ domain.php?name=$1
+RewriteRule ^hostings/dnar$ dhost.php
 
 
 # Редирект старый страниц
-RewriteRule ^8.html$ http://dnar.ru/hostings [R=301,L]
+RewriteRule ^8.html$ http://dnar.ru/hostings/dnar [R=301,L]
 RewriteRule ^88.html$ http://dnar.ru/hostings/dnar [R=301,L]
-RewriteRule ^888.html$ http://dnar.ru/hostings [R=301,L]
+RewriteRule ^888.html$ http://dnar.ru/hostings/dnar [R=301,L]
 RewriteRule ^yandex-money.html$ http://dnar.ru/#payment [R=301,NE,B,L]
 RewriteRule ^qiwi-money.html$ http://dnar.ru/#payment [R=301,NE,B,L]

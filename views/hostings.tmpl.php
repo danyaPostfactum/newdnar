@@ -5,8 +5,6 @@
  	include(ROOT_PATH . '_partials/header.php') 
 ?>
 
-<!-- Количество баз данных, дисковое пространство, цена 
-	тестовый период (t/f), скрипты php/perl/python (t/f), платформа (radio Unix, Windows) -->
 <?php 
 $hosters = array();
 $hosters['timeweb'] = array(
@@ -14,10 +12,10 @@ $hosters['timeweb'] = array(
 	'img' => 'http://placehold.it/16x16',
 	'url' => 'http://timeweb.ru'
 	);
-$hosters['reg.ru'] = array(
-	'name' => 'REG.RU',
-	'img' => 'http://placehold.it/16x16',
-	'url' => 'http://reg.ru'
+$hosters['dnar'] = array(
+	'name' => 'DNAR.RU',
+	'img' => 'dist/assets/img/hostings/dnar.png',
+	'url' => 'http://dnar.ru/hostings/dnar'
 	);
 $hosters['nic.ru'] = array(
 	'name' => 'Nic',
@@ -43,9 +41,9 @@ $pricing_options = array(
 			'OS' => 'Unix'
 			),
 		'price' => 407.5, 
-		'url' => 'http://hosting.r01.ru',
+		'url' => 'http://localhost/newdnar/hostings/dnar',
 		'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque animi optio molestias, ab dolor veritatis numquam. Qui dicta recusandae iste, quasi corporis excepturi.',
-		'hoster' => $hosters['R01']
+		'hoster' => $hosters['dnar']
 		),
 	array(
 		'name' => 'Something',
@@ -93,7 +91,7 @@ $pricing_options = array(
 		'price' => 300, 
 		'url' => 'http://timeweb.com/ru/services/hosting/',
 		'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, excepturi. And something else.',
-		'hoster' => $hosters['reg.ru']
+		'hoster' => $hosters['dnar']
 		)
 	);
 
@@ -178,8 +176,8 @@ $pricing_options = array(
 					<div class="row">
 						<div class="col-sm-12">
 							<h4 class="tarif-name">
-								<img class="hoster-icon" src="<?php echo $hoster_img; ?>" alt="">
-								<a href="<?php echo $tarif_url; ?>"><?php echo $tarif_name; ?></a>
+								<img class="hoster-icon" src="<?php echo BASE_URL; ?><?php echo $hoster_img; ?>" alt="">
+								<a href="<?php echo $tarif_url; ?>" target="_blank" rel="nofollow"><?php echo $tarif_name; ?></a>
 								<span class="tarif-price-label tarif-price">
 									<?php echo $price; ?> <i class="icon-ruble"></i><span style="font-size: 13px;">/месяц</span>
 								</span>

@@ -3,7 +3,7 @@
 			<div class="scroll-top">
 				<span class="scroll-top-item"><span class="glyphicon glyphicon-chevron-up"></span></span>
 			</div>
-		<?php if ($page_name == 'domains')  { ?>
+		<?php if ($page_name == 'domains' or $page_name == 'dhost' or $page_name == 'domains_info')  { ?>
 			<div class="row payment-icons-row-wrapper">
 				<div class="col-sm-12">
 					<div class="payment-icons-row">

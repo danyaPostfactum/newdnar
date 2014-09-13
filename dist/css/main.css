@@ -6399,6 +6399,14 @@ a.sort:hover {
 .table > tbody > tr > td {
   font-size: 13px;
 }
+.dhost .dhfirst {
+  text-align: left;
+}
+.dhost td,
+.dhost th {
+  text-align: center;
+  width: 25%;
+}
 footer {
   color: #777777;
   padding-bottom: 15px;
