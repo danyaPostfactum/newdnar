@@ -5918,7 +5918,8 @@ body {
   text-decoration: none;
 }
 .show-more-question {
-  margin-top: 20px;
+  margin-top: 10px;
+  line-height: 1.2;
 }
 .show-more-content {
   display: none;
@@ -6533,4 +6534,13 @@ footer {
 }
 .domains-cost {
   float: right;
+}
+.faq-table {
+  width: 100%;
+}
+.faq-table tr {
+  vertical-align: top;
+}
+.faq-table td {
+  width: 50%;
 }
