@@ -53,11 +53,12 @@
 							<span class="domain-item-price pull-right">{{domain_price}} руб.</span>
 							{{/if_unknown}}
 							<p class="item-description">
-								{{#if available}}<a href="http://domain.dnar.ru">Зарегистрировать</a>
-								{{else}}Домен зарегистрирован. <a href="#" class="more-whois-info">Перенести к нам</a>
+								{{#if available}}<a href="#" data-toggle="modal" data-target="#dnarLoginModal">Зарегистрировать</a><span style="float:right;">Домен свободен</span>
+								{{else}}<a href="#" class="more-whois-info">Перенести к нам</a><span style="float:right;">Домен занят</span>
 								<div class="more-whois-content">
 									{{#if_RuSuRf domain.tld}}
-									<p>Регистратор домена: <strong><code style="color: #328bf4">{{regyinfo.registrar}}</code></strong>. Чтобы перенести домен к нам, нужно: <br>
+									<p>Текущий регистратор домена: <strong><code style="color: #328bf4">{{regyinfo.registrar}}</code></strong>
+                                    <br><br>Для того, чтобы перенести домен к нам, нужно: <br>
 									--- Инструкция для ru/su/рф ---</p>
 									{{else}}
 									<p>Инструкция для всех остальных доменов</p>
