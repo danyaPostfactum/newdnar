@@ -22,3 +22,8 @@ RewriteRule ^88.html$ http://dnar.ru/hostings/dnar [R=301,L]
 RewriteRule ^888.html$ http://dnar.ru/hostings/dnar [R=301,L]
 RewriteRule ^yandex-money.html$ http://dnar.ru/#payment [R=301,NE,B,L]
 RewriteRule ^qiwi-money.html$ http://dnar.ru/#payment [R=301,NE,B,L]
+
+
+# Редиректы реферальных ссылок :)
+RewriteRule ^hostings/timeweb$ http://timeweb.com/ru/services/hosting/?i=3591&a=0006 [R=301,L]
+

@@ -41,7 +41,7 @@ $pricing_options = array(
 			'OS' => 'Unix'
 			),
 		'price' => 201.6, 
-		'url' => 'http://localhost/newdnar/hostings/dnar',
+		'url' => 'dnar',
 		'description' => '',
 		'hoster' => $hosters['dnar']
 		),
@@ -57,7 +57,7 @@ $pricing_options = array(
 			'OS' => 'UNIX'
 			),
 		'price' => 316.8, 
-		'url' => 'http://localhost/newdnar/hostings/dnar',
+		'url' => 'dnar',
 		'description' => '',
 		'hoster' => $hosters['dnar']
 		),
@@ -73,7 +73,7 @@ $pricing_options = array(
 			'OS' => 'UNIX'
 			),
 		'price' => 489.6, 
-		'url' => 'http://localhost/newdnar/hostings/dnar',
+		'url' => 'dnar',
 		'description' => '',
 		'hoster' => $hosters['dnar']
 		),
@@ -89,7 +89,7 @@ $pricing_options = array(
 			'OS' => 'Unix'
 			),
 		'price' => 120, 
-		'url' => 'http://timeweb.com/ru/services/hosting/?i=3591&a=0006',
+		'url' => 'timeweb',
 		'description' => '',
 		'hoster' => $hosters['timeweb']
 		),
@@ -105,7 +105,7 @@ $pricing_options = array(
 			'OS' => 'Unix'
 			),
 		'price' => 175, 
-		'url' => 'http://timeweb.com/ru/services/hosting/?i=3591&a=0006',
+		'url' => 'timeweb',
 		'description' => '',
 		'hoster' => $hosters['timeweb']
 		),
@@ -121,7 +121,7 @@ $pricing_options = array(
 			'OS' => 'Unix'
 			),
 		'price' => 265, 
-		'url' => 'http://timeweb.com/ru/services/hosting/?i=3591&a=0006',
+		'url' => 'timeweb',
 		'description' => '',
 		'hoster' => $hosters['timeweb']
 		),
@@ -137,7 +137,7 @@ $pricing_options = array(
 			'OS' => 'Unix'
 			),
 		'price' => 410, 
-		'url' => 'http://timeweb.com/ru/services/hosting/?i=3591&a=0006',
+		'url' => 'timeweb',
 		'description' => '',
 		'hoster' => $hosters['timeweb']
 		)
@@ -225,7 +225,8 @@ $pricing_options = array(
 						<div class="col-sm-12">
 							<h4 class="tarif-name">
 								<img class="hoster-icon" src="<?php echo BASE_URL; ?><?php echo $hoster_img; ?>" alt="">
-								<a href="<?php echo BASE_URL; ?>go.php?<?php echo $tarif_url; ?>" target="_blank" rel="nofollow"><?php echo $tarif_name; ?></a>
+								
+								<a href="<?php echo BASE_URL; ?>go.php?<?php echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'/'.$tarif_url; ?>" target="_blank" rel="nofollow"><?php echo $tarif_name; ?></a>
 								<span class="tarif-price-label tarif-price">
 									<?php echo $price; ?> <i class="icon-ruble"></i><span style="font-size: 13px;">/месяц</span>
 								</span>
