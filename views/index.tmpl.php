@@ -15,7 +15,7 @@
 						<p><a class="btn btn-primary" role="button" href="http://domain.dnar.ru/OFFERTA/offerta_add_select_type.khtml">Зарегистрироваться</a></p>
 					</div>
 					<div class="hidden-xs col-sm-5">
-						<img src="dist/assets/img/earth_rocket.png"class="pull-right" alt="">
+						<img src="<?php echo BASE_URL; ?>dist/assets/img/earth_rocket.png"class="pull-right" alt="">
 					</div>
 				</div>
 				
@@ -138,7 +138,7 @@
 											<div class="col-md-2 col-sm-4 price-list-column">
 												<section class="price-list-item">
 													<h4 style="display: inline-block;">
-														<a class="price_tld" href="domains/<?php echo $tld; ?>">.<?php if ($tld == 'xn--p1ai') { echo 'рф'; } else { echo $tld; } ?></a>
+														<a class="price_tld" title="О доменной зоне .<?php if ($tld == 'xn--p1ai') { echo 'рф'; } else { echo $tld; } ?>" href="domains/<?php echo $tld; ?>">.<?php if ($tld == 'xn--p1ai') { echo 'рф'; } else { echo $tld; } ?></a>
 													</h4>
 													<h4 class="price-list-price pull-right"><?php echo $TLDprices[$tld]['price']; ?> руб.</h4>
 												</section>

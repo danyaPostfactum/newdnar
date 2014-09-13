@@ -1,8 +1,14 @@
 <?php 
-	$title = 'Информация о доменном имени';
+    if ($domains_info[$domain_name]['name'] == 'xn--p1ai') { 
+        $domainname = 'рф'; 
+    } 
+    else { 
+        $domainname = $domains_info[$domain_name]['name']; 
+    };
+	$title = 'Регистрация дешевых доменов в зоне .'. $domainname;
 	$description = 'test1';
 	$keywords = 'test2';
-	include(ROOT_PATH . '_partials/header.php') 
+	include(ROOT_PATH . '_partials/header.php');
 ?>
 <?php if ($have_domain) { ?>
 <div class="jumbotron <?php if ($page_title == 'domains') { echo 'jumbotron-brand'; } ?>">
@@ -11,8 +17,8 @@
 			<div class="col-sm-9">
 			<?php if (isset($domains_info[$domain_name])) { ?>
 
-				<h1>Доменная зона<br/> <?php echo $domains_info[$domain_name]['name']; ?></h1>
-				<p><?php echo $domains_info[$domain_name]['description']; ?></p>
+				<h1>Доменная зона .<?php echo $domainname; ?></h1>		
+				
 
 			<?php } else { ?>
 
@@ -28,9 +34,19 @@
 </div>
 
 <div class="container">
+    <!--<div class="breadcrumb"><a href="<?php echo BASE_URL; ?>">Домены</a> / Доменная зона .<?php echo $domainname; ?></div>-->
 	<?php if (isset($domains_info[$domain_name])) { ?>
-		<p><?php echo $domains_info[$domain_name]['description']; ?></p>
-		<p><?php if ($domains_info[$domain_name]['restrictions'] === false) { echo 'Ограничения на регистрацию домена отсутствуют'; } ?></p>
+    <p>
+      <div class="domains-img"><img src="<?php echo BASE_URL; ?>dist/assets/img/domains/<?php echo $domains_info[$domain_name]['name']; ?>.png" alt="<?php echo $title; ?>" title="<?php echo $title; ?>"></div>
+            
+      <div class="domains-description"><?php echo $domains_info[$domain_name]['description']; ?></div>
+            
+      <div class="domains-cost"><button type="button" class="btn btn-default" data-toggle="modal" data-target="#dnarLoginModal">Зарегистрировать за <?php
+                    $tld = $domains_info[$domain_name]['name'];                               
+                    echo $TLDprices[$tld]['price']; 
+                    ?> руб.</button></div>
+    </p>
+		
 	<?php } ?>
 	
 <?php } else { ?>

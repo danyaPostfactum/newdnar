@@ -8,59 +8,89 @@ require('functions.php');
 $domains_info = array(
 		'ru' => array(
 				'name' => 'ru',
-				'description' => 'Домен .RU является официальным доменом России. Использование домена .RU рекомендуется для сайтов относящихся к России или содержащих подобную информацию, для компаний и частных лиц которые находятся в России, выходят на ее рынок и, естественно, всем кому подходит данная доменная зона.',
-				'restrictions' => 'Ограничения на регистрацию и использование доменного имени в зоне .RU отсутствуют' // лучше просто задать None или false
+				'description' => 'Домен .RU является официальным доменом России. Использование домена .RU рекомендуется для сайтов относящихся к России или содержащих подобную информацию, для компаний и частных лиц которые находятся в России, выходят на ее рынок и, естественно, всем кому подходит данная доменная зона.'
 			),
 		'com' => array(
 				'name' => 'com',
-				'description' => "Домен .COM международный домен верхнего уровня. Рекомендуется для организаций и частных лиц занимающихся коммерческой деятельностью.",
-				'restrictions' => false
+				'description' => "Домен .COM международный домен верхнего уровня. Рекомендуется для организаций и частных лиц занимающихся коммерческой деятельностью."
 			),
 		'su' => array(
 				'name' => 'su',
-				'description' => "Домен .SU является официальным доменом бывшего СССР. Использование домена .SU рекомендуется для сайтов относящихся к республикам бывшего СССР или содержащих подобную информацию, для компаний и частных лиц которые находятся на территории бывшего СССР, выходят на их рынок и, естественно, всем кому подходит данная доменная зона.",
-				'restrictions' => false
+				'description' => "Домен .SU является официальным доменом бывшего СССР. Использование домена .SU рекомендуется для сайтов относящихся к республикам бывшего СССР или содержащих подобную информацию, для компаний и частных лиц которые находятся на территории бывшего СССР, выходят на их рынок и, естественно, всем кому подходит данная доменная зона."
 			),
 
 		'org' => array(
 				'name' => 'org',
-				'description' => "Домен .ORG международный домен верхнего уровня. Рекомендуется для сайтов организаций и частных лиц занимающихся общественной деятельностью",
-				'restrictions' => false
+				'description' => "Домен .ORG международный домен верхнего уровня. Рекомендуется для сайтов организаций и частных лиц занимающихся общественной деятельностью"
 			),
 		'net' => array(
 				'name' => 'net',
-				'description' => "Домен .NET международный домен верхнего уровня. Рекомендуется для телекоммуникационных компаний, а также для организаций и частных лиц имеющих отношение к сетевым технологиям.",
-				'restrictions' => false
+				'description' => "Домен .NET международный домен верхнего уровня. Рекомендуется для телекоммуникационных компаний, а также для организаций и частных лиц имеющих отношение к сетевым технологиям."
 			),
 		'info' => array(
 				'name' => 'info',
-				'description' => "Домен .INFO международный домен верхнего уровня. Рекомендуется для всех, кто желает разместить в Интернете информацию о себе, своем предприятиии, товаре или услуге.",
-				'restrictions' => false
+				'description' => "Домен .INFO международный домен верхнего уровня. Рекомендуется для всех, кто желает разместить в Интернете информацию о себе, своем предприятиии, товаре или услуге."
 			),
 		'me' => array(
 				'name' => 'me',
 				'description' => "Доменная зона .me принадлежит Черногории и была создана 24 сентября 2007 года. Администратором доменной зоны .me является Центр информационных систем университета Черногории (Centre of Information Systems, University of Montenegro)",
 				'restrictions' => false
 			),
-		'605' => array(
-				'name' => 'some domain',
-				'description' => "No description yet",
-				'restrictions' => false
+		'biz' => array(
+				'name' => 'biz',
+				'description' => "No description yet"
 			),
-		'606' => array(
-				'name' => 'some domain',
-				'description' => "No description yet",
-				'restrictions' => false
+		'mobi' => array(
+				'name' => 'mobi',
+				'description' => "No description yet"
 			),
-		'607' => array(
-				'name' => 'some domain',
-				'description' => "No description yet",
-				'restrictions' => false
+		'name' => array(
+				'name' => 'name',
+				'description' => "No description yet"
 			),
-		'608' => array(
-				'name' => 'some domain',
-				'description' => "No description yet",
-				'restrictions' => false
+        'in' => array(
+				'name' => 'in',
+				'description' => "No description yet"
+			),
+		'mn' => array(
+				'name' => 'mn',
+				'description' => "No description yet"
+			),
+        'cc' => array(
+				'name' => 'cc',
+				'description' => "No description yet"
+			),
+		'ws' => array(
+				'name' => 'ws',
+				'description' => "No description yet"
+			),
+		'bz' => array(
+				'name' => 'bz',
+				'description' => "No description yet"
+			),
+        'asia' => array(
+				'name' => 'asia',
+				'description' => "No description yet"
+			),
+		'us' => array(
+				'name' => 'us',
+				'description' => "No description yet"
+			),
+        'tel' => array(
+				'name' => 'tel',
+				'description' => "No description yet"
+			),
+		'kz' => array(
+				'name' => 'kz',
+				'description' => "No description yet"
+			),
+        'xn--p1ai' => array(
+				'name' => 'xn--p1ai',
+				'description' => "No description yet"
+			),
+		'tv' => array(
+				'name' => 'tv',
+				'description' => "No description yet"
 			)
 	);
 

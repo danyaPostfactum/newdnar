@@ -1,0 +1,8 @@
+User-agent: Yandex
+Disallow: /whois/
+Host: dnar.ru
+
+User-agent: *
+Disallow: /whois/
+
+Sitemap: http://dnar.ru/sitemap.xml

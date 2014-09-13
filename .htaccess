@@ -4,6 +4,20 @@ AddDefaultCharset utf-8
 
 
 RewriteEngine On
+
+# Не забыть сделать редирект с www на без www
+# RewriteCond %{HTTP_HOST} ^www.dnar.ru$ [NC]
+# RewriteRule ^(.*)$ http://dnar.ru/$1 [R=301,L]
+
+
 RewriteRule ^(\w+)$ $1.php [NC]
 
 RewriteRule ^domains/(.*)$ domain.php?name=$1
+
+
+# Редирект старый страниц
+RewriteRule ^8.html$ http://dnar.ru/hostings [R=301,L]
+RewriteRule ^88.html$ http://dnar.ru/hostings/dnar [R=301,L]
+RewriteRule ^888.html$ http://dnar.ru/hostings [R=301,L]
+RewriteRule ^yandex-money.html$ http://dnar.ru/#payment [R=301,NE,B,L]
+RewriteRule ^qiwi-money.html$ http://dnar.ru/#payment [R=301,NE,B,L]
