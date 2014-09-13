@@ -225,7 +225,7 @@ $pricing_options = array(
 						<div class="col-sm-12">
 							<h4 class="tarif-name">
 								<img class="hoster-icon" src="<?php echo BASE_URL; ?><?php echo $hoster_img; ?>" alt="">
-								<a href="<?php echo BASE_URL; ?>stat.php?<?php echo $tarif_url; ?>" target="_blank" rel="nofollow"><?php echo $tarif_name; ?></a>
+								<a href="<?php echo BASE_URL; ?>go.php?<?php echo $tarif_url; ?>" target="_blank" rel="nofollow"><?php echo $tarif_name; ?></a>
 								<span class="tarif-price-label tarif-price">
 									<?php echo $price; ?> <i class="icon-ruble"></i><span style="font-size: 13px;">/месяц</span>
 								</span>
