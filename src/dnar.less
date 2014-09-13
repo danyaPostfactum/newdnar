@@ -437,7 +437,7 @@ body {
 .filter-column {
 	position: relative;
 	.box-shadow();
-	padding-bottom: 40px;
+	padding-bottom: 8px;//40px;
 }
 .card-wrapper {
 	width: 100%;
@@ -449,6 +449,42 @@ body {
 		font-size: 16px;
 	}
 }
+
+
+select {
+    //-webkit-appearance: button;
+    //-moz-appearance: button;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-padding-end: 20px;
+    -moz-padding-end: 20px;
+    -webkit-padding-start: 6px;
+    -moz-padding-start: 6px;
+    background-color: #FFF; /* fallback color if gradients are not supported */
+   // background-image: url(../images/select-arrow.png), -webkit-linear-gradient(top, #E5E5E5, #F4F4F4); /* For Chrome and Safari */
+   // background-image: url(../images/select-arrow.png), -moz-linear-gradient(top, #E5E5E5, #F4F4F4); /* For old Fx (3.6 to 15) */
+   // background-image: url(../images/select-arrow.png), -ms-linear-gradient(top, #E5E5E5, #F4F4F4); /* For pre-releases of IE 10*/
+   // background-image: url(../images/select-arrow.png), -o-linear-gradient(top, #E5E5E5, #F4F4F4); /* For old Opera (11.1 to 12.0) */ 
+   // background-image: url(../images/select-arrow.png), linear-gradient(to bottom, #E5E5E5, #F4F4F4); /* Standard syntax; must be last */
+    background-position: center right;
+    background-repeat: no-repeat;
+    border: 1px solid #AAA;
+    border-radius: 0px;
+   // box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   // color: #555;
+    font-size: inherit;
+    margin: 0;
+    overflow: hidden;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 98%;
+}
+
+
+
+
 .filter-columnd {
 	.card-wrapper:first-child {
 		margin-bottom: -7px;
@@ -486,6 +522,8 @@ a.sort {
 .category-name {
 	text-transform: none;
 }
+
+
 .tarif-name {
 	position: relative;
 	padding-left: 24px;
@@ -559,7 +597,7 @@ a.sort {
 
 // settings
 .settings-card {
-	border-bottom: 1px dotted @gray-lighter;
+
 	h1, h2, h3, h4 {
 		text-transform: none;
 	}
@@ -570,10 +608,17 @@ a.sort {
 	padding-bottom: 10px;
 }
 
+.range-filter {
+   	border-bottom: 1px dotted @gray-lighter; 
+}
+
+
 .order-settings-header {
 	margin-top: 5px;
 	padding-bottom: 10px;
 	font-weight: 400;
+    text-transform: none;
+    
 }
 
 .interval-input {
@@ -811,3 +856,4 @@ footer {
         width: 50%;
     }
 }
+

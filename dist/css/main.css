@@ -6211,7 +6211,7 @@ body {
   box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(0, 0, 0, 0);
   box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.1);
-  padding-bottom: 40px;
+  padding-bottom: 8px;
 }
 .card-wrapper {
   width: 100%;
@@ -6219,6 +6219,28 @@ body {
 }
 .card-wrapper h4 {
   font-size: 16px;
+}
+select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-padding-end: 20px;
+  -moz-padding-end: 20px;
+  -webkit-padding-start: 6px;
+  -moz-padding-start: 6px;
+  background-color: #FFF;
+  /* fallback color if gradients are not supported */
+  background-position: center right;
+  background-repeat: no-repeat;
+  border: 1px solid #AAA;
+  border-radius: 0px;
+  font-size: inherit;
+  margin: 0;
+  overflow: hidden;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 98%;
 }
 .filter-columnd .card-wrapper:first-child {
   margin-bottom: -7px;
@@ -6325,7 +6347,6 @@ a.sort:hover {
   line-height: 1.6;
 }
 .settings-card {
-  border-bottom: 1px dotted #d0d0cf;
   padding-bottom: 10px;
 }
 .settings-card h1,
@@ -6338,10 +6359,14 @@ a.sort:hover {
   white-space: pre-wrap;
   margin-bottom: 10px;
 }
+.range-filter {
+  border-bottom: 1px dotted #d0d0cf;
+}
 .order-settings-header {
   margin-top: 5px;
   padding-bottom: 10px;
   font-weight: 400;
+  text-transform: none;
 }
 .interval-input {
   display: inline-block;

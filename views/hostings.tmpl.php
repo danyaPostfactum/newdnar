@@ -332,14 +332,14 @@ $pricing_options = array(
 				</section>
 
 
-				<form id="Filters" class="card-wrapper">
+				<form id="Filters" class="">
 					<?php foreach (array(
 										 // 'ddos_safe' => 'Защита от DDOS', 
 										 'test_period' => "Наличие тестового периода", 
 										 'scripts_available' => "Скрипты php/perl/python") as $filter_key => $filter_name) { ?>
-						<fieldset>
-							<h4 class="category-name"><?php echo $filter_name; ?></h4>
-							<select>
+				    <fieldset class="card-wrapper settings-card range-filter">
+							<h4 class="order-settings-header"><?php echo $filter_name; ?></h4>
+                            <select>
 							    <option value="">Неважно</option>
 							    <option value=".<?php echo strtolower('filter-' . $filter_key); ?>">Да</option>
 							    <option value=".<?php echo strtolower('filter-' . 'no-' . $filter_key); ?>">Нет</option>
@@ -350,26 +350,27 @@ $pricing_options = array(
 							<button type="button" class="btn btn-default filter" data-filter=".<?php echo strtolower('filter-' . 'no-' . $filter_key); ?>">
 								<?php echo "Нет";  ?>
 							</button> -->
-
-						</fieldset>
+				    </fieldset>
 							
 					<?php } ?>
+                
 
-					<fieldset>
-						<h4 class="category-name">Операционная система</h4>
+					<fieldset class="card-wrapper settings-card">
+						<h4 class="order-settings-header">Операционная система</h4>
 						<!-- <button type="button" class="btn btn-default filter" data-filter=".filter-Windows">
 							Windows
 						</button>
 						<button type="button" class="btn btn-default filter" data-filter=".filter-Unix">
 							Unix
 						</button> -->
+
 						<select>
 							<option value="">Неважно</option>
 							<option value=".filter-Unix">Unix</option>							
 							<option value=".filter-Window">Windows</option>							
 						</select>
-
 					</fieldset>
+
 
 				</form>
 				

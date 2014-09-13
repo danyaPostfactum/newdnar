@@ -28,7 +28,7 @@
 					  // },
 					  callbacks: {
 					    onMixFail: function(){
-					      alert('No items were found matching the selected filters.');
+					      alert('Ничего не найдено. Попробуйте изменить параметры.');
 					    }
 					  }
 					}); 
