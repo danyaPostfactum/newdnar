@@ -9,11 +9,11 @@
 $hosters = array();
 $hosters['timeweb'] = array(
 	'name' => 'TimeWeb',
-	'img' => 'http://placehold.it/16x16',
-	'url' => 'http://timeweb.ru'
+	'img' => 'dist/assets/img/hostings/timeweb.ico',
+	'url' => 'http://timeweb.com/ru/services/hosting/?i=3591&a=0006'
 	);
 $hosters['dnar'] = array(
-	'name' => 'DNAR.RU',
+	'name' => 'DNAR',
 	'img' => 'dist/assets/img/hostings/dnar.png',
 	'url' => 'http://dnar.ru/hostings/dnar'
 	);
@@ -30,68 +30,116 @@ $hosters['R01'] = array(
 
 $pricing_options = array(
 	array(
-		'name' => 'Ультра',
+		'name' => 'Мини',
 		'features' => array(
 			//'ddos_safe' => false,
-			'webspace' => 12,
-			'domain_amount' => 24,
-			'databases_amount' => 10,
-			'test_period' => false,
+			'webspace' => 3,
+			'domain_amount' => 6,
+			'databases_amount' => 0,
+			'test_period' => true,
 			'scripts_available' => false,
 			'OS' => 'Unix'
 			),
-		'price' => 407.5, 
+		'price' => 201.6, 
 		'url' => 'http://localhost/newdnar/hostings/dnar',
-		'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque animi optio molestias, ab dolor veritatis numquam. Qui dicta recusandae iste, quasi corporis excepturi.',
+		'description' => '',
 		'hoster' => $hosters['dnar']
 		),
 	array(
-		'name' => 'Something',
+		'name' => 'Макси',
 		'features' => array(
 			//'ddos_safe' => true,
-			'webspace' => 4,
-			'domain_amount' => 7,
-			'databases_amount' => 6,
-			'test_period' => false,
-			'scripts_available' => false,
-			'OS' => 'Windows'
-			),
-		'price' => 410, 
-		'url' => 'http://hosting.nic.ru',
-		'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque animi optio molestias, ab dolor veritatis numquam. Qui dicta recusandae iste, quasi corporis excepturi.',
-		'hoster' => $hosters['nic.ru']
-		),
-	array(
-		'name' => 'Host-Lite',
-		'features' => array(
-			//'ddos_safe' => true,
-			'webspace' => 5,
-			'domain_amount' => 10,
-			'databases_amount' => 0,
-			'test_period' => false,
+			'webspace' => 7,
+			'domain_amount' => 12,
+			'databases_amount' => 100,
+			'test_period' => true,
 			'scripts_available' => true,
-			'OS' => 'Windows'
+			'OS' => 'UNIX'
 			),
-		'price' => 87, 
-		'url' => 'https://hosting.reg.ru',
-		'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, excepturi.',
-		'hoster' => $hosters['timeweb']
+		'price' => 316.8, 
+		'url' => 'http://localhost/newdnar/hostings/dnar',
+		'description' => '',
+		'hoster' => $hosters['dnar']
 		),
 	array(
-		'name' => 'Базовый',
+		'name' => 'Ультра',
+		'features' => array(
+			//'ddos_safe' => true,
+			'webspace' => 12,
+			'domain_amount' => 24,
+			'databases_amount' => 100,
+			'test_period' => true,
+			'scripts_available' => true,
+			'OS' => 'UNIX'
+			),
+		'price' => 489.6, 
+		'url' => 'http://localhost/newdnar/hostings/dnar',
+		'description' => '',
+		'hoster' => $hosters['dnar']
+		),
+    array(
+		'name' => 'Year',
 		'features' => array(
 			//'ddos_safe' => false,
 			'webspace' => 2,
-			'domain_amount' => 9,
-			'databases_amount' => 3,
-			'test_period' => false,
+			'domain_amount' => 2,
+			'databases_amount' => 2,
+			'test_period' => true,
 			'scripts_available' => true,
 			'OS' => 'Unix'
 			),
-		'price' => 300, 
-		'url' => 'http://timeweb.com/ru/services/hosting/',
-		'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, excepturi. And something else.',
-		'hoster' => $hosters['dnar']
+		'price' => 120, 
+		'url' => 'http://timeweb.com/ru/services/hosting/?i=3591&a=0006',
+		'description' => '',
+		'hoster' => $hosters['timeweb']
+		),
+    array(
+		'name' => 'Optimo',
+		'features' => array(
+			//'ddos_safe' => false,
+			'webspace' => 4,
+			'domain_amount' => 5,
+			'databases_amount' => 5,
+			'test_period' => true,
+			'scripts_available' => true,
+			'OS' => 'Unix'
+			),
+		'price' => 175, 
+		'url' => 'http://timeweb.com/ru/services/hosting/?i=3591&a=0006',
+		'description' => '',
+		'hoster' => $hosters['timeweb']
+		),
+    array(
+		'name' => 'Century',
+		'features' => array(
+			//'ddos_safe' => false,
+			'webspace' => 6.4,
+			'domain_amount' => 10,
+			'databases_amount' => 100,
+			'test_period' => true,
+			'scripts_available' => true,
+			'OS' => 'Unix'
+			),
+		'price' => 265, 
+		'url' => 'http://timeweb.com/ru/services/hosting/?i=3591&a=0006',
+		'description' => '',
+		'hoster' => $hosters['timeweb']
+		),
+	array(
+		'name' => 'Millennium',
+		'features' => array(
+			//'ddos_safe' => false,
+			'webspace' => 12,
+			'domain_amount' => 20,
+			'databases_amount' => 100,
+			'test_period' => true,
+			'scripts_available' => true,
+			'OS' => 'Unix'
+			),
+		'price' => 410, 
+		'url' => 'http://timeweb.com/ru/services/hosting/?i=3591&a=0006',
+		'description' => '',
+		'hoster' => $hosters['timeweb']
 		)
 	);
 
