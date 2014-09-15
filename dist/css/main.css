@@ -5840,6 +5840,7 @@ a.list-group-item-danger.active:focus {
 }
 body {
   padding-top: 90px;
+  overflow-y: scroll;
 }
 .container {
   position: relative;
