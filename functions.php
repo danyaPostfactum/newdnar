@@ -65,13 +65,15 @@ function queryWhoIs($query_value) { // using reg.ru whois script
 	$whois_info_array = array();
 
 	$whois_info = new Phois\Whois\Whois($query_value);
+	$whois_answer = $whois_info->info();
+
 	$whois_info_array['available'] = $whois_info->isAvailable();
 	$whois_info_array['regyinfo'] = array();
+	$whois_info_array['regyinfo']['raw'] = $whois_answer;
 	$whois_info_array['domain'] = array(
 			'name' => $whois_info->getDomain(),
 			'tld' => $whois_info->getTLDs()
 		);
-	$whois_answer = $whois_info->info();
 
 	// regex for registrar info for RU/SU/RF
 	$domain_TLD = $whois_info->getTLDs();

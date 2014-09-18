@@ -59,6 +59,18 @@ body {
 	}
 	
 }
+@media (max-width: 767px) {
+	.navbar-collapse {
+		background-color: @navbar-collapse-bg;
+		li:hover {
+			background-color: @navbar-collapse-hover-bg;
+		}
+		.navbar-form {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+}
 
 .lower-shadow {
 	box-shadow: 0 1px 17px 3px rgba(0, 0, 0, 0.55);
@@ -309,6 +321,21 @@ body {
 	color: @base-font-color;
 	display: none;
 }
+
+.raw-domain-wrapper {
+	margin-top: 15px;
+	margin-right: 0 - @list-group-item-padding-horizontal;
+	margin-left: 0 - @list-group-item-padding-horizontal;
+	margin-bottom: 0 - @list-group-item-padding-vertical;
+	max-height: 300px;
+	overflow-y: auto;
+	pre {
+		border-radius: 0;
+		border: none;
+		background-color: @rawdata-bg;
+	}
+}
+
 
 // Move domains
 .move-domain-heading {
@@ -625,6 +652,57 @@ a.sort {
 .interval-input {
 	display: inline-block;
 	width: 35%;
+}
+
+// Icon Tabs
+.tabs-row {
+	.clear-ul();
+	text-align: justify;
+	&:after {
+		width: 100%;
+		display: inline-block;
+		content: ".";
+		visibility: hidden;
+	}
+}
+.tabs-row-item {
+	display: inline-block;
+	margin-right: 10px;
+	&:hover {
+		color: #666;
+	}
+	&:first-child {
+		color: @brand-primary;
+		&:hover {
+			color: darken(@brand-primary, 15%);
+		}
+	}
+	&:nth-child(2) {
+		color: @brand-success;
+		&:hover {
+			color: darken(@brand-success, 15%);
+		}
+	}
+	&:nth-child(3) {
+		color: @brand-danger;
+		&:hover {
+			color: darken(@brand-danger, 15%);
+		}
+	}
+	&:nth-child(4) {
+		color: @brand-primary;
+		&:hover {
+			color: darken(@brand-primary, 15%);
+		}
+	}
+	&.active {
+		border-bottom: 4px solid @brand-primary;
+	}
+	a {
+		font-size: 50px;
+		text-decoration: none;
+		color: inherit;
+	}
 }
 
 // Sidebar

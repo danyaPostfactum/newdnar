@@ -80,6 +80,7 @@
 		<script>
 			(function() {
 				// tabs behavior (jquery-ui) ======================================
+				// main page
 				$tabsNav = $('#mainTabs');
 				var hash = window.location.hash;
 				if (hash) {
@@ -93,6 +94,13 @@
 				  window.location.hash = $tab.attr('href');
 				  console.log($tab.attr('href'));
 				  $tab.tab('show');
+				});
+
+				// support 
+				$("#supportTabs").find('a').click(function(e) {
+					e.preventDefault();
+					console.log('tab');
+					$(this).tab('show');
 				});
 			})();
 

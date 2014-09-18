@@ -98,9 +98,9 @@
 														<li>Registrar: {{regyinfo.registrar}}</li>
 													</ul>
 													{{else}}
-													<ul>
-														<li>Не удалось получить точную информацию</li>
-													</ul>
+													<div class="raw-domain-wrapper">
+														<pre>{{regyinfo.raw}}</pre>
+													</div>
 													{{/if}}
 												</div>
 											{{/if}}
