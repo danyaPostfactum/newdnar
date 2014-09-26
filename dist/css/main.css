@@ -5937,6 +5937,10 @@ body {
 .show-more-content {
   display: none;
 }
+.jumbotron {
+  background-color: #328bf4;
+  color: #ffffff;
+}
 .jumbotron h1 {
   text-transform: uppercase;
   margin-bottom: 22px;
