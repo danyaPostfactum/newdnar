@@ -8,16 +8,13 @@
 <div class="jumbotron">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-9">
-			
-
-				<h1>Хостинг DNAR</h1>
-
+			<div class="col-sm-7">
+                <h1>Хостинг DNAR</h1>
 				<p>Можешь этим заняться )</p>
-
-			
-
-			</div>
+            </div>
+            <div class="hidden-xs col-sm-5">
+						<img src="<?php echo BASE_URL; ?>dist/assets/img/hostings.png"class="pull-right" alt="">
+            </div>
 		</div>
 		
 	</div>

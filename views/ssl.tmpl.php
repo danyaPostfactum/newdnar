@@ -8,16 +8,14 @@
 <div class="jumbotron">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-9">
-			
-
-				<h1>SSL сертификаты</h1>
-
+            <div class="col-sm-7">
+                <h1>SSL сертификаты</h1>
 				<p>Можешь этим заняться )</p>
-
-			
-
-			</div>
+            </div>
+            <div class="hidden-xs col-sm-5">
+						<img src="<?php echo BASE_URL; ?>dist/assets/img/ssl.png"class="pull-right" alt="">
+            </div>
+        </div>
 		</div>
 		
 	</div>

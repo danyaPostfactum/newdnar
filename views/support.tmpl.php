@@ -1,5 +1,5 @@
 <?php 
-	$title = 'Техподдержка и сопровождение сайтов';
+	$title = 'Поддержка сайтов';
 	$description = 'test1';
 	$keywords = 'test2';
 	include(ROOT_PATH . '_partials/header.php') 
@@ -7,11 +7,14 @@
 
 <div class="jumbotron <?php if ($page_title == 'domains') { echo 'jumbotron-brand'; } ?>">
 	<div class="container">
-		<div class="row">
-			<div class="col-sm-9">
-				<h1>Техподдержка<br/> и сопровождение сайтов</h1>
+		<div class="row">		
+            <div class="col-sm-7">
+	            <h1>Поддержка сайтов</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet inventore maiores magni provident tenetur rem, eum ratione qui eveniet alias, molestias ex, quo quidem doloremque. Necessitatibus delectus rem quibusdam et, atque voluptatum cumque aspernatur, unde modi praesentium porro consequatur velit sint nemo rerum laborum beatae amet minus, vitae doloremque, quisquam aliquam. Laborum, tempora dolor odit quidem, cum, tempore eum mollitia sint ad reiciendis numquam labore minus perferendis libero commodi.</p>
-			</div>
+            </div>
+            <div class="hidden-xs col-sm-5">
+						<img src="<?php echo BASE_URL; ?>dist/assets/img/support.png"class="pull-right" alt="">
+            </div>
 		</div>
 		
 	</div>

@@ -148,10 +148,14 @@ $pricing_options = array(
 <div class="jumbotron <?php if ($page_title == 'domains') { echo 'jumbotron-brand'; } ?>">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-9">
-				<h1>10 самых лучших<br/> хостингов рунета</h1>
-				<p>Мы работаем уже более 6 лет. За это время 6 500 клиентов зарегистрировали более 20 000 доменов. Мы предоставляем самые низкие цены на покупку доменов, более 40 способов оплаты и техническую поддержку ваших сайтов. Список наших услуг продолжает расти.</p>
-			</div>
+			<div class="col-sm-7">
+                <h1>10 самых лучших<br/> хостингов рунета</h1>
+				<p>Можешь этим заняться )</p>
+            </div>
+            <div class="hidden-xs col-sm-5">
+						<img src="<?php echo BASE_URL; ?>dist/assets/img/hostings.png"class="pull-right" alt="">
+            </div>
+
 		</div>
 		
 	</div>
