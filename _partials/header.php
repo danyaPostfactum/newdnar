@@ -90,7 +90,7 @@
 						<li <?php if ($page_name == 'garant') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>garant">Гарант сделок</a></li>
 						<li <?php if ($page_name == 'support') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>support">Поддержка сайтов</a></li>
 					</ul>
-					<form class="navbar-form navbar-left" role="search">
+					<form class="navbar-form navbar-left pull-right" role="search">
 						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#dnarLoginModal">Войти</button>
 					</form>
 					
