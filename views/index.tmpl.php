@@ -156,16 +156,16 @@
 									<figure class="square-featurette">
 										<span class="big-feature-icon"><span class="icon-ruble"></span></span>
 										<h3 class="featurette-heading">Лучшие цены</h3>
-										<p class="square-featurette-text">Только наши клиенты имеют возможность зарегистрировать домены в зоне RU всего за 95 рублей!</p>
+										<p class="square-featurette-text">Регистрация и продление доменов в зоне RU всего за 95 рублей!</p>
 									</figure>
 									<figure class="square-featurette">
 										<span class="big-feature-icon"><span class="glyphicon glyphicon-tower"></span></span>
 										<h3 class="featurette-heading">Надежно</h3>
 										<p class="square-featurette-text">
                                           <ul style="padding: 0;margin-left: 5px;">
-                                              <li>6 лет безупречной работы</li>
                                               <li>Стратегический партнер регистратора R01</li>
                                               <li>Сайт защищен SSL сертификатом</li>
+                                              <li>6 лет безупречной работы</li>
                                           </ul>
                                         </p>
 									</figure>
