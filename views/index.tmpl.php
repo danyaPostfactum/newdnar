@@ -30,7 +30,7 @@
 					  <li class="active"><a href="#main" role="tab" data-toggle="tab">Поиск и проверка домена</a></li>
 					  <li><a href="#payment" role="tab" data-toggle="tab">Как оплатить</a></li>
 					  <li><a href="#questions-and-answers" role="tab" data-toggle="tab">Вопросы и ответы</a></li>
-					  <li><a href="#advantages" role="tab" data-toggle="tab">Почему дешево?</a></li>
+					  <li><a href="#advantages" role="tab" data-toggle="tab">Почему DNAR</a></li>
 					  <li><a href="#move-domain" role="tab" data-toggle="tab">Перенести домен к нам</a></li>
 					</ul>
 				</nav>
@@ -156,24 +156,36 @@
 									<figure class="square-featurette">
 										<span class="big-feature-icon"><span class="icon-ruble"></span></span>
 										<h3 class="featurette-heading">Лучшие цены</h3>
-										<p class="square-featurette-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit nulla veritatis aliquid dolor, impedit magnam.</p>
+										<p class="square-featurette-text">Только наши клиенты имеют возможность зарегистрировать домены в зоне RU всего за 95 рублей!</p>
 									</figure>
 									<figure class="square-featurette">
 										<span class="big-feature-icon"><span class="glyphicon glyphicon-tower"></span></span>
 										<h3 class="featurette-heading">Надежно</h3>
-										<p class="square-featurette-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit nulla veritatis aliquid dolor, impedit magnam.</p>
+										<p class="square-featurette-text">
+                                          <ul style="padding: 0;margin-left: 5px;">
+                                              <li>6 лет безупречной работы</li>
+                                              <li>Стратегический партнер регистратора R01</li>
+                                              <li>Сайт защищен SSL сертификатом</li>
+                                          </ul>
+                                        </p>
 									</figure>
 
 								</div>
 								<div class="col-sm-6">
-									<h3>Правила регистрации доменов</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea nihil eaque, a! Nobis architecto veritatis, harum asperiores ab soluta ducimus nemo est eius fugiat, adipisci ullam expedita totam nesciunt dolorum modi, fuga molestiae et repudiandae voluptatibus. Maxime voluptas, laudantium illum non, perspiciatis repellendus voluptatem ad dolorem ut a assumenda in voluptates</p>
-									<p>Neque eaque repudiandae cupiditate quae eius fuga atque deserunt excepturi numquam recusandae! Doloribus consequatur voluptates, corrupti nam itaque autem in, totam, sint exercitationem, reiciendis ipsa obcaecati! Reprehenderit deleniti, aperiam! Numquam qui deserunt et quia.</p>
-									<p><a href="#" class="show-more">Подробнее</a></p>
+<p>После регистрации Вы сможете привязать зарегистрированный домен к абсолютно любому хостингу при помощи удобной панели управления! DNS сервера у нас абсолютно бесплатны.
+</p><p>
+Не упустите такую возможность - зарегистрируйтесь в системе и Вы всегда сможете регистрировать домены по привлекательным ценам! Действует система скидок: регистрируйте больше - платите меньше!
+</p><p>
+Услуга регистрация доменов пользуется большой популярностью у веб-мастеров, ведь домен является фактически лицом сайта. На нашем сайте Вы можете зарегистрировать домен всего за 3 шага. Регистрация моментальная и Ваш домен становится доступен сразу поле процедуры регистрации домена.
+</p>                          
+                          
+                          		<p><a href="#" class="show-more">Подробнее</a></p>
 									<div class="show-more-content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos dolores quibusdam maxime rerum ipsum nihil incidunt perferendis iste eligendi, suscipit odit atque necessitatibus mollitia praesentium.</p>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos dolores quibusdam maxime rerum.</p>
+<p>
+Регистрация доменов осуществляется через регистратора Рег.ру. Мы являемся официальными партнерами по регистрации доменов данного регистратора и предлагаем помимо регистрации бесплатные DNS-сервера, услугу Web-forwarding и многое другое. Не пропустите - регистрация доменов RU и РФ всего за 99 рублей. </p>
+<p align="center"><a class="btn btn-default" role="button" href="http://domain.dnar.ru/OFFERTA/offerta_add_select_type.khtml">Зарегистрироваться</a></p>
 									</div>
+                           
 										
 								</div>
 							</div>
