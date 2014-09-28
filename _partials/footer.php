@@ -28,7 +28,7 @@
         <?php if ($page_name == 'sppc' or $page_name == 'susability' or $page_name == 'sseo' or $page_name == 'stext' or $page_name == 'svirus' or $page_name == 'ssupport')  { ?>
 			<div class="row payment-icons-row-wrapper">
 				<div class="col-sm-12">
-                    <form action="sendform.php" method="post" class="card-wrapper feedback-form" id="supportForm">
+                    <center><form action="sendform.php" method="post" class="card-wrapper feedback-form" id="supportForm">
 				        <div class="form-group">
 				        	<input name="name" type="text" class="form-control" id="name" placeholder="Как вас зовут?">
 				        </div>
@@ -48,7 +48,7 @@
 				        <div class="form-success-text">
 				        	<p>Stuff</p>
 				        </div>
-			        </form>
+                        </form></center>
 				</div>
 			</div>
 		<?php } ?>
