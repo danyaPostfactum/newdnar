@@ -153,7 +153,7 @@ $pricing_options = array(
 				<p>Можешь этим заняться )</p>
             </div>
             <div class="hidden-xs col-sm-5">
-						<img src="<?php echo BASE_URL; ?>dist/assets/img/hostings.png"class="pull-right" alt="">
+						<img src="<?php echo BASE_URL; ?>dist/assets/img/hostings.png" class="pull-right" alt="">
             </div>
 
 		</div>

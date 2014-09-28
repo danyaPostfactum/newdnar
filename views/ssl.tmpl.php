@@ -13,7 +13,7 @@
 				<p>Можешь этим заняться )</p>
             </div>
             <div class="hidden-xs col-sm-5">
-						<img src="<?php echo BASE_URL; ?>dist/assets/img/ssl.png"class="pull-right" alt="">
+						<img src="<?php echo BASE_URL; ?>dist/assets/img/ssl.png"class=" pull-right" alt="">
             </div>
         </div>
 		</div>
