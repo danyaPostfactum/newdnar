@@ -6520,6 +6520,10 @@ a.sort:hover {
   font-size: 20px;
   font-weight: unset;
 }
+.support-table img {
+  width: 150px;
+  height: 150px;
+}
 footer {
   color: #777777;
   padding-bottom: 15px;

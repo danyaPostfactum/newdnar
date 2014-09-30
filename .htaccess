@@ -3,7 +3,11 @@ AddDefaultCharset utf-8
 #AddType php5.3-script .php
 
 
+
 RewriteEngine On
+# RewriteBase /
+
+ErrorDocument 404 /404.php
 
 # Не забыть сделать редирект с www на без www
 # RewriteCond %{HTTP_HOST} ^www.dnar.ru$ [NC]

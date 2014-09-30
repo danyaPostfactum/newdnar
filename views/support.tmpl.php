@@ -8,11 +8,11 @@
 <div class="jumbotron <?php if ($page_title == 'domains') { echo 'jumbotron-brand'; } ?>">
 	<div class="container">
 		<div class="row">		
-            <div class="col-sm-7">
+            <div class="col-sm-8">
 	            <h1>Поддержка сайтов</h1>
 				<p>При заказе любой из услуг - продление домена обслуживающегося у нас - бесплатно!</p>
             </div>
-            <div class="hidden-xs col-sm-5">
+            <div class="hidden-xs col-sm-4">
 						<img src="<?php echo BASE_URL; ?>dist/assets/img/support.png" class="pull-right" alt="">
             </div>
 		</div>

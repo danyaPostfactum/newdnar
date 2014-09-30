@@ -148,11 +148,11 @@ $pricing_options = array(
 <div class="jumbotron <?php if ($page_title == 'domains') { echo 'jumbotron-brand'; } ?>">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-7">
+			<div class="col-sm-8">
                 <h1>10 самых лучших<br/> хостингов рунета</h1>
 				<p>Можешь этим заняться )</p>
             </div>
-            <div class="hidden-xs col-sm-5">
+            <div class="hidden-xs col-sm-4">
 						<img src="<?php echo BASE_URL; ?>dist/assets/img/hostings.png" class="pull-right" alt="">
             </div>
 
