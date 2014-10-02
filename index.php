@@ -36,5 +36,11 @@ if ( isXHR() && isset($_GET['domain_name']) ) {
 	return;
 }
 
+require("modx/api.php");
+
+/** @var $resource modResource */
+$qaResource = $modx->getObject('modResource', 1);
+$qaChapters = $qaResource->getMany('Children');
+
 include("views/index.tmpl.php");
 
