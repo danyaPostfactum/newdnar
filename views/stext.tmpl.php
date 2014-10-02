@@ -8,12 +8,12 @@
 <div class="jumbotron">
 	<div class="container">
 		<div class="row">
-            <div class="col-sm-7">
+            <div class="col-sm-8">
                 <h1>Написание текстов для сайта</h1>
 				<p>Можешь этим заняться )</p>
             </div>
-            <div class="hidden-xs col-sm-5">
-						<img src="<?php echo BASE_URL; ?>dist/assets/img/support/big/text.png" class="pull-right" alt="">
+            <div class="hidden-xs col-sm-4">
+						<img src="<?php echo BASE_URL; ?>dist/assets/img/support/text.png" class="pull-right" alt="">
             </div>			
 		</div>
 		

@@ -3,7 +3,11 @@ AddDefaultCharset utf-8
 #AddType php5.3-script .php
 
 
+
 RewriteEngine On
+RewriteBase /
+
+
 
 # Не забыть сделать редирект с www на без www
 # RewriteCond %{HTTP_HOST} ^www.dnar.ru$ [NC]
@@ -23,7 +27,7 @@ RewriteRule ^support/usability$ susability.php
 RewriteRule ^support/virus$ svirus.php
 RewriteRule ^support/support$ ssupport.php
 
-
+ErrorDocument 404 /404.php
 
 
 # Редирект старый страниц
