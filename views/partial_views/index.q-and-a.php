@@ -18,6 +18,8 @@
                 <? foreach ($links as $link) { ?>
                     <li><a href="<?= 'qa/' . $link->get('alias') ?>"><?= $link->get('pagetitle'); ?></a></li>
                 <? } ?>
+                            </ul>
+                        </div>
             <? } ?>
         <? } ?>
                    </td>

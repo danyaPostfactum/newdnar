@@ -12,7 +12,7 @@
 		<div class="row">
             <div class="col-sm-8">
                 <h1>Анализ конкурентов</h1>
-				<p>Можешь этим заняться )</p>
+				<p>Узнай всё о своих конкурентах в контекстной рекламе и поиске</p>
             </div>
             <div class="hidden-xs col-sm-4">
 						<img src="<?php echo BASE_URL; ?>dist/assets/img/support/adspy.png" class="pull-right" alt="">
@@ -23,8 +23,98 @@
 </div>
 
 <div class="container">
+    <div class="row advantages-section">
+        <div class="col-sm-6 big-img"><img src="<?php echo BASE_URL; ?>dist/assets/img/tagcloud_transp.png" alt="Облако тегов"></div>
+        <div class="col-sm-6">
+            <ul class="advantages">
+                <li><span>Их</span> ключевые слова</li>
+                <li><span>Тексты</span> их объявлений и позиции</li>
+                <li><span>Позиции</span> и сниппеты в выдаче</li>
+                <li><span>Оценка</span> трафика и бюджета</li>
+                <li><span>Данные</span> по Яндекс, Google и Вконтакте</li>
+            </ul>
+            <button class="btn btn-default" id="scrollToCalc">Узнать стоимость</button>
+        </div>
+    </div>
+</div>
 
-			<p>Lorem ipsum dolor sit amet, error sunt. Blanditiis unde assumenda explicabo voluptatem cumque iusto aspernatur a reiciendis repellendus laboriosam! Magnam molestias eos velit ullam, quos officia nulla odio, minima voluptate provident. Tempore, cum repellat. Ab quam, nam neque molestiae quasi ratione cupiditate similique eum non adipisci repudiandae id sunt, sapiente est at. Fugiat beatae, reprehenderit modi aliquam totam quidem deserunt cumque commodi expedita recusandae possimus sit, sunt laborum maiores assumenda doloremque, sint velit est alias repellendus, veritatis rem ducimus officia autem. Optio reprehenderit odit distinctio eum dolore. Odit mollitia odio, magni distinctio, iure officiis aliquid consequuntur dolores. Perferendis nisi ducimus possimus autem iure eveniet, magni assumenda totam deleniti esse voluptatibus, quod nam asperiores facere. Beatae.</p>
+<div class="container">
+    <div class="row info-section">
+        <div class="col-sm-12">
+            <h1>Для чего это нужно</h1>
+            <p>Детальная информация о ваших конкурентах по их контекстным кампаниям и позициям в органическом поиске поможет вам:</p>
+            <ul>
+                <li>Проанализировать конкурентов на рынке</li>
+                <li>Проанализировать ниши для бизнеса</li>
+                <li>Найти подниши для вашего бизнеса</li>
+                <li>Подобрать запросы для рекламных кампаний</li>
+                <li>Проверить подрядчика по рекламе</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container reports">
+    <h1>Что содержит отчет</h1>
+    <div class="row info-section">
+        <div class="col-sm-5 col-sm-offset-2">
+            <h4>Контекстная реклама:</h4>
+            <ul>
+                <li>Запросы в контексте</li>
+                <li>Позиции и тексты объявлений</li>
+                <li>Оценка бюджета контекста</li>
+                <li>Оценка трафика с контекста</li>
+            </ul>
+        </div>
+        <div class="col-sm-5">
+            <h4>Поисковые системы:</h4>
+            <ul>
+                <li>Запросы в поиске</li>
+                <li>Позиции в поиске</li>
+                <li>Сниппеты и url страниц</li>
+                <li>Оценка трафика с поиска</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-7">
+            <h3>Мы знаем, что делаем</h3>
+            <p>Мы — специалисты с огромным опытом, которые трудятся в сфере интернет‐маркетинга вот уже порядка 5-и лет. За это время мы провели множество аудитов, помогли наладить бизнес в онлайне десяткам компаний и создали сотни успешных проектов. У вас появилась возможность использовать наш опыт.</p>
+        </div>
+        <div class="col-sm-5">
+            <section class="counter wrapper">
+              <section class="clock">
+                <figure class="flipper">
+                  <span class="icon">0</span>
+                </figure>
+                <figure class="flipper">
+                  <span>8</span>
+                </figure>
+                <figure class="flipper">
+                  <span>4</span>
+                </figure>
+              </section>
+            <p class="counter-info">Количество довольных клиентов</p>
+            </section>
+        </div>
+    </div>
+    <?php /*<div class="row">
+        <div class="col-sm-12">
+            <h1>Нам доверяют</h1>
+            <div class="clients-panel-container">
+                <div class="clients-panel">
+                    <a class="clients-panel-cvm" href="#"><span></span></a>
+                    <a class="clients-panel-manzana" href="#"><span></span></a>
+                    <a class="clients-panel-bmp" href="#"><span></span></a>
+                    <a class="clients-panel-ventart" href="#"><span></span></a>
+                </div>
+            </div>
+        </div>
+    </div> */?>
+</div>
 
 <div class="container">
                 <div class="row">
@@ -103,6 +193,22 @@
                     </div>
                 </div>
             </div>
+
+<div class="container reports">
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Как срочно выполняется аудит?</h3>
+            <p>Аудит выполняется в течение 5-и рабочих дней.</p>
+            <h3>Как узнать о том, что аудит выполнен?</h3>
+            <p>На указанную вами электронную почту придет уведомление о том, что аудит завершен.</p>
+        </div>
+        <div class="col-sm-6">
+            <h3>Как можно оплатить аудит?</h3>
+            <p>Вы можете оплатить аудит с помощью банковских карт, электронной валюты (Webmoney, Яндекс.Деньги) и сервисов мобильной коммерции (МТС, Мегафон, Билайн), посредством интернет‐банкинга, через банкоматы и терминалы мгновенной оплаты. Также мы работаем по безналичному расчету с юридическими лицами из Российской Федерации. Счет на оплату будет выставлен после уточнения деталей заказа.</p>
+        </div>
+    </div>
+</div>
+
 <!-- Modal -->
 <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -140,6 +246,7 @@
     </div>
   </div>
 </div>
-			
+
+<div class="container">
 <?php include("_partials/footer.php") ?>
 
