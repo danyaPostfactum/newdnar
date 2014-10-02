@@ -13,6 +13,7 @@ RewriteEngine On
 RewriteRule ^(\w+)$ $1.php [NC]
 
 RewriteRule ^domains/(.*)$ domain.php?name=$1
+RewriteRule ^qa/(.*)$ qa.php?alias=$1
 RewriteRule ^hostings/dnar$ dhost.php
 RewriteRule ^support/seo$ sseo.php
 RewriteRule ^support/ppc$ sppc.php
