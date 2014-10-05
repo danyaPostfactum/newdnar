@@ -6504,8 +6504,8 @@ a.sort:hover {
 .support-link-item .caption p {
   color: #0095fb;
 }
-@media (min-width: 768px) {
-  .support-link-item img {
+@media (min-width: 500px) {
+  .support-link-item a > img {
     max-width: 150px;
   }
 }
