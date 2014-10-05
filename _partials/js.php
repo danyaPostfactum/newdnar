@@ -80,7 +80,9 @@
 			<!-- // <script src="js/dropzone.js"></script> -->
 		<?php } ?>
 		<?php if (isset($need_calc)) { ?>
+
 			<script src="<?php echo BASE_URL; ?>js/calc.js"></script>
+
 		<?php } ?>
 		<script type="text/javascript" src="//yandex.st/share/share.js"
 		charset="utf-8"></script>
