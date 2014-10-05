@@ -79,15 +79,27 @@
 		<?php } ?>
 		<?php if (isset($need_calc)) { ?>
 <script>
+	$("#scrollToCalc").on("click", function() {
+		var land = $("[name=calcAnchor]");
+		$('html, body').animate({scrollTop: land.offset().top}, 'slow');
+	});
+
 	// polifyll for input[form=abc]
-	$("#orderForm").submit(function() {
+	$("#orderForm").submit(function(e) {
+		e.preventDefault();
 		var form = this;
-		var $external = $('[form=' + this.name + ']');
-		$external.each(function() {
-			if (this.type == 'checkbox' && !this.checked)
-				return;
-			var atts = {type: hidden, name: this.name, value: this.value};
-			$('<input>', atts).appendTo(form);
+		var $external = $('[form=' + this.getAttribute('name') + ']');
+		$.ajax({
+			type: 'post',
+			data : $(this).add($external).serialize() + '&price=' + $external.filter('[name="price"]').text(),
+			url: '/call.php',
+			success: function(response) {
+				alert(response.message);
+				if (response.success) {
+					$('#orderModal').modal('hide');
+				}
+			},
+			dataType: 'json'
 		});
 	});
 
@@ -183,7 +195,7 @@
 	
 	
 	var chosenServices = 0;
-	var sumOutput = $(".final-sum").find('span');
+	var sumOutput = $(".final-sum").find('output');
 
 	// Min-price stuff
 	var orderButton = $(".order-box");
@@ -231,7 +243,7 @@
 	}
 
 	var printOutputPrice = function(price) {
-		sumOutput.text(price + ' ').append($("<i></i>").addClass('icon-ruble'));
+		sumOutput.text(price);
 		enableButton(price);
 	};
 
