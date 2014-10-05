@@ -24,6 +24,14 @@ var WhoisSearch = {
 				return opts.inverse(this);
 			}
 		});
+
+		Handlebars.registerHelper('if_R01', function(registrar, opts) {
+			if (registrar == 'R01-RU') {
+				return opts.fn(this)
+			} else {
+				return opts.inverse(this);
+			}
+		});
 		
 		Handlebars.registerHelper('if_RuSuRf', function(tld, opts) {
 			if (tld === "ru" || tld == "su" || tld == 'xn--p1ai') {

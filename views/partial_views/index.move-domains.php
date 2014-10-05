@@ -58,6 +58,9 @@
 								<div class="more-whois-content">
 									{{#if_RuSuRf domain.tld}}
 									<p>Текущий регистратор домена: <strong><code style="color: #328bf4">{{regyinfo.registrar}}</code></strong>
+									{{#if_R01 regyinfo.registrar}}
+										<br><br>Особый текст для R01
+									{{/if_R01}}
                                     <br><br>Для того, чтобы перенести домен к нам, нужно: <br>
 									--- Инструкция для ru/su/рф ---</p>
 									{{else}}

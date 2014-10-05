@@ -126,51 +126,51 @@
                         <form class="analyze" id="servicesCalc">
 
                             <div class="chk-inline">
-                                <input form="orderForm" type="checkbox" class="chbx-hide" name="top50Yand" id="top50Yand">
+                                <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[top50Yand]" id="top50Yand" value="Запросы, по которым конкуренты в Топ 50 в поисковой системе Яндекс, а также сниппеты и url страниц">
                                 <label class="inline-label ch-bx" for="top50Yand">Запросы, по которым конкуренты в Топ 50 в поисковой системе Яндекс, а также сниппеты и url страниц</label>
                             </div>
                             <div class="chk-inline sublevel">
-                                <input form="orderForm" type="checkbox" class="chbx-hide" name="top10Yand" id="top10Yand">
+                                <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[top10Yand]" id="top10Yand" value="Рассчитать потенциальный трафик запросов из Топ 10 для Яндекс">
                                 <label class="inline-label ch-bx" for="top10Yand">Рассчитать потенциальный трафик запросов из Топ 10 для Яндекс</label>
                             </div>
                             <div class="chk-inline sublevel">
-                                <input form="orderForm" type="checkbox" class="chbx-hide" name="yandPos" id="yandPos">
+                                <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[yandPos]" id="yandPos" value="Снять точные позиции конкурентов по запросам на день проведения аудита">
                                 <label class="inline-label ch-bx" for="yandPos">Снять точные позиции конкурентов по запросам на день проведения аудита</label>
                             </div>
 
                             <div class="chk-inline">
-                                <input form="orderForm" type="checkbox" class="chbx-hide" name="top50Google" id="top50Google">
+                                <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[top50Google]" id="top50Google" value="Запросы, по которым конкуренты в Топ 50 в поисковой системе Google, а также сниппеты и url страниц">
                                 <label class="inline-label ch-bx" for="top50Google">Запросы, по которым конкуренты в Топ 50 в поисковой системе Google, а также сниппеты и url страниц</label>
                             </div>
                             <div class="chk-inline sublevel">
-                                <input form="orderForm" type="checkbox" class="chbx-hide" name="top10Google" id="top10Google">
+                                <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[top10Google]" id="top10Google" value="Рассчитать потенциальный трафик запросов из Топ 10 для Google">
                                 <label class="inline-label ch-bx" for="top10Google">Рассчитать потенциальный трафик запросов из Топ 10 для Google</label>
                             </div>
                             <div class="chk-inline sublevel">
-                                <input form="orderForm" type="checkbox" class="chbx-hide" name="googlePos" id="googlePos">
+                                <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[googlePos]" id="googlePos" value="Снять точные позиции конкурентов по запросам на день проведения аудита">
                                 <label class="inline-label ch-bx" for="googlePos">Снять точные позиции конкурентов по запросам на день проведения аудита</label>
                             </div>
 
                             <div class="chk-inline">
-                                <input form="orderForm" type="checkbox" class="chbx-hide" name="queryYandDirect" id="queryYandDirect">
+                                <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[queryYandDirect]" id="queryYandDirect" value="Запросы, по которым конкуренты дают рекламу в Яндекс Директ, а также позиции и тексты объявлений">
                                 <label class="inline-label ch-bx" for="queryYandDirect">Запросы, по которым конкуренты дают рекламу в Яндекс Директ, а также позиции и тексты объявлений</label>
                             </div>
                             <div class="chk-inline sublevel">
-                                <input form="orderForm" type="checkbox" class="chbx-hide" name="calcBudgetYand" id="calcBudgetYand">
+                                <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[calcBudgetYand]" id="calcBudgetYand" value="Рассчитать примерные бюджеты конкурентов в Яндекс Директ">
                                 <label class="inline-label ch-bx" for="calcBudgetYand">Рассчитать примерные бюджеты конкурентов в Яндекс Директ</label>
                             </div>
 
                             <div class="chk-inline">
-                                <input form="orderForm" type="checkbox" class="chbx-hide" name="contextAdwordsBox" id="contextAdwordsBox">
+                                <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[contextAdwordsBox]" id="contextAdwordsBox" value="Запросы, по которым конкуренты дают рекламу в Google Adwords, а также позиции и тексты объявлений">
                                 <label class="inline-label ch-bx" for="contextAdwordsBox">Запросы, по которым конкуренты дают рекламу в Google Adwords, а также позиции и тексты объявлений</label>
                             </div>
                             <div class="chk-inline sublevel">
-                                <input form="orderForm" type="checkbox" class="chbx-hide" name="calcBudgetGoogle" id="calcBudgetGoogle">
+                                <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[calcBudgetGoogle]" id="calcBudgetGoogle" value="Рассчитать примерные бюджеты конкурентов в Google Adwords">
                                 <label class="inline-label ch-bx" for="calcBudgetGoogle">Рассчитать примерные бюджеты конкурентов в Google Adwords</label>
                             </div>
 
                             <div class="chk-inline">
-                                <input form="orderForm" type="checkbox" class="chbx-hide" name="contextVKBox" id="contextVKBox">
+                                <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[contextVKBox]" id="contextVKBox" value="Какие объявления дают конкуренты в ВКонтакте, а также количество показов и на какую аудиторию">
                                 <label class="inline-label ch-bx" for="contextVKBox">Какие объявления дают конкуренты в ВКонтакте, а также количество показов и на какую аудиторию</label>
                             </div>
                             
@@ -182,7 +182,7 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <p class="final-sum">Итого: 
-                                        <span>0 <i class="icon-ruble"></i></span>
+                                        <output form="orderForm" name="price" style="display:inline">0</output> <i class="icon-ruble"></i>
                                     </p>
                                 </div>
                             </div>
@@ -236,8 +236,7 @@
                 <label><input type="radio" name="payMethod" value="cashless">Безналичный расчёт</label>
             </div>
             <div class="form-group">
-                <input class="form-control" type="text" name="website" placeholder="Ваш сайт" />
-                <textarea name="comments" placeholder="Список ваших конкурентов. Также вы можете оставить дополнительные вопросы"></textarea>
+                <textarea class="form-control" name="comments" placeholder="Список ваших конкурентов. Также вы можете оставить дополнительные вопросы"></textarea>
             </div>
             <button type="submit" class="btn btn-default">Отправить заявку</button>
             <p class="assure">Ваши данные в безопасности и не будут переданы третьим лицам</p>
