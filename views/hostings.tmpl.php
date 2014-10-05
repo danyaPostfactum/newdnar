@@ -115,7 +115,7 @@ $pricing_options = array(
 			//'ddos_safe' => false,
 			'webspace' => 6.4,
 			'domain_amount' => 10,
-			'databases_amount' => 100,
+			'databases_amount' => INF,
 			'test_period' => true,
 			'scripts_available' => true,
 			'OS' => 'Unix'
@@ -221,7 +221,7 @@ $pricing_options = array(
 							data-priceorder='<?php echo $price ?>' 
 							data-webspace='<?php echo $webspace; ?>' 
 							data-domainamount='<?php echo $domain_amount; ?>'
-							data-databases='<?php echo $databases_amount; ?>'>
+							data-databases='<?php echo is_infinite($databases_amount) ? 'Infinity' : $databases_amount; ?>'>
 					<!-- <div class="col-sm-3">
 						<h3 class="hoster-name"><a href="<?php echo $hoster_url; ?>"><?php echo $hoster_name; ?></a></h3>
 					</div> -->
@@ -247,7 +247,7 @@ $pricing_options = array(
 									<table class="table tarif-specs-table">
 										<tr class="tarif-spec-item">
 											<td>Хранилище:</td>
-											<td><?php echo $webspace ?> Gb</td>
+											<td><?php echo $webspace === 0 ? 'Нет' : (is_infinite($webspace) ? '∞' : $webspace) ?> Gb</td>
 										</tr>
 										<!-- <tr class="tarif-spec-item <?php if ( !$ddos_safe ) { echo "unavailable"; } ?>">
 											<td>Защита от DDOS:</td>
@@ -259,11 +259,11 @@ $pricing_options = array(
 										</tr> -->
 										<tr class="tarif-spec-item">
 											<td>Количество сайтов:</td>
-											<td><?php echo $domain_amount; ?></td>
+											<td><?php echo $domain_amount === 0 ? 'Нет' : (is_infinite($domain_amount) ? '∞' : $domain_amount) ?></td>
 										</tr>
 										<tr class="tarif-spec-item <?php if ( $databases_amount === 0 ) { echo "unavailable"; } ?>">
 											<td>Количество баз:</td>
-											<td><?php echo $databases_amount; ?></td>
+											<td><?php echo $databases_amount === 0 ? 'Нет' : (is_infinite($databases_amount) ? '∞' : $databases_amount) ?></td>
 										</tr>
 									</table>
 								</div>
