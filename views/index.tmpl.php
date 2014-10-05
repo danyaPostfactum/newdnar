@@ -2,7 +2,7 @@
 	$title = 'Регистрация дешевых доменных имен';
 	$description = 'test1';
 	$keywords = 'test2';
- 	include(ROOT_PATH . '_partials/header.php') 
+ 	include(ROOT_PATH . '_partials/header.php');
 ?>
 
 		<!-- Main jumbotron for a primary marketing message or call to action -->
@@ -118,7 +118,7 @@
 							<div class="row">
 								<div class="col-md-12">
 									<h3 class="pricetable-heading">
-										Тарифы 
+										Тарифы
 										<div class="yashare-auto-init yandex-sharing-icons-row" data-yashareL10n="ru" 
 																	   data-yashareQuickServices="yaru,vkontakte,facebook,twitter,gplus" 
 																	   data-yashareTheme="counter"
@@ -199,11 +199,11 @@
 					</section>
 				</article>
 
-				<?php include('views/partial_views/index.how-to-pay.php'); ?>
-				<?php include('views/partial_views/index.q-and-a.php'); ?>
-				<?php include('views/partial_views/index.advantages.php'); ?>
-				<?php include('views/partial_views/index.move-domains.php'); ?>
+				<?php include(ROOT_PATH . 'views/partial_views/index.how-to-pay.php'); ?>
+				<?php include(ROOT_PATH . 'views/partial_views/index.q-and-a.php'); ?>
+				<?php include(ROOT_PATH . 'views/partial_views/index.advantages.php'); ?>
+				<?php include(ROOT_PATH . 'views/partial_views/index.move-domains.php'); ?>
 			</div>
 
 
-<?php include(ROOT_PATH . '_partials/footer.php') ?>
+<?php include(ROOT_PATH . '_partials/footer.php'); ?>

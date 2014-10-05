@@ -6492,6 +6492,15 @@ a.sort:hover {
   position: relative;
   top: 2px;
 }
+.support-link-item {
+  border: none;
+}
+.support-link-item .caption {
+  text-align: center;
+}
+.support-link-item .caption p {
+  color: #0095fb;
+}
 .table > thead > tr > th {
   vertical-align: bottom;
   border-bottom: none;
@@ -6509,20 +6518,6 @@ a.sort:hover {
 .dhost th {
   text-align: center;
   width: 25%;
-}
-.support-table td {
-  text-align: center;
-  width: 25%;
-  padding-bottom: 25px;
-  padding-top: 20px;
-}
-.support-table th {
-  font-size: 20px;
-  font-weight: unset;
-}
-.support-table img {
-  width: 150px;
-  height: 150px;
 }
 footer {
   color: #777777;
