@@ -9,11 +9,10 @@
 	<div class="container">
 		<div class="row">
             <div class="col-sm-7">
-                <h1>Гарант сделок</h1>
-				<p>Можешь этим заняться )</p>
+                <h1><?= $resource->get('pagetitle') ?></h1>
             </div>
             <div class="hidden-xs col-sm-5">
-						<img src="<?php echo BASE_URL; ?>dist/assets/img/garant.png" class="pull-right" alt="">
+						<img src="<?php echo BASE_URL; ?>dist/assets/img/qanda.png" class="pull-right" alt="">
             </div>			
 		</div>
 		
