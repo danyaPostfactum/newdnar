@@ -6495,11 +6495,19 @@ a.sort:hover {
 .support-link-item {
   border: none;
 }
+.support-link-item img {
+  width: 100%;
+}
 .support-link-item .caption {
   text-align: center;
 }
 .support-link-item .caption p {
   color: #0095fb;
+}
+@media (min-width: 768px) {
+  .support-link-item img {
+    max-width: 150px;
+  }
 }
 .table > thead > tr > th {
   vertical-align: bottom;

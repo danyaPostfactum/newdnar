@@ -747,6 +747,9 @@ a.sort {
 // support ==================================
 .support-link-item {
 	border: none;
+	img {
+		width: 100%;
+	}
 	.caption {
 		text-align: center;
 		p {
@@ -754,7 +757,13 @@ a.sort {
 		}
 	}
 }
-
+@media (min-width: 768px) {
+	.support-link-item {
+		img {
+			max-width: 150px;
+		}
+	}
+}
 // Tables
 .table {
 	> thead > tr > th {
