@@ -58,7 +58,7 @@
 		//	}
 		//}
 
-		if ($callform["address"]) {
+		if (isset($callform["address"])) {
 			array_push($error_message, "Your form submission has an error.");
 		}
 
@@ -94,24 +94,26 @@
 			$message = $email_body;
 			$headers  = 'MIME-Version: 1.0' . "\r\n";
 			$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-			//$headers .= 'To: ' . $emailaddress . "\r\n";
+			$headers .= 'To: ' . $emailaddress . "\r\n";
 			$headers .= 'From: ' . $email . "\r\n";
 
-			//mail($to, $subject, $message, $headers);
+			mail($to, $subject, $message, $headers);
 
 			//echo $email_body;
 			if (@mail($to, $subject, $message, $headers)) {
 				$response = array('success' => true, 'message' => "Спасибо за заявку, мы ответим вам в течение рабочего дня");
 
 			} else {
-				$response = array('success' => false, 'message' => "Произошла ошибка отправки данных");
+				$response = array('success' => false, 'message' => "Произошла ошибка отправки данных. Попробуйте снова.");
 			}
 
 		} else {
-				$response = array('success' => false, 'message' => "Вы не заполнили требуемые поля: \n" . implode("\n", $error_message));
+				$response = array('success' => false, 'message' => "Возникли ошибки при заполнении формы: \n" . implode("\n", $error_message));
 		}
 
 		header('Content-Type: application/json');
 		echo json_encode($response);
+	} else {
+		echo "not post method";
 	}
  ?>

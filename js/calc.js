@@ -1,3 +1,5 @@
+(function() {
+
 $("#scrollToCalc").on("click", function() {
 	var land = $("[name=calcAnchor]");
 	$('html, body').animate({scrollTop: land.offset().top}, 'slow');
@@ -5,18 +7,30 @@ $("#scrollToCalc").on("click", function() {
 
 // polifyll for input[form=abc]
 $("#orderForm").submit(function(e) {
+	var baseUrl = $("#baseUrl").text();
+	console.log(baseUrl);
 	e.preventDefault();
 	var form = this;
 	var $external = $('[form=' + this.getAttribute('name') + ']');
 	$.ajax({
 		type: 'post',
 		data : $(this).add($external).serialize() + '&price=' + $external.filter('[name="price"]').text(),
-		url: '/call.php',
+		url: baseUrl + 'call.php',
 		success: function(response) {
-			alert(response.message);
-			if (response.success) {
-				$('#orderModal').modal('hide');
+			console.log('response from php success');
+			if (response) {
+				$('.calculator-submit-dialog').hide();
+				$('.calculator-response-dialog').show().find('p').text(response.message);
+				setTimeout(function() {
+					$('.calculator-response-dialog').hide();
+					$('#orderModal').modal('hide');
+					$('.calculator-submit-dialog').show();
+				}, 5000);
 			}
+		},
+		error: function(err) {
+			console.log('error');
+			console.log(err);
 		},
 		dataType: 'json'
 	});
@@ -44,7 +58,7 @@ var minPrice = "undefined";
 var defaultPrice = 1500; // цена по умолчанию
 var defaultDiscount = 0.5; // скидка по умолчанию (50%)
 
-var minPrice = 5000; // Минимальная цена, эту строчку можно закомментировать, чтобы её отключить
+var minPrice = 3000; // Минимальная цена, эту строчку можно закомментировать, чтобы её отключить
 
 
 
@@ -209,3 +223,6 @@ compAmount.keyup(function() {
 		makeCalc.competitors(enteredData);
 	}
 });
+
+
+})();

@@ -13,9 +13,20 @@ gulp.task('less', function() {
 		.pipe(gulp.dest('./dist/css'));
 });
 
+gulp.task('adspy', function() {
+	gulp.src('./src/adspy.less')
+		.pipe(plumber())
+		.pipe(less())
+		// .pipe(prefix('Firefox > 20', 'last 5 versions', 'Opera 12.1'))
+		.pipe(gulp.dest('./dist/css'));
+});
+
+
+
 
 gulp.task('watch', function() {
 	gulp.watch('src/**/*.less', ['less']);
+	gulp.watch('src/**/adspy.less', ['adspy']);
 });
 
-gulp.task('default', ['less', 'watch']);
+gulp.task('default', ['less', 'adspy', 'watch']);

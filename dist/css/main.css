@@ -5842,6 +5842,11 @@ body {
   padding-top: 90px;
   overflow-y: scroll;
 }
+.invisible {
+  display: none;
+  height: 1px;
+  width: 1px;
+}
 .container {
   position: relative;
 }
