@@ -60,3 +60,4 @@ Icon?
 Thumbs.db
 modx/*
 !modx/api.php
+config.php
