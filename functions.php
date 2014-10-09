@@ -123,10 +123,91 @@ function echoWhoisHtmlSpecs($whois) {
 	return $output;
 }
 
+function pageSpeed($url) {
+	$service = 'https://www.googleapis.com/pagespeedonline/v1/runPagespeed';
+	$key = PAGESPEED_API_KEY;
+	$locale = 'ru';
 
+	$params = array('url' => $url, 'key' => $key, 'locale' => $locale, 'screenshot' => 'true');
+	return getJSON($service, $params);
+}
 
+function getJSON($url, $params) {
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, $url . '?' . http_build_query($params));
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+	curl_setopt($ch, CURLOPT_TIMEOUT, 60);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+	$response = curl_exec($ch);
+	return json_decode($response);
+}
 
+function getHttpInfo($url) {
+	// curl session to get whois reposnse
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+	curl_setopt($ch, CURLOPT_TIMEOUT, 60);
+	curl_setopt($ch, CURLOPT_HEADER, 1);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 
+	$response = curl_exec($ch);
 
+	if (curl_error($ch)) {
+		return "Connection error!";
+	} else {
+		$status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+		$header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+		$header_raw = substr($response, 0, $header_size);
+		$headers = http_parse_headers($header_raw);
+	}
+	curl_close($ch);
+	return array('status' => $status, 'headers' => $headers);
+}
 
+if (!function_exists('http_parse_headers'))
+{
+	function http_parse_headers($raw_headers)
+	{
+		$headers = array();
+		$key = ''; // [+]
 
+		foreach(explode("\n", $raw_headers) as $i => $h)
+		{
+			$h = explode(':', $h, 2);
+
+			if (isset($h[1]))
+			{
+				if (!isset($headers[$h[0]]))
+					$headers[$h[0]] = trim($h[1]);
+				elseif (is_array($headers[$h[0]]))
+				{
+					// $tmp = array_merge($headers[$h[0]], array(trim($h[1]))); // [-]
+					// $headers[$h[0]] = $tmp; // [-]
+					$headers[$h[0]] = array_merge($headers[$h[0]], array(trim($h[1]))); // [+]
+				}
+				else
+				{
+					// $tmp = array_merge(array($headers[$h[0]]), array(trim($h[1]))); // [-]
+					// $headers[$h[0]] = $tmp; // [-]
+					$headers[$h[0]] = array_merge(array($headers[$h[0]]), array(trim($h[1]))); // [+]
+				}
+
+				$key = $h[0]; // [+]
+			}
+			else // [+]
+			{ // [+]
+				if (substr($h[0], 0, 1) == "\t") // [+]
+					$headers[$key] .= "\r\n\t".trim($h[0]); // [+]
+				elseif (!$key) // [+]
+					$headers[0] = trim($h[0]);trim($h[0]); // [+]
+			} // [+]
+		}
+
+		return $headers;
+	}
+}
