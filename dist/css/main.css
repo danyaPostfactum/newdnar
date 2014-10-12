@@ -6137,9 +6137,6 @@ body {
 .move-domain-heading {
   margin-top: -33px;
 }
-.move-domain-intro {
-  margin-bottom: 38.5px;
-}
 .price-list-column .price-list-price {
   font-weight: 600;
 }
@@ -6212,9 +6209,9 @@ body {
 .payment-method-paragraph .payment-icons {
   float: left;
   top: 7px;
-  left: 0;
-  width: 120px;
-  height: 100px;
+  margin-right: 12px;
+  width: 70px;
+  height: 65px;
 }
 .bank-cards-icons {
   background: url('../assets/img/payment/payment_icons_visa.png'), url('../assets/img/payment/payment_icons_master.png');
@@ -6676,4 +6673,10 @@ footer {
 }
 .faq-table td {
   width: 50%;
+}
+.move-info {
+  font-size: 52px;
+  color: #1743DD;
+  float: left;
+  margin-right: 12px;
 }

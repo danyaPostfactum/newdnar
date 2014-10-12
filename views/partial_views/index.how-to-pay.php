@@ -11,36 +11,69 @@
 			</span>
 		</div>
 		<section class="col-sm-12 payment-type" id="individual-person">
-			<h3>Банковскими картами</h3>
+            <br>
+            <div>После авторизации в личном кабинете - зайдите в раздел меню «Счета» и нажмите вверху кнопку «Пополнить баланс» - затем введите нужную вам сумму. <strong>На все виды платежей для физических лиц - 0% комиссии!</strong></div>
+
+            <h3>Оплата через платежный агрегатор <font color="#0188cd">ROBO</font><font color="#fc0000">KASSA</font></h3>
 			<div class="row">
 				<div class="col-sm-12">
-					<p class="payment-method-paragraph bank-cards-paragraph">
-						<span class="payment-icons bank-cards-icons"></span>
-						При оформлении заказа вы можете выбрать оплату банковскими картами Visa и MasterCard. После подтверждения выбранного метода оплаты вы будете перенаправлены на
-						сайт платёжной системы, где будет необходимо ввести данные карты. После успешного совершения платежа система автоматически перенаправит вас обратно на сайт регистратора.
+					<p class="payment-method-paragraph electronic-paragraph">
+					<img src="<?php echo BASE_URL; ?>dist/assets/img/payment/robox_oplata.jpg" alt="Оплата регистрации доменов через Robokassa">
+						<br><br>
+После формирования счета нажмите на кнопку "Оплатить через ROBOXchange.com", после чего Вы будете перенаправлены на сайт платёжной системы ROBOKASSA. Вам на выбор будут предложены различные способы оплаты:
+<ul>
+    <li>банковские карты VISA и MasterCard;</li>
+    <li>электронные кошельки (Яндекс.Деньги, QIWI, Кошелек Элекснет, Деньги@mail.ru, EasyPay, Единый кошелек, TeleMoney);</li>
+    <li>терминалы моментальной оплаты (QIWI, Элекснет, Евросеть, Связной, Мобил Элемент, К@ссира.нет);</li>
+    <li>сотовые операторы (МТС, МегаФон, Билайн, Tele2);</li>
+    <li>интернет-банки ведущих банков (Альфа-Банк, Русский Стандарт, ВТБ24, Промсвязьбанк и др.)</li>
+</ul>
+Таким образом, Вы можете выбрать для себя самый оптимальный способ оплаты. При оплате через сервис ROBOKASSA зачисление на счет производится автоматически. После совершения платежа система автоматически перенаправит вас обратно в личный кабинет.
 					</p>
 				</div>
 			</div>
 			
-
-			<h3>Электронными деньгами</h3>
+            <h3>Квитанция Сбербанка</h3>
 			<div class="row">
 				<div class="col-sm-12">
-					<p class="payment-method-paragraph electronic-paragraph">
-						<span class="payment-icons electronic-money-icons"></span>
-						Оплата при помощи <strong>Яндекс.Денег, Webmoney, QIWI-кошелька, RBK Money</strong> и ещё более 30 видов электронных платежей. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-						Corrupti dolorem nesciunt mollitia doloribus officia aut quos hic similique perferendis velit ducimus laborum, doloremque, totam maxime fugit 
-						debitis autem tempora rerum, odio architecto quam! Eaque maiores eligendi nobis. Aliquid at odio, itaque eos error nisi 
-						possimus dicta fuga vero placeat nobis.
+					<p class="payment-method-paragraph bank-cards-paragraph">
+						<img class="payment-icons" src="<?php echo BASE_URL; ?>dist/assets/img/payment/sberbank_logo.png" alt="Оплата регистрации доменов по квитанции Сбербанка">
+После формирования счета - внизу таблицы найдите «Квитанция Сбербанка», рядом будет ссылка на PDF. Распечатайте полученный файл и можете идти в любое отделение Сбербанка для оплаты. Деньги будут зачислены в ручном режиме после получения нами на счет в банке - как правило, на следующий рабочий день.
 					</p>
 				</div>
 			</div>
+			
+			
+			
+			<h3>Безналичный перевод</h3>
+			<div class="row">
+				<div class="col-sm-12">
+					<p class="payment-method-paragraph bank-cards-paragraph">
+						<img class="payment-icons" src="<?php echo BASE_URL; ?>dist/assets/img/payment/bank-icon.png" alt="Оплата регистрации доменов по безналичному переводу">
+После формирования счета - внизу таблицы найдите «Печатная версия (с подписью и печатью)», рядом будет ссылка на PDF. Распечатайте полученный файл счета для оплаты. Деньги будут зачислены в ручном режиме после получения нами на счет в банке - как правило, на следующий рабочий день.						
+					</p>
+				</div>
+			</div>
+			
+			
+			
+			
 		</section>
 		<section class="col-sm-12 payment-type" id="legal-entity">
-			<h3>Безналичный расчёт</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus at, fugit assumenda laboriosam cupiditate tempora asperiores culpa ipsum temporibus, eveniet, debitis corporis fuga modi, provident.</p>
-
-			<h3>Работа с ИП и ООО</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum voluptate nemo doloribus earum recusandae. Vel dolores saepe cumque, nemo ea animi cupiditate modi. Eos iusto architecto omnis labore inventore sequi accusamus excepturi, vitae harum numquam minima sed culpa, officiis facere voluptates autem perspiciatis impedit assumenda. Hic voluptates magni quae voluptate sit. Distinctio, ipsum quidem doloremque ipsa maiores magni voluptate suscipit ab quisquam aliquid recusandae beatae eveniet rem, nobis incidunt ut expedita fugit libero excepturi quos! Laudantium consequuntur suscipit tempora adipisci facilis totam alias cumque odit officia perferendis reiciendis, culpa eos laboriosam quidem vel blanditiis, eveniet unde porro voluptates. Inventore, minima.</p>
+		<h3>Безналичный расчёт</h3>
+		<div class="row">
+				<div class="col-sm-12">
+					<p class="payment-method-paragraph bank-cards-paragraph">
+			
+			<img class="payment-icons" src="<?php echo BASE_URL; ?>dist/assets/img/payment/bank-icon.png" alt="Оплата регистрации доменов по безналичному расчёту">
+			После авторизации в личном кабинете - зайдите в раздел меню «Счета» и нажмите вверху кнопку «Пополнить баланс» - затем введите нужную вам сумму. После формирования счета - внизу таблицы найдите «Печатная версия (с подписью и печатью)», рядом будет ссылка на PDF. Распечатайте полученный файл счета для оплаты. Деньги будут зачислены в ручном режиме после получения нами на счет в банке - как правило, на следующий рабочий день. <br>
+            <h4>Важно</h4>
+            <ul>
+<li><strong>За обработку платежа и документооборот - с любой суммы платежа будет удержена фиксированная комиссия в 50 рублей!</strong></li>
+<li>Счет налогом на добавленную стоимость не облагается в связи с применением УСН.</li>
+            </ul>
+           	        </p>
+				</div>
+        </div> 
 		</section>
 	</article>
