@@ -24,12 +24,22 @@
 	
 <ul>
    	<li <?php if ($page_name == 'domains') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>">Домены</a></li>
-    <li <?php if ($page_name == 'ssl') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>ssl">SSL сертификаты</a></li>
-    <li <?php if ($page_name == 'hostings') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>hostings">Хостинги</a></li>
+    <!--<li <?php if ($page_name == 'ssl') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>ssl">SSL сертификаты</a></li>-->
+    <li <?php if ($page_name == 'hostings') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>hostings">Подбор хостинга</a></li>
     <li <?php if ($page_name == 'analyze') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>check">Анализ сайтов</a></li>
     <li <?php if ($page_name == 'garant') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>garant">Гарант сделок</a></li>
     <li <?php if ($page_name == 'support') { ?>class="active"<?php } ?>><a href="<?php echo BASE_URL; ?>support">Поддержка сайтов</a></li>
-   
+        <ul>
+           <li><a href="<?php echo BASE_URL; ?>support/adspy">Анализ конкурентов</a></li>
+           <li><a href="<?php echo BASE_URL; ?>support/ppc">Контекстная реклама</a></li>
+           <li><a href="<?php echo BASE_URL; ?>support/seo">Поисковая оптимизация и продвижение сайтов</a></li>
+           <li><a href="<?php echo BASE_URL; ?>support/support">Поддержка и сопровождение сайтов</a></li>
+           <li><a href="<?php echo BASE_URL; ?>support/virus">Удаление вирусов на сайте</a></li>
+        </ul>
+        
+
+
+        
 </ul>
 	
 

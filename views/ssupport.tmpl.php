@@ -9,7 +9,7 @@
 	<div class="container">
 		<div class="row">
             <div class="col-sm-8">
-                <h1>Поддержка сайтов</h1>
+                <h1>Поддержка и сопровождение сайтов</h1>
 				<p>Можешь этим заняться )</p>
             </div>
             <div class="hidden-xs col-sm-4">

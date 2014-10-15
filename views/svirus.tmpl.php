@@ -9,7 +9,7 @@
 	<div class="container">
 		<div class="row">
             <div class="col-sm-8">
-                <h1>Удаление вирусов</h1>
+                <h1>Поиск и удаление <br>вирусов на сайте</h1>
 				<p>Можешь этим заняться )</p>
             </div>
             <div class="hidden-xs col-sm-4">
