@@ -23,7 +23,7 @@
 </div>
 <div class="adspy">
     
-    <div class="container">
+   <!-- <div class="container">
         <div id="baseUrl" class="invisible"><?php echo BASE_URL; ?></div>
         <div class="row advantages-section">
             <div class="col-sm-6 big-img"><img src="<?php echo BASE_URL; ?>dist/assets/img/tagcloud_transp.png" alt="Облако тегов"></div>
@@ -38,7 +38,7 @@
                 <button class="btn btn-default" id="scrollToCalc">Узнать стоимость</button>
             </div>
         </div>
-    </div>
+    </div>-->
     
     <div class="container">
         <div class="row info-section">
