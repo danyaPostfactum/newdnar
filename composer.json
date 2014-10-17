@@ -1,0 +1,6 @@
+{
+    "require": {
+        "php": ">=5.3.2",
+        "true/punycode": "~1.0"
+    }
+}
