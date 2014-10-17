@@ -36,15 +36,16 @@ class su_handler
 		{
 		$items = array(
                   'domain:' => 'domain.name',
+                  'registrar:' => 'domain.registrar',
                   'state:' => 'domain.status',
                   'person:' => 'owner.name',
                   'phone:' => 'owner.phone',
                   'e-mail:' => 'owner.email',
                   'created:' => 'domain.created',
                   'paid-till:' => 'domain.expires',
-/*
                   'nserver:' => 'domain.nserver.',
-                  'source:' => 'domain.source',
+
+/*                  'source:' => 'domain.source',
                   'type:' => 'owner.type',
                   'org:' => 'owner.organization',
                   'fax-no:' => 'owner.fax',
