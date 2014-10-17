@@ -1,5 +1,7 @@
 <?php
 
+require_once('vendor/autoload.php');
+
 $TLDnames = Array('ru', 'su', 'com', 'xn--p1ai', 'net', 'org', 'biz', 'info', 'mobi', 'name', 'tv', 'in', 'mn', 'cc', 'ws', 'bz', 'asia', 'me', 'us', 'tel', 'kz');
 $TLDprices = Array(
 	'ru' => array('price' => 95), 'su' => array('price' => 400), 'com' => array('price' => 380), 'xn--p1ai' => array('price' => 100), 'net' => array('price' => 380), 'org' => array('price' => 380), 'biz' => array('price' => 380), 'info' => array('price' => 380), 'mobi' => array('price' => 800), 
@@ -12,9 +14,9 @@ function isXHR() {
 }
 
 function is_valid_domain_name($domain_name) {
-    return (preg_match("/^([a-z\d](-*[a-z\d])*)(\.([a-z\d](-*[a-z\d])*))*$/i", $domain_name) //valid chars check
-            && preg_match("/^.{1,253}$/", $domain_name) //overall length check
-            && preg_match("/^[^\.]{1,63}(\.[^\.]{1,63})*$/", $domain_name)   ); //length of each label
+	return (preg_match("/^([a-z\d](-*[a-z\d])*)(\.([a-z\d](-*[a-z\d])*))*$/i", $domain_name) //valid chars check
+			&& preg_match("/^.{1,253}$/", $domain_name) //overall length check
+			&& preg_match("/^[^\.]{1,63}(\.[^\.]{1,63})*$/", $domain_name)   ); //length of each label
 }
 
 function structure_domain_name($domain_name) {
@@ -38,26 +40,59 @@ function structure_domain_name($domain_name) {
 function phpWhois($query_value) { // using phpwhois script
 	include_once('phpwhois/whois.main.php');
 	// include_once('phpwhois/whois.utils.php');
+	$servers = json_decode(file_get_contents( __DIR__.'/new-php-whois/src/Phois/Whois/whois.servers.json' ), true);
+	$servers['рф'] = 'xn--p1ai';
+	unset($severs['xn--p1ai']);
 
 	$whois = new Whois();
+	$whois->DATA['xn--p1ai'] = 'ru';
 
 	// Set to true if you want to allow proxy requests
 	$allowproxy = true;
 
- 	// get faster but less acurate results
- 	// $whois->deep_whois = empty($_GET['fast']);
- 	$whois->deep_whois = false;
- 	
- 	// To use special whois servers (see README)
-	//$whois->UseServer('uk','whois.nic.uk:1043?{hname} {ip} {query}');
-	//$whois->UseServer('au','whois-check.ausregistry.net.au');
+	// get faster but less acurate results
+	// $whois->deep_whois = empty($_GET['fast']);
+	$whois->deep_whois = false;
+
+	foreach ($servers as $key => $server) {
+		if (preg_match("/^https?:\/\//i", $server[0])) {
+			$server[0] = $server[0] . '{domain}'. '.' . $key;
+		}
+		$whois->UseServer($key, $server[0]);
+	}
 
 	// Comment the following line to disable support for non ICANN tld's
 	$whois->non_icann = true;
 
 	$whoisArray = $whois->Lookup($query_value);
 
+	if (isset($whoisArray['rawdata'])) {
+		$whoisArray['rawdata'] = implode("\n", $whoisArray['rawdata']);
+	}
+
 	return $whoisArray;
+}
+
+function findMainHost($host) {
+	$servers = json_decode(file_get_contents( __DIR__.'/new-php-whois/src/Phois/Whois/whois.servers.json' ), true);
+	$servers['рф'] = 'xn--p1ai';
+	unset($severs['xn--p1ai']);
+	$domains = explode('.', $host);
+
+	if (count($domains) < 2)
+		return null;
+
+	$found = '';
+	for ($i = count($domains) - 1; $i > 0; $i--) {
+		$test = implode('.', array_slice($domains, $i));
+		if (isset($servers[$test]))
+			$found = $test;
+	}
+
+	if (!$found)
+		return null;
+	$host = substr($host, 0, - (strlen($found) + 1));
+	return array_pop(explode('.', $host)) . '.' . $found;
 }
 
 function queryWhoIs($query_value) { // using reg.ru whois script
@@ -129,19 +164,37 @@ function pageSpeed($url) {
 	$locale = 'ru';
 
 	$params = array('url' => $url, 'key' => $key, 'locale' => $locale, 'screenshot' => 'true');
-	return getJSON($service, $params);
+	$response = getRemoteContent($service . '?' . http_build_query($params));
+	if ($response) {
+		$result = json_decode($response);
+	}
+
+	if (isset($result->screenshot)) {
+		$result->screenshot->data = str_replace(array('_', '-'), array('/', '+'), $result->screenshot->data);
+	}
+	return $result;
 }
 
-function getJSON($url, $params) {
+function getRemoteContent($url) {
 	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, $url . '?' . http_build_query($params));
+	curl_setopt($ch, CURLOPT_URL, $url);
 	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 	curl_setopt($ch, CURLOPT_TIMEOUT, 60);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 	$response = curl_exec($ch);
-	return json_decode($response);
+	$status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+	if (curl_error($ch) || $status != 200) {
+		return false;
+	}
+	return $response;
+}
+
+function getAbsoluteURL($source_url, $relative_url)
+{
+	$url_parts = parse_url($relative_url);
+	return http_build_url($source_url, $url_parts, HTTP_URL_JOIN_PATH);
 }
 
 function getHttpInfo($url) {
@@ -158,15 +211,50 @@ function getHttpInfo($url) {
 	$response = curl_exec($ch);
 
 	if (curl_error($ch)) {
-		return "Connection error!";
+		return array('error' => curl_error($ch));
 	} else {
 		$status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 		$header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
 		$header_raw = substr($response, 0, $header_size);
 		$headers = http_parse_headers($header_raw);
+
+		$favUrl = '/favicon.ico';
+
+		$body = substr($response, $header_size);
+		$dom = new DOMDocument();
+		if (@$dom->loadHTML($body)) {
+			$links = $dom->getElementsByTagName('link');
+			foreach ($links as $link) {
+				$rel = $link->getAttribute('rel');
+				if ($rel and strpos($rel, 'shortcut') !== false) {
+					$linkUrl = $link->getAttribute('href');
+					if ($linkUrl) {
+						$favUrl = $linkUrl;
+					}
+				}
+			}
+		}
+
+		$favUrl = getAbsoluteURL($url, $favUrl);
+
+		$favicon = getRemoteContent($favUrl);
+		if (!$favicon)
+			$favUrl = false;
 	}
 	curl_close($ch);
-	return array('status' => $status, 'headers' => $headers);
+	return array('status' => $status, 'headers' => $headers, 'favicon' => $favUrl);
+}
+
+function getDnsRecords($host) {
+	// PHP гавно
+	$records = @dns_get_record($host, DNS_A + DNS_MX + DNS_NS);
+	$result = array();
+	if ($records) {
+		foreach ($records as $record) {
+			$result[$record['type']][] = $record;
+		}
+	}
+	return $result;
 }
 
 if (!function_exists('http_parse_headers'))
@@ -209,5 +297,109 @@ if (!function_exists('http_parse_headers'))
 		}
 
 		return $headers;
+	}
+}
+
+if (!function_exists('http_build_url'))
+{
+	define('HTTP_URL_REPLACE', 1);              // Replace every part of the first URL when there's one of the second URL
+	define('HTTP_URL_JOIN_PATH', 2);            // Join relative paths
+	define('HTTP_URL_JOIN_QUERY', 4);           // Join query strings
+	define('HTTP_URL_STRIP_USER', 8);           // Strip any user authentication information
+	define('HTTP_URL_STRIP_PASS', 16);          // Strip any password authentication information
+	define('HTTP_URL_STRIP_AUTH', 32);          // Strip any authentication information
+	define('HTTP_URL_STRIP_PORT', 64);          // Strip explicit port numbers
+	define('HTTP_URL_STRIP_PATH', 128);         // Strip complete path
+	define('HTTP_URL_STRIP_QUERY', 256);        // Strip query string
+	define('HTTP_URL_STRIP_FRAGMENT', 512);     // Strip any fragments (#identifier)
+	define('HTTP_URL_STRIP_ALL', 1024);         // Strip anything but scheme and host
+
+	// Build an URL
+	// The parts of the second URL will be merged into the first according to the flags argument. 
+	// 
+	// @param   mixed           (Part(s) of) an URL in form of a string or associative array like parse_url() returns
+	// @param   mixed           Same as the first argument
+	// @param   int             A bitmask of binary or'ed HTTP_URL constants (Optional)HTTP_URL_REPLACE is the default
+	// @param   array           If set, it will be filled with the parts of the composed url like parse_url() would return 
+	function http_build_url($url, $parts=array(), $flags=HTTP_URL_REPLACE, &$new_url=false)
+	{
+		$keys = array('user','pass','port','path','query','fragment');
+
+		// HTTP_URL_STRIP_ALL becomes all the HTTP_URL_STRIP_Xs
+		if ($flags & HTTP_URL_STRIP_ALL)
+		{
+			$flags |= HTTP_URL_STRIP_USER;
+			$flags |= HTTP_URL_STRIP_PASS;
+			$flags |= HTTP_URL_STRIP_PORT;
+			$flags |= HTTP_URL_STRIP_PATH;
+			$flags |= HTTP_URL_STRIP_QUERY;
+			$flags |= HTTP_URL_STRIP_FRAGMENT;
+		}
+		// HTTP_URL_STRIP_AUTH becomes HTTP_URL_STRIP_USER and HTTP_URL_STRIP_PASS
+		else if ($flags & HTTP_URL_STRIP_AUTH)
+		{
+			$flags |= HTTP_URL_STRIP_USER;
+			$flags |= HTTP_URL_STRIP_PASS;
+		}
+
+		// Parse the original URL
+		$parse_url = parse_url($url);
+
+		// Scheme and Host are always replaced
+		if (isset($parts['scheme']))
+			$parse_url['scheme'] = $parts['scheme'];
+		if (isset($parts['host']))
+			$parse_url['host'] = $parts['host'];
+
+		// (If applicable) Replace the original URL with it's new parts
+		if ($flags & HTTP_URL_REPLACE)
+		{
+			foreach ($keys as $key)
+			{
+				if (isset($parts[$key]))
+					$parse_url[$key] = $parts[$key];
+			}
+		}
+		else
+		{
+			// Join the original URL path with the new path
+			if (isset($parts['path']) && ($flags & HTTP_URL_JOIN_PATH))
+			{
+				if (isset($parse_url['path']))
+					$parse_url['path'] = rtrim(str_replace(basename($parse_url['path']), '', $parse_url['path']), '/') . '/' . ltrim($parts['path'], '/');
+				else
+					$parse_url['path'] = $parts['path'];
+			}
+
+			// Join the original query string with the new query string
+			if (isset($parts['query']) && ($flags & HTTP_URL_JOIN_QUERY))
+			{
+				if (isset($parse_url['query']))
+					$parse_url['query'] .= '&' . $parts['query'];
+				else
+					$parse_url['query'] = $parts['query'];
+			}
+		}
+
+		// Strips all the applicable sections of the URL
+		// Note: Scheme and Host are never stripped
+		foreach ($keys as $key)
+		{
+			if ($flags & (int)constant('HTTP_URL_STRIP_' . strtoupper($key)))
+				unset($parse_url[$key]);
+		}
+
+
+		$new_url = $parse_url;
+
+		return 
+			 ((isset($parse_url['scheme'])) ? $parse_url['scheme'] . '://' : '')
+			.((isset($parse_url['user'])) ? $parse_url['user'] . ((isset($parse_url['pass'])) ? ':' . $parse_url['pass'] : '') .'@' : '')
+			.((isset($parse_url['host'])) ? $parse_url['host'] : '')
+			.((isset($parse_url['port'])) ? ':' . $parse_url['port'] : '')
+			.((isset($parse_url['path'])) ? $parse_url['path'] : '')
+			.((isset($parse_url['query'])) ? '?' . $parse_url['query'] : '')
+			.((isset($parse_url['fragment'])) ? '#' . $parse_url['fragment'] : '')
+		;
 	}
 }

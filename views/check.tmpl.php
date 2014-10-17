@@ -8,13 +8,13 @@
 <div class="jumbotron">
 	<div class="container">
 		<div class="row">
-             <div class="col-sm-8">
-                <h1>Анализ сайтов</h1>
+			 <div class="col-sm-8">
+				<h1>Анализ сайтов</h1>
 				<p>Уникальный сервис диагностики сайта позволит в автоматическом режиме получить информацию по домену, работе сайта</p>
-            </div>
-            <div class="hidden-xs col-sm-4">
+			</div>
+			<div class="hidden-xs col-sm-4">
 						<img src="<?php echo BASE_URL; ?>dist/assets/img/check.png" class="pull-right" alt="">
-            </div>
+			</div>
 		</div>
 		
 	</div>
@@ -38,18 +38,28 @@
 		</form>
 	</div>
 </div>
+<div id="check-alert" style="display:none">
+	<div class="alert alert-danger"></div>
+</div>
 <div class="row">
 	<div class="col-sm-4">
+		<div class="card-wrapper hosting-card check-results clearfix" id="check-screenshot">
+			<h4>Скриншот</h4>
+		</div>
+	</div>
+	<div class="col-sm-8">
 		<div class="card-wrapper hosting-card check-results clearfix" id="check-whois-results">
 			<h4>Данные whois</h4>
 		</div>
 	</div>
-	<div class="col-sm-4">
+</div>
+<div class="row">
+	<div class="col-sm-6">
 		<div class="card-wrapper hosting-card check-results clearfix" id="check-dns-results">
 			<h4>Диагностика</h4>
 		</div>
 	</div>
-	<div class="col-sm-4">
+	<div class="col-sm-6">
 		<div class="card-wrapper hosting-card check-results clearfix" id="check-http-results">
 			<h4>Вебсервер</h4>
 		</div>
@@ -58,7 +68,6 @@
 <div class="card-wrapper hosting-card check-results clearfix" id="check-pagespeed-results">
 	<h4>Советы по отпимизации</h4>
 </div>
-<img id="screenshot" style="display:none" />
 <script type="text/x-handlebars-template" id="check-loading-template">
 	<div style="float: left; margin-bottom: 15px; margin-right: 20px;">
 		<div class="loading-ball"></div>
@@ -105,7 +114,7 @@
 	<ul class="list-unstyled list-checks">
 		{{#if status}}
 			<li>
-				<div><span class="glyphicon glyphicon-ok"></span> Код ответа веб-сервера: {{status}}</div>
+				<div><span class="glyphicon glyphicon-{{#eq status 200}}ok{{else}}remove{{/eq}}"></span> Код ответа веб-сервера: {{status}}</div>
 			</li>
 			{{#if headers.Server}}
 				<li>
@@ -122,10 +131,14 @@
 		{{/if}}
 	</ul>
 </script>
+<script type="text/x-handlebars-template" id="check-screenshot-template">
+	<div class="check-screenshot-wrapper">
+		<img src="{{src}}" width="{{width}}" height="{{height}}" alt="Скриншот" />
+	</div>
+</script>
 
 <script type="text/x-handlebars-template" id="check-whois-template">
-	<h4><img id="favicon" style="display:none;vertical-align:top" width="16" height="16" /> {{regrinfo.domain.name}}</h4>
-	{{#if regrinfo}}
+	<h4><img id="favicon" style="display:none;vertical-align:top" width="16" height="16" /> {{domain}}</h4>
 	<dl class="dl-horizontal dl-properties">
 		<dt>Регистратор</dt><dd>{{regrinfo.domain.registrar}}</dd>
 		<dt>Дата регистрации</dt><dd>{{regrinfo.domain.created}}</dd>
@@ -134,44 +147,66 @@
 		<dt>DNS-серверы</dt><dd>{{#each regrinfo.domain.nserver}} {{@key}} {{/each}}</dd>
 	</dl>
 	<p><a href="javascript:" data-toggle="modal" data-target="#whoisModal">Вся информация WHOIS</a></p>
-	{{else}}
-		<div>Домен свободен</div>
-	{{/if}}
+
 <div class="modal fade" id="whoisModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" style="width:504px">
-    <div class="modal-content">
-      <div class="modal-header">
-        <span data-dismiss="modal" class="modal-close"><span class="glyphicon glyphicon-remove"></span></span>
-        <h4 class="modal-title" id="myModalLabel">Данные WHOIS</h4>
-      </div>
-      <div class="modal-body"><pre>{{rawdata}}</pre></div>
-      <div class="modal-footer"><button class="btn btn-default" data-dismiss="modal">Закрыть</button>
-       </div>
-    </div>
+	<div class="modal-content">
+	  <div class="modal-header">
+		<span data-dismiss="modal" class="modal-close"><span class="glyphicon glyphicon-remove"></span></span>
+		<h4 class="modal-title" id="myModalLabel">Данные WHOIS</h4>
+	  </div>
+	  <div class="modal-body"><pre>{{rawdata}}</pre></div>
+	  <div class="modal-footer"><button class="btn btn-default" data-dismiss="modal">Закрыть</button>
+	   </div>
+	</div>
   </div>
 </div>
 </script>
 <script type="text/x-handlebars-template" id="check-pagespeed-template">
 	<h4>Советы по оптимизации</h4>
-	<h5>Оценка сайта: <span class="label label-success">{{score}}</span> / 100</h5>
+	<h5>Оценка сайта: <span class="label label-{{#scoreLabel score}}{{/scoreLabel}}">{{score}}</span> / 100</h5>
 	<ul class="list-unstyled list-checks">
 		{{#each formattedResults.ruleResults}}
 		<li>
-			<div><span class="glyphicon glyphicon-{{#if this.ruleImpact}}remove{{else}}ok{{/if}}"></span> {{this.localizedRuleName}} ({{this.ruleImpact}})</div>
-			<!-- {{#each this.urlBlocks}}
-				<div>{{#format this.header}}{{/format}}</div>
-				<ul>
-					{{#each this.urls}}
-						<li>{{#format this.result}}{{/format}}</li>
-					{{/each}}
-				</ul>
+			{{#if this.ruleImpact}}
+			<div><span class="glyphicon glyphicon-remove"></span> <a class="show-more" href="javascript:">{{this.localizedRuleName}}</a></div>
+			<div style="display:none">
+			{{#each this.urlBlocks}}
+					<div>{{#format this.header}}{{/format}}</div>
+					<ul>
+						{{#each this.urls}}
+							<li>{{#format this.result}}{{/format}}</li>
+						{{/each}}
+					</ul>
 			{{/each}}
-			-->
+			</div>
+			{{else}}
+			<span class="glyphicon glyphicon-ok"></span> {{this.localizedRuleName}}
+			{{/if}}
 		</li>
 		{{/each}}
 	</ul>
 </script>
 <style>
+.alert-danger {
+	color: #a94442;
+	background-color: #f2dede;
+	border-color: #ebccd1;
+}
+.alert {
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+.check-screenshot-wrapper {
+	text-align: center;
+	margin: -5px -5px 0;
+}
+.check-screenshot-wrapper img{
+	max-width: 100%;
+	margin-bottom: 10px;
+}
 .check-results{
 	min-height: 200px;
 }
@@ -230,45 +265,90 @@ window.onload = function() {
 			return obj.args[number - 1].value;
 		});
 	});
+	Handlebars.registerHelper('eq', function(a, b, options) {
+		if (a == b) {
+			return options.fn(this);
+		} else {
+			return options.inverse(this);
+		}
+	});
+	Handlebars.registerHelper('scoreLabel', function(a) {
+		if (a > 90)
+			return 'success';
+		if (a > 70)
+			return 'warning';
+		return 'error';
+	});
+	var requests = [];
 	$('#checkForm').submit(function(e) {
+		var input = this.url.value;
 		e.preventDefault();
-		$('.check-results').html($('#check-loading-template').html());
-		var dnsRequest = $.ajax({
-			data: 'get=dns&url=' + this.url.value,
-			success: function(response) {
-				var template = Handlebars.compile($('#check-dns-template').html());
-				var html = template({dns: response});
-				$('#check-dns-results').html(html);
-			}
+		$.each(requests, function() {
+			this.abort();
 		});
-		var httpRequest = $.ajax({
-			data: 'get=http&url=' + this.url.value,
-			success: function(response) {
-				var template = Handlebars.compile($('#check-http-template').html());
-				var html = template(response);
-				$('#check-http-results').html(html);
-				dnsRequest.done(function() {
-					$('#favicon').prop('src', response.favicon).fadeIn();
-				});
-			}
-		});
+		$('#check-alert').hide();
+		$('.check-results').css({opacity: 1}).html($('#check-loading-template').html());
 		var whoisRequest = $.ajax({
-			data: 'get=whois&url=' + this.url.value,
+			data: 'get=whois&url=' + input,
 			success: function(response) {
-				var template = Handlebars.compile($('#check-whois-template').html());
-				var html = template(response);
-				$('#check-whois-results').html(html);
+				if (response.error) {
+					$('.check-results').animate({opacity: 0});
+					$('#check-alert').show().find('.alert').html(response.error);
+				} else {
+					var template = Handlebars.compile($('#check-whois-template').html());
+					var html = template(response);
+					$('#check-whois-results').html(html);
+					var dnsRequest = $.ajax({
+						data: 'get=dns&url=' + input,
+						success: function(response) {
+							var template = Handlebars.compile($('#check-dns-template').html());
+							var html = template({dns: response});
+							$('#check-dns-results').html(html);
+						}
+					});
+					var httpRequest = $.ajax({
+						data: 'get=http&url=' + input,
+						success: function(response) {
+							var template = Handlebars.compile($('#check-http-template').html());
+							var html = template(response);
+							$('#check-http-results').html(html);
+							if (response.favicon)
+								$('#favicon').prop('src', response.favicon).show();
+						}
+					});
+					var pagespeedRequest = $.ajax({
+						data: 'get=pagespeed&url=' + input,
+						success: function(response) {
+							var template = Handlebars.compile($('#check-pagespeed-template').html());
+							var html = template(response);
+							$('#check-pagespeed-results').html(html);
+							$(".show-more").on('click', function(e) {
+								e.preventDefault();
+								$(this).parent().next().slideToggle('fast');
+							});
+							var template = Handlebars.compile($('#check-screenshot-template').html());
+							if (response.screenshot) {
+								var screenshot = {
+									width: response.screenshot.width,
+									height: response.screenshot.height,
+									src: 'data:' + response.screenshot.mime_type + ';base64,' + response.screenshot.data
+								};
+							} else {
+								var screenshot = {
+									width: 256,
+									height: 256,
+									src: '/dist/assets/img/404.png'
+								};
+							}
+							var html = template(screenshot);
+							$('#check-screenshot').html(html);
+						}
+					});
+					requests.push(dnsRequest, httpRequest, pagespeedRequest);
+				}
 			}
 		});
-		var pagespeedRequest = $.ajax({
-			data: 'get=pagespeed&url=' + this.url.value,
-			success: function(response) {
-				$('#screenshot').prop('src' , 'data:image/jpeg;base64,' + response.screenshot.data).show();
-				var template = Handlebars.compile($('#check-pagespeed-template').html());
-				var html = template(response);
-				$('#check-pagespeed-results').html(html);
-			}
-		});
+		requests = [whoisRequest];
 	});
 };
 </script>
