@@ -42,7 +42,7 @@ function phpWhois($query_value) { // using phpwhois script
 	// include_once('phpwhois/whois.utils.php');
 	$servers = json_decode(file_get_contents( __DIR__.'/new-php-whois/src/Phois/Whois/whois.servers.json' ), true);
 	$servers['рф'] = 'xn--p1ai';
-	unset($severs['xn--p1ai']);
+	unset($servers['xn--p1ai']);
 
 	$whois = new Whois();
 	$whois->DATA['xn--p1ai'] = 'ru';
@@ -76,7 +76,7 @@ function phpWhois($query_value) { // using phpwhois script
 function findMainHost($host) {
 	$servers = json_decode(file_get_contents( __DIR__.'/new-php-whois/src/Phois/Whois/whois.servers.json' ), true);
 	$servers['рф'] = 'xn--p1ai';
-	unset($severs['xn--p1ai']);
+	unset($servers['xn--p1ai']);
 	$domains = explode('.', $host);
 
 	if (count($domains) < 2)
@@ -91,8 +91,8 @@ function findMainHost($host) {
 
 	if (!$found)
 		return null;
-	$host = substr($host, 0, - (strlen($found) + 1));
-	return array_pop(explode('.', $host)) . '.' . $found;
+	$parts = explode('.', substr($host, 0, - (strlen($found) + 1)));
+	return array_pop($parts) . '.' . $found;
 }
 
 function queryWhoIs($query_value) { // using reg.ru whois script

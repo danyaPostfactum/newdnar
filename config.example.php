@@ -10,4 +10,5 @@ if ($cd == 'newdnar') {
 
 define("BASE_URL", "$directory");
 define("ROOT_PATH", $_SERVER["DOCUMENT_ROOT"] . "$directory");
+define("PAGESPEED_API_KEY", "xxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxx");
 ?>
