@@ -4,9 +4,6 @@
 	$keywords = 'test2';
 	include(ROOT_PATH . '_partials/header.php') 
 ?>
-<?php
-	$need_calc = true;
-?>
 <div class="jumbotron">
 	<div class="container">
 		<div class="row">

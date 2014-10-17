@@ -79,10 +79,14 @@
 			<script src="<?php echo BASE_URL; ?>js/sendform.js"></script>
 			<!-- // <script src="js/dropzone.js"></script> -->
 		<?php } ?>
-		<?php if (isset($need_calc)) { ?>
 
+		<?php if (isset($page_name) && $page_name == 'sadspy') { ?>
 			<script src="<?php echo BASE_URL; ?>js/calc.js"></script>
-
 		<?php } ?>
+
+		<?php if (isset($page_name) && $page_name == 'check') { ?>
+			<script src="<?php echo BASE_URL; ?>js/analyzer.js"></script>
+		<?php } ?>
+
 		<script type="text/javascript" src="//yandex.st/share/share.js"
 		charset="utf-8"></script>

@@ -148,19 +148,18 @@
 	</dl>
 	<p><a href="javascript:" data-toggle="modal" data-target="#whoisModal">Вся информация WHOIS</a></p>
 
-<div class="modal fade" id="whoisModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" style="width:504px">
-	<div class="modal-content">
-	  <div class="modal-header">
-		<span data-dismiss="modal" class="modal-close"><span class="glyphicon glyphicon-remove"></span></span>
-		<h4 class="modal-title" id="myModalLabel">Данные WHOIS</h4>
-	  </div>
-	  <div class="modal-body"><pre>{{rawdata}}</pre></div>
-	  <div class="modal-footer"><button class="btn btn-default" data-dismiss="modal">Закрыть</button>
-	   </div>
+	<div class="modal fade" id="whoisModal" tabindex="-1" role="dialog" aria-labelledby="whoisModalLabel" aria-hidden="true">
+		<div class="modal-dialog" style="width:504px">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span data-dismiss="modal" class="modal-close"><span class="glyphicon glyphicon-remove"></span></span>
+					<h4 class="modal-title" id="whoisModalLabel">Данные WHOIS</h4>
+				</div>
+				<div class="modal-body"><pre>{{rawdata}}</pre></div>
+				<div class="modal-footer"><button class="btn btn-default btn-full pull-right" data-dismiss="modal">Закрыть</button></div>
+			</div>
+		</div>
 	</div>
-  </div>
-</div>
 </script>
 <script type="text/x-handlebars-template" id="check-pagespeed-template">
 	<h4>Советы по оптимизации</h4>
@@ -254,104 +253,5 @@
 	border-radius: .25em;
 }
 </style>
-<script>
-window.onload = function() {
-	Handlebars.registerHelper('format', function(obj) {
-		return obj.format.replace(new RegExp('\\$([0-9]+)', 'g'), function(match, number) {
-			var arg = obj.args[number - 1];
-			if (arg.type == 'URL') {
-				return arg.value.link(arg.value);
-			}
-			return obj.args[number - 1].value;
-		});
-	});
-	Handlebars.registerHelper('eq', function(a, b, options) {
-		if (a == b) {
-			return options.fn(this);
-		} else {
-			return options.inverse(this);
-		}
-	});
-	Handlebars.registerHelper('scoreLabel', function(a) {
-		if (a > 90)
-			return 'success';
-		if (a > 70)
-			return 'warning';
-		return 'error';
-	});
-	var requests = [];
-	$('#checkForm').submit(function(e) {
-		var input = this.url.value;
-		e.preventDefault();
-		$.each(requests, function() {
-			this.abort();
-		});
-		$('#check-alert').hide();
-		$('.check-results').css({opacity: 1}).html($('#check-loading-template').html());
-		var whoisRequest = $.ajax({
-			data: 'get=whois&url=' + input,
-			success: function(response) {
-				if (response.error) {
-					$('.check-results').animate({opacity: 0});
-					$('#check-alert').show().find('.alert').html(response.error);
-				} else {
-					var template = Handlebars.compile($('#check-whois-template').html());
-					var html = template(response);
-					$('#check-whois-results').html(html);
-					var dnsRequest = $.ajax({
-						data: 'get=dns&url=' + input,
-						success: function(response) {
-							var template = Handlebars.compile($('#check-dns-template').html());
-							var html = template({dns: response});
-							$('#check-dns-results').html(html);
-						}
-					});
-					var httpRequest = $.ajax({
-						data: 'get=http&url=' + input,
-						success: function(response) {
-							var template = Handlebars.compile($('#check-http-template').html());
-							var html = template(response);
-							$('#check-http-results').html(html);
-							if (response.favicon)
-								$('#favicon').prop('src', response.favicon).show();
-						}
-					});
-					var pagespeedRequest = $.ajax({
-						data: 'get=pagespeed&url=' + input,
-						success: function(response) {
-							var template = Handlebars.compile($('#check-pagespeed-template').html());
-							var html = template(response);
-							$('#check-pagespeed-results').html(html);
-							$(".show-more").on('click', function(e) {
-								e.preventDefault();
-								$(this).parent().next().slideToggle('fast');
-							});
-							var template = Handlebars.compile($('#check-screenshot-template').html());
-							if (response.screenshot) {
-								var screenshot = {
-									width: response.screenshot.width,
-									height: response.screenshot.height,
-									src: 'data:' + response.screenshot.mime_type + ';base64,' + response.screenshot.data
-								};
-							} else {
-								var screenshot = {
-									width: 256,
-									height: 256,
-									src: '/dist/assets/img/404.png'
-								};
-							}
-							var html = template(screenshot);
-							$('#check-screenshot').html(html);
-						}
-					});
-					requests.push(dnsRequest, httpRequest, pagespeedRequest);
-				}
-			}
-		});
-		requests = [whoisRequest];
-	});
-};
-</script>
 
 <?php include("_partials/footer.php") ?>
-
