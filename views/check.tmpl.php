@@ -79,33 +79,33 @@
 	<h4>Диагностика</h4>
 	<ul class="list-unstyled list-checks">
 		{{#if dns}}
-			<li><span class="glyphicon glyphicon-ok"></span> Информация DNS получена</li>
+			<li><span class="glyphicon glyphicon-ok"></span> Информация из DNS получена</li>
 			<li>
 				{{#if dns.A}}
-					<div><span class="glyphicon glyphicon-ok"></span> A-записи получены:</div>
+					<div><span class="glyphicon glyphicon-ok"></span> A-запись:</div>
 					<ul>
 					{{#each dns.A}}
 						<li>{{this.ip}}</li>
 					{{/each}}
 					</ul>
 				{{else}}
-					<div>A-записи не получены</div>
+					<div>A-запись не получена</div>
 				{{/if}}
 			</li>
 			<li>
 				{{#if dns.MX}}
-					<div><span class="glyphicon glyphicon-ok"></span> MX-записи получены:</div>
+					<div><span class="glyphicon glyphicon-ok"></span> MX-запись:</div>
 					<ul>
 					{{#each dns.MX}}
 						<li>{{this.target}}</li>
 					{{/each}}
 					</ul>
 				{{else}}
-					<div><span class="glyphicon glyphicon-remove"></span> MX-записи не получены</div>
+					<div><span class="glyphicon glyphicon-remove"></span> MX-запись не получена</div>
 				{{/if}}
 			</li>
 		{{else}}
-			<li><span class="glyphicon glyphicon-remove"></span> Информация DNS не получена</li>
+			<li><span class="glyphicon glyphicon-remove"></span> Информация из DNS не получена</li>
 		{{/if}}
 	</ul>
 </script>
@@ -118,12 +118,12 @@
 			</li>
 			{{#if headers.Server}}
 				<li>
-					<div>Сервер представляется как: {{headers.Server}}</div>
+					<div>Веб-сервер: {{headers.Server}}</div>
 				</li>
 			{{/if}}
 			{{#if headers.X-Powered-By}}
 				<li>
-					<div>Страница генерируется с помощью: {{headers.X-Powered-By}}</div>
+					<div>Язык программирования: {{headers.X-Powered-By}}</div>
 				</li>
 			{{/if}}
 		{{else}}
