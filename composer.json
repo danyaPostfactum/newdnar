@@ -1,6 +1,14 @@
 {
     "require": {
         "php": ">=5.3.2",
-        "true/punycode": "~1.0"
-    }
+        "true/punycode": "~1.0",
+        "phpWhois/phpWhois": "dev-master",
+        "phois/whois": "dev-master"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "http://github.com/regru/php-whois"
+        }
+    ]
 }
