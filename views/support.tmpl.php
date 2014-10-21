@@ -84,7 +84,7 @@
 				<a href="<?php echo BASE_URL; ?>support/virus">
 					<img src="<?php echo BASE_URL; ?>dist/assets/img/support/virus.png" alt="Удаление вирусов">
 					<div class="caption">
-						<p>Удаление вирусов на сайте</p>
+						<p>Поиск и удаление вирусов на сайте</p>
 					</div>
 				</a>
 			</div>

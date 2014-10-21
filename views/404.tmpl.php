@@ -34,7 +34,7 @@
            <li><a href="<?php echo BASE_URL; ?>support/ppc">Контекстная реклама</a></li>
            <li><a href="<?php echo BASE_URL; ?>support/seo">Поисковая оптимизация и продвижение сайтов</a></li>
            <li><a href="<?php echo BASE_URL; ?>support/support">Поддержка и сопровождение сайтов</a></li>
-           <li><a href="<?php echo BASE_URL; ?>support/virus">Удаление вирусов на сайте</a></li>
+           <li><a href="<?php echo BASE_URL; ?>support/virus">Поиск и удаление вирусов на сайте</a></li>
         </ul>
         
 
