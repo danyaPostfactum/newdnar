@@ -37,12 +37,8 @@ function structure_domain_name($domain_name) {
 	return $domainArray;
 }
 
-function phpWhois($query_value) { // using phpwhois script
-	include_once('phpwhois/whois.main.php');
-	// include_once('phpwhois/whois.utils.php');
-	$servers = json_decode(file_get_contents( __DIR__.'/new-php-whois/src/Phois/Whois/whois.servers.json' ), true);
-	$servers['рф'] = 'xn--p1ai';
-	unset($servers['xn--p1ai']);
+function phpWhois($query_value) {
+	$servers = json_decode(file_get_contents( __DIR__.'/vendor/phois/whois/src/Phois/Whois/whois.servers.json' ), true);
 
 	$whois = new Whois();
 	$whois->DATA['xn--p1ai'] = 'ru';
@@ -74,9 +70,7 @@ function phpWhois($query_value) { // using phpwhois script
 }
 
 function findMainHost($host) {
-	$servers = json_decode(file_get_contents( __DIR__.'/new-php-whois/src/Phois/Whois/whois.servers.json' ), true);
-	$servers['рф'] = 'xn--p1ai';
-	unset($servers['xn--p1ai']);
+	$servers = json_decode(file_get_contents( __DIR__.'/vendor/phois/whois/src/Phois/Whois/whois.servers.json' ), true);
 	$domains = explode('.', $host);
 
 	if (count($domains) < 2)
@@ -96,7 +90,6 @@ function findMainHost($host) {
 }
 
 function queryWhoIs($query_value) { // using reg.ru whois script
-	include_once('new-php-whois/src/Phois/Whois/Whois.php');
 	$whois_info_array = array();
 
 	$whois_info = new Phois\Whois\Whois($query_value);

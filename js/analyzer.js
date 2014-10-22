@@ -19,7 +19,7 @@ Handlebars.registerHelper('scoreLabel', function(a) {
 		return 'success';
 	if (a > 70)
 		return 'warning';
-	return 'error';
+	return 'danger';
 });
 (function() {
 	var requests = [];

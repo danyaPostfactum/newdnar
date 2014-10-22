@@ -140,7 +140,7 @@
 <script type="text/x-handlebars-template" id="check-whois-template">
 	<h4><img id="favicon" style="display:none;vertical-align:top" width="16" height="16" /> {{domain}}</h4>
 	<dl class="dl-horizontal dl-properties">
-		<dt>Регистратор</dt><dd>{{regrinfo.domain.registrar}}</dd>
+		<dt>Регистратор</dt><dd>{{regrinfo.domain.sponsor}}</dd>
 		<dt>Дата регистрации</dt><dd>{{regrinfo.domain.created}}</dd>
 		<dt>Зарегистрирован до</dt><dd>{{regrinfo.domain.expires}}</dd>
 		<dt>Статус</dt><dd>{{regrinfo.domain.status}}</dd>
