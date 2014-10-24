@@ -6112,14 +6112,13 @@ body {
   margin: 0;
 }
 .domain-item-taken {
-  color: #d9534f;
+  color: #5cb85c;
 }
 .domain-item-free {
   color: #5cb85c;
 }
 .more-whois-content {
   color: #343437;
-  display: none;
 }
 .raw-domain-wrapper {
   margin-top: 15px;
@@ -6212,6 +6211,9 @@ body {
   margin-right: 12px;
   width: 70px;
   height: 65px;
+}
+.faq_icon {
+  vertical-align: baseline;
 }
 .bank-cards-icons {
   background: url('../assets/img/payment/payment_icons_visa.png'), url('../assets/img/payment/payment_icons_master.png');
@@ -6663,7 +6665,7 @@ footer {
   font-size: 11px;
 }
 .domains-cost {
-  float: right;
+  margin-bottom: -25px;
 }
 .faq-table {
   width: 100%;
@@ -6675,8 +6677,8 @@ footer {
   width: 50%;
 }
 .move-info {
-  font-size: 52px;
-  color: #1743DD;
+  font-size: 40px;
+  color: #1790DD;
   float: left;
   margin-right: 12px;
 }

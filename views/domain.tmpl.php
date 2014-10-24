@@ -39,7 +39,30 @@
     <p>
       <div class="domains-img"><img src="<?php echo BASE_URL; ?>dist/assets/img/domains/<?php echo $domains_info[$domain_name]['name']; ?>.png" alt="<?php echo $title; ?>" title="<?php echo $title; ?>"></div>
             
-      <div class="domains-description"><?php echo $domains_info[$domain_name]['description']; ?></div>
+      <div class="domains-description">
+          <?php echo $domains_info[$domain_name]['description']; ?>
+           <br><br>
+          На сегодняшний день мы предлагаем самую низкую цену на регистрацию и продление доменов в зоне .<span style="text-transform: uppercase;"><?php echo $domainname; ?></span>, независимо от количества регистрируемых или продлеваемых доменов.
+           <br><br>
+           <table class="table">
+               <tr>
+                    
+                    <th>Регистрация доменов .<span style="text-transform: uppercase;"><?php echo $domainname; ?></span></th>
+                    <th>Продление доменов .<span style="text-transform: uppercase;"><?php echo $domainname; ?></span></th>
+               </tr>
+               <tr>
+                    
+                    <td><?php
+                    $tld = $domains_info[$domain_name]['name'];                               
+                    echo $TLDprices[$tld]['price']; 
+                    ?> руб.</td>
+                    <td><?php
+                    $tld = $domains_info[$domain_name]['name'];                               
+                    echo $TLDprices[$tld]['price']; 
+                    ?> руб.</td>
+               </tr>
+          </table>
+      </div>
             
       <div class="domains-cost"><button type="button" class="btn btn-default" data-toggle="modal" data-target="#dnarLoginModal">Зарегистрировать за <?php
                     $tld = $domains_info[$domain_name]['name'];                               
