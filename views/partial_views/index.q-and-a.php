@@ -9,12 +9,12 @@
                    <td>
         <? if ($qaChapter) { ?>
                         <h3><?= $qaChapter->get('pagetitle') ?></h3>
-            <? $qaSubchapters = $qaChapter->getMany('Children'); ?>
+            <? $qaSubchapters = $qaChapter->getMany('Children', array('published' => true)); ?>
             <? foreach ($qaSubchapters as $subchapter) { ?>
                         <h4 class="show-more-question"><a href="#" class="show-more"><?= $subchapter->get('pagetitle') ?></a></h4>
                         <div class="show-more-content show-more-answer">
                             <ul>
-                <? $links = $subchapter->getMany('Children'); ?>
+                <? $links = $subchapter->getMany('Children', array('published' => true)); ?>
                 <? foreach ($links as $link) { ?>
                     <li><a href="<?= 'qa/' . $link->get('alias') ?>"><?= $link->get('pagetitle'); ?></a></li>
                 <? } ?>
