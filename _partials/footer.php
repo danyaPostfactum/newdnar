@@ -18,7 +18,7 @@
 							<img src="<?php echo BASE_URL; ?>dist/assets/img/payment/rbk_logo2.png" alt="RBK Money" title="RBK Money">
 							<img src="<?php echo BASE_URL; ?>dist/assets/img/payment/bank-icon2.png" alt="Безналичный расчет" title="Безналичный расчет">
 						</span>	
-						<span class="payment-icons-row-link"><a href="<?php echo BASE_URL; ?>/#payment">Все способы оплаты</a></span>
+						<span class="payment-icons-row-link"><a href="../#payment">Все способы оплаты</a></span>
 					</div>
 				</div>
 			</div>

@@ -457,13 +457,22 @@ RewriteRule ^17.html$ http://dnar.ru/ [R=301,L]
 RewriteRule ^13.html$ http://dnar.ru/#payment [R=301,NE,B,L]
 RewriteRule ^faq_add_payment.html$ http://dnar.ru/#payment [R=301,NE,B,L]
 RewriteRule ^faq_domains.html$ http://dnar.ru/#questions-and-answers [R=301,NE,B,L]
-
+RewriteRule ^1.html$ http://dnar.ru/ [R=301,L] # Может редирект на FAQ?
+RewriteRule ^2.html$ http://dnar.ru/ [R=301,L] # Может редирект на FAQ?
 RewriteRule ^faq_new_domain.html$ http://dnar.ru/qa/new-domain [R=301,L]
-
-
 RewriteRule ^/faq_prolong_domain.html$ http://dnar.ru/qa/prolong_domain [R=301,L]
 RewriteRule ^/faq_autoprolong_domain.html$ http://dnar.ru/qa/prolong_domain [R=301,L]
-
+RewriteRule ^faq_user_domain_take_from_reg.html$ http://dnar.ru/#move-domain [R=301,NE,B,L]
+RewriteRule ^faq_domain_list.html$ http://dnar.ru/#questions-and-answers [R=301,NE,B,L]
+RewriteRule ^faq_update_domain.html$ http://dnar.ru/qa/delegate-domain [R=301,L]
+RewriteRule ^faq_parking.html$ http://dnar.ru/qa/parking-domain [R=301,L]
+RewriteRule ^nsi_registry.html$ http://dnar.ru/qa/dns-servers [R=301,L]
+RewriteRule ^ptr_records.html$ http://dnar.ru/qa/ptr [R=301,L]
+RewriteRule ^faq_add_payment.html$ http://dnar.ru/#payment [R=301,NE,B,L]
+RewriteRule ^faq_finance.html$ http://dnar.ru/#payment [R=301,NE,B,L]
+RewriteRule ^faq_invoices.html$ http://dnar.ru/#payment [R=301,NE,B,L]
+RewriteRule ^faq_payments.html$ http://dnar.ru/#payment [R=301,NE,B,L]
+RewriteRule ^nslookup_help.html$ http://dnar.ru/qa/nslookup [R=301,L]
 
 
 
