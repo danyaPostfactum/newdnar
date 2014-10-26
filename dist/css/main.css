@@ -5861,7 +5861,7 @@ body {
   font-size: 12px;
 }
 .navbar-form {
-  paddiing: 0;
+  padding: 0;
 }
 @media (min-width: 992px) and (max-width: 1200px) {
   .navbar-nav > li > a {
@@ -6232,8 +6232,10 @@ body {
   margin-top: 15px;
   float: right;
 }
-.filter-column-wrapper {
-  padding-left: 60px;
+@media (min-width: 992px) {
+  .filter-column-wrapper {
+    padding-left: 60px;
+  }
 }
 .filter-column {
   position: relative;
@@ -6378,7 +6380,11 @@ a.sort:hover {
   line-height: 1.6;
 }
 .settings-card {
+  border-bottom: 1px dotted #d0d0cf;
   padding-bottom: 10px;
+}
+.settings-card:last-child {
+  border-bottom: none;
 }
 .settings-card h1,
 .settings-card h2,
@@ -6390,9 +6396,6 @@ a.sort:hover {
   white-space: pre-wrap;
   margin-bottom: 10px;
 }
-.range-filter {
-  border-bottom: 1px dotted #d0d0cf;
-}
 .order-settings-header {
   margin-top: 5px;
   padding-bottom: 10px;
@@ -6402,6 +6405,14 @@ a.sort:hover {
 .interval-input {
   display: inline-block;
   width: 35%;
+}
+.aligned-list {
+  padding: 0;
+  padding-left: 1em;
+  list-style-position: inside;
+}
+.aligned-list > li {
+  text-indent: -1em;
 }
 .tabs-row {
   padding: 0;

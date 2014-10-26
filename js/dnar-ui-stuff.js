@@ -27,6 +27,7 @@
 		console.log('tab');
 		$(this).tab('show');
 	});
+
 })();
 
 (function() {
@@ -70,14 +71,18 @@
 	});
 
 	// Toggle payment information ====================================
-	$('.payment-type-switch').find('input').on('click', function() {
+	var $paymentSwitch = $('.payment-type-switch');
+	$paymentSwitch.on('click', 'input', function(e) {
+		// e.stopPropagation();
 		console.log('clicked');
 		if ( $(this).is(":checked") ) {
 			var showPayment = $(this).val();
 			$(".payment-type").hide();
 			$('#' + showPayment).show();	
 		}
-		
+	});
+	$paymentSwitch.find('.anchor-label-switch').on('click', function(e) {
+		e.preventDefault();
 	});
 
 	// position modal to be vertically centered ======================

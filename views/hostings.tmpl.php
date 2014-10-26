@@ -2,159 +2,19 @@
 	$title = 'Подбор выгодного хостинга';
 	$description = 'test1';
 	$keywords = 'test2';
- 	include(ROOT_PATH . '_partials/header.php') 
+	include(ROOT_PATH . '_partials/header.php') 
 ?>
-
-<?php 
-$hosters = array();
-$hosters['timeweb'] = array(
-	'name' => 'TimeWeb',
-	'img' => 'dist/assets/img/hostings/timeweb.ico',
-	'url' => 'http://timeweb.com/ru/services/hosting/?i=3591&a=0006'
-	);
-$hosters['dnar'] = array(
-	'name' => 'DNAR',
-	'img' => 'dist/assets/img/hostings/dnar.png',
-	'url' => 'http://dnar.ru/hostings/dnar'
-	);
-$hosters['nic.ru'] = array(
-	'name' => 'Nic',
-	'img' => 'http://placehold.it/16x16',
-	'url' => 'http://nic.ru'
-	);
-$hosters['R01'] = array(
-	'name' => 'R01 Регистратор',
-	'img' => 'http://placehold.it/16x16',
-	'url' => 'http://hosting.r01.ru'
-	);
-
-$pricing_options = array(
-	array(
-		'name' => 'Мини',
-		'features' => array(
-			//'ddos_safe' => false,
-			'webspace' => 3,
-			'domain_amount' => 6,
-			'databases_amount' => 0,
-			'test_period' => true,
-			'scripts_available' => false,
-			'OS' => 'Unix'
-			),
-		'price' => 201.6, 
-		'url' => 'dnar',
-		'description' => '',
-		'hoster' => $hosters['dnar']
-		),
-	array(
-		'name' => 'Макси',
-		'features' => array(
-			//'ddos_safe' => true,
-			'webspace' => 7,
-			'domain_amount' => 12,
-			'databases_amount' => INF,
-			'test_period' => true,
-			'scripts_available' => true,
-			'OS' => 'Unix'
-			),
-		'price' => 316.8, 
-		'url' => 'dnar',
-		'description' => '',
-		'hoster' => $hosters['dnar']
-		),
-	array(
-		'name' => 'Ультра',
-		'features' => array(
-			//'ddos_safe' => true,
-			'webspace' => 12,
-			'domain_amount' => 24,
-			'databases_amount' => INF,
-			'test_period' => true,
-			'scripts_available' => true,
-			'OS' => 'Unix'
-			),
-		'price' => 489.6, 
-		'url' => 'dnar',
-		'description' => '',
-		'hoster' => $hosters['dnar']
-		),
-    array(
-		'name' => 'Year',
-		'features' => array(
-			//'ddos_safe' => false,
-			'webspace' => 2,
-			'domain_amount' => 2,
-			'databases_amount' => 2,
-			'test_period' => true,
-			'scripts_available' => true,
-			'OS' => 'Unix'
-			),
-		'price' => 120, 
-		'url' => 'timeweb',
-		'description' => '',
-		'hoster' => $hosters['timeweb']
-		),
-    array(
-		'name' => 'Optimo',
-		'features' => array(
-			//'ddos_safe' => false,
-			'webspace' => 4,
-			'domain_amount' => 5,
-			'databases_amount' => 5,
-			'test_period' => true,
-			'scripts_available' => true,
-			'OS' => 'Unix'
-			),
-		'price' => 175, 
-		'url' => 'timeweb',
-		'description' => '',
-		'hoster' => $hosters['timeweb']
-		),
-    array(
-		'name' => 'Century',
-		'features' => array(
-			//'ddos_safe' => false,
-			'webspace' => 6.4,
-			'domain_amount' => 10,
-			'databases_amount' => INF,
-			'test_period' => true,
-			'scripts_available' => true,
-			'OS' => 'Unix'
-			),
-		'price' => 265, 
-		'url' => 'timeweb',
-		'description' => '',
-		'hoster' => $hosters['timeweb']
-		),
-	array(
-		'name' => 'Millennium',
-		'features' => array(
-			//'ddos_safe' => false,
-			'webspace' => 12,
-			'domain_amount' => 20,
-			'databases_amount' => INF,
-			'test_period' => true,
-			'scripts_available' => true,
-			'OS' => 'Unix'
-			),
-		'price' => 410, 
-		'url' => 'timeweb',
-		'description' => '',
-		'hoster' => $hosters['timeweb']
-		)
-	);
-
- ?>
 
 <div class="jumbotron <?php if ($page_title == 'domains') { echo 'jumbotron-brand'; } ?>">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-8">
-                <h1>Подбор лучшего хостинга</h1>
+				<h1>Подбор лучшего хостинга</h1>
 				<p>Наш сервис создан для сравнения тарифных планов хостинговых компаний под ваши нужды, что призвано помочь вам сократить время на поиск подходящего варианта, а также сэкономить деньги.</p>
-            </div>
-            <div class="hidden-xs col-sm-4">
+			</div>
+			<div class="hidden-xs col-sm-4">
 						<img src="<?php echo BASE_URL; ?>dist/assets/img/hostings.png" class="pull-right" alt="">
-            </div>
+			</div>
 
 		</div>
 		
@@ -207,7 +67,8 @@ $pricing_options = array(
 				?>
 				<div class="card-wrapper 
 							hosting-card 
-							mix 
+							mix
+							filter-not-outofrange
 							<?php echo 'filter-' . $hostingOS; ?> 
 							<?php foreach ($pricing_option['features'] as $key => $feature) {
 								if ($feature === true) {
@@ -315,39 +176,39 @@ $pricing_options = array(
 
 				</section> -->
 
-				<section class="card-wrapper settings-card range-filter" data-filtername="priceorder">
-					<h4 class="order-settings-header">Ежемесячная плата</h4>
-					от <input class="interval-input lower-range" type="text"> до
-					<input class="interval-input upper-range" type="text"> <i class="icon-ruble"></i>
-				</section>
-				<section class="card-wrapper settings-card range-filter" data-filtername="webspace">
-					<h4 class="order-settings-header">Дисковое пространство</h4>
-					от <input class="interval-input lower-range" type="text"> до
-					<input class="interval-input upper-range" type="text"> Гб
-				</section>
-				<section class="card-wrapper settings-card range-filter" data-filtername="domainamount">
-					<h4 class="order-settings-header">Количество сайтов</h4>
-					от <input class="interval-input lower-range" type="text"> до
-					<input class="interval-input upper-range" type="text"> шт.
-				</section>
-				<section class="card-wrapper settings-card range-filter" data-filtername="databases">
-					<h4 class="order-settings-header">Количество баз данных</h4>
-					от <input class="interval-input lower-range" type="text"> до
-					<input class="interval-input upper-range" type="text"> шт.
-				</section>
+				<form id="Filters">
+					<section class="card-wrapper settings-card range-filter" data-filtername="priceorder">
+						<h4 class="order-settings-header">Ежемесячная плата</h4>
+						от <input class="interval-input lower-range" type="text"> до
+						<input class="interval-input upper-range" type="text"> <i class="icon-ruble"></i>
+					</section>
+					<section class="card-wrapper settings-card range-filter" data-filtername="webspace">
+						<h4 class="order-settings-header">Дисковое пространство</h4>
+						от <input class="interval-input lower-range" type="text"> до
+						<input class="interval-input upper-range" type="text"> Гб
+					</section>
+					<section class="card-wrapper settings-card range-filter" data-filtername="domainamount">
+						<h4 class="order-settings-header">Количество сайтов</h4>
+						от <input class="interval-input lower-range" type="text"> до
+						<input class="interval-input upper-range" type="text"> шт.
+					</section>
+					<section class="card-wrapper settings-card range-filter" data-filtername="databases">
+						<h4 class="order-settings-header">Количество баз данных</h4>
+						от <input class="interval-input lower-range" type="text"> до
+						<input class="interval-input upper-range" type="text"> шт.
+					</section>
 
 
-				<form id="Filters" class="">
 					<?php foreach (array(
 										 // 'ddos_safe' => 'Защита от DDOS', 
 										 'test_period' => "Наличие тестового периода", 
 										 'scripts_available' => "Скрипты php/perl/python") as $filter_key => $filter_name) { ?>
-				    <fieldset class="card-wrapper settings-card range-filter">
+					<fieldset class="card-wrapper settings-card">
 							<h4 class="order-settings-header"><?php echo $filter_name; ?></h4>
-                            <select>
-							    <option value="">Неважно</option>
-							    <option value=".<?php echo strtolower('filter-' . $filter_key); ?>">Да</option>
-							    <option value=".<?php echo strtolower('filter-' . 'no-' . $filter_key); ?>">Нет</option>
+							<select>
+								<option value="">Неважно</option>
+								<option value=".<?php echo strtolower('filter-' . $filter_key); ?>">Да</option>
+								<option value=".<?php echo strtolower('filter-' . 'no-' . $filter_key); ?>">Нет</option>
 							</select>
 							<!-- <button type="button" class="btn btn-default filter" data-filter=".<?php echo strtolower('filter-' . $filter_key); ?>">
 								<?php echo "Да"; ?>
@@ -355,10 +216,12 @@ $pricing_options = array(
 							<button type="button" class="btn btn-default filter" data-filter=".<?php echo strtolower('filter-' . 'no-' . $filter_key); ?>">
 								<?php echo "Нет";  ?>
 							</button> -->
-				    </fieldset>
+					</fieldset>
 							
 					<?php } ?>
-                
+
+
+				
 
 					<fieldset class="card-wrapper settings-card">
 						<h4 class="order-settings-header">Операционная система</h4>
@@ -383,33 +246,34 @@ $pricing_options = array(
 
 
 			<div class="hostings-description">
-                <p><strong>Выбор хостинга в 7 простых шагов</strong><br><br>
-Чтобы выбрать оптимальный хостинг достаточно последовательно заполнить 7 полей:</p>
-<ol>
-    <li><strong>Цена</strong> – устанавливаем ежемесячный бюджет на хостинг.</li>
-    <li><strong>Место на диске</strong> – выбираем максимальный объем хранимой информации. Всегда берите с запасом!</li>
-    <li><strong>Количество сайтов</strong> – устанавливаем необходимое количество сайтов.  Не забывайте о возможности открытия новых проектов.</li>
-    <li><strong>Количество БД</strong> – в зависимости от специфики ресурсов выбираем количество необходимых баз данных.</li>
-    <li><strong>Тестовый период</strong> – многие провайдеры предоставляют 7 и более дней "на пробу" – отличный способ проверить качество услуг. </li>
-    <li><strong>Скрипты</strong> – отсутствие их поддержки снижает стоимость, но не один серьезный проект не может без них функционировать.</li>
-    <li><strong>Операционная система</strong> – Unix = PHP+MySQL, Windows = ASP+MS SQL.</li>
-</ol>
-<p><a href="#" class="show-more">7 признаков надежного хостинга</a></p>
+				<p>
+					<strong>Выбор хостинга в 7 простых шагов</strong><br><br>
+					Чтобы выбрать оптимальный хостинг достаточно последовательно заполнить 7 полей:
+				</p>
+				<ol class="aligned-list advice-list">
+					<li><strong>Цена</strong> – устанавливаем ежемесячный бюджет на хостинг.</li>
+					<li><strong>Место на диске</strong> – выбираем максимальный объем хранимой информации. Всегда берите с запасом!</li>
+					<li><strong>Количество сайтов</strong> – устанавливаем необходимое количество сайтов.  Не забывайте о возможности открытия новых проектов.</li>
+					<li><strong>Количество БД</strong> – в зависимости от специфики ресурсов выбираем количество необходимых баз данных.</li>
+					<li><strong>Тестовый период</strong> – многие провайдеры предоставляют 7 и более дней "на пробу" – отличный способ проверить качество услуг. </li>
+					<li><strong>Скрипты</strong> – отсутствие их поддержки снижает стоимость, но не один серьезный проект не может без них функционировать.</li>
+					<li><strong>Операционная система</strong> – Unix = PHP+MySQL, Windows = ASP+MS SQL.</li>
+				</ol>
+				<p><a href="#" class="show-more">7 признаков надежного хостинга</a></p>
 
-<div class="show-more-content">
-    <ul>
-        <li>Открытая информация о стране, в которой зарегистрирована компания. Наличие лицензии.</li>
-        <li>Информативный сайт с нешаблонным дизайном.</li>
-        <li>Положительные отзывы со стороны реальных клиентов.</li>
-        <li>Наличие offline-офиса и support'a по телефону.</li>
-        <li>Большое количество способов оплаты.</li>
-        <li>Наличие тестового периода.</li>
-        <li>Система скидок для постоянных клиентов.</li>
-    </ul>
-</div>
+				<div class="show-more-content">
+					<ul class="aligned-list">
+						<li>Открытая информация о стране, в которой зарегистрирована компания. Наличие лицензии.</li>
+						<li>Информативный сайт с нешаблонным дизайном.</li>
+						<li>Положительные отзывы со стороны реальных клиентов.</li>
+						<li>Наличие offline-офиса и support'a по телефону.</li>
+						<li>Большое количество способов оплаты.</li>
+						<li>Наличие тестового периода.</li>
+						<li>Система скидок для постоянных клиентов.</li>
+					</ul>
+				</div>
 
 			</div>
-				
 
 		</aside>
 	</div>

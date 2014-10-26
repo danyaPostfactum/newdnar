@@ -16,7 +16,9 @@
 				$(function(){
 						
 					// Initialize buttonFilter code
-					dropdownFilter.init();
+					dropdownFilter.init({
+						defaultFilter: '.filter-not-outofrange'
+					});
 					// buttonFilter.init();
 					// Instantiate MixItUp
 						
@@ -47,26 +49,45 @@
 					});
 
 					var $mix = $(".mix");
+					var $ranges = $('.range-filter');
 					var rangeFilter = function() {
 						console.log('keyup!');
-						var wrapper = $(this);
-						var minValue = parseInt(wrapper.find(".lower-range").val(), 10) || 0;
-						var maxValue = parseInt(wrapper.find(".upper-range").val(), 10) || 0;
-						var filterName = wrapper.data().filtername;
 						$.each($mix, function(index, element) {
 							var elem = $(element);
-							elem.show();
-							if (parseInt(elem.data()[filterName], 10) < minValue) {
-								elem.hide();
-							} else {
-								if (maxValue > minValue && parseInt(elem.data()[filterName], 10) > maxValue) {
-									elem.hide();
-								}
-							}
-
+							elem.removeClass('filter-outofrange');
+							elem.addClass('filter-not-outofrange');
 						});
+						$.each($ranges, function(index, element) {
+							console.log(element);
+							var wrapper = $(element);
+							var minValue = parseInt(wrapper.find(".lower-range").val(), 10) || 0;
+							var maxValue = parseInt(wrapper.find(".upper-range").val(), 10) || 0;
+							var filterName = wrapper.data().filtername;
+							$.each($mix, function(index, element) {
+								var elem = $(element);
+								// elem.show();
+								if (parseInt(elem.data()[filterName], 10) < minValue) {
+									// $('#Container').mixItUp('filter', '.filter-test_quality')
+									elem.addClass('filter-outofrange');
+									elem.removeClass('filter-not-outofrange');
+									// elem.hide();
+								} else {
+									if (maxValue > minValue && parseInt(elem.data()[filterName], 10) > maxValue) {
+										// $('#Container').mixItUp('filter', '.filter-test_quality')
+										elem.addClass('filter-outofrange');
+										elem.removeClass('filter-not-outofrange');
+										// elem.hide();
+									}
+								}
+							});
+						});
+						console.log('applying mixitup to ranges');
+						dropdownFilter.parseFilters();
 					};
-					$(".range-filter").on('keyup', rangeFilter);
+
+					$ranges.on('keyup', function() {
+						setTimeout(rangeFilter, 500);
+					});
 				});
 			</script>
 		<?php } ?>

@@ -2,12 +2,12 @@
 		<div class="col-sm-12 payment-types-toggle">
 			<span class="switch-toggle switch-dnar payment-type-switch">
 				<input id="week" name="view" value="individual-person" type="radio" checked>
-				<label for="week" onclick="">Для физических лиц</label>
+				<label for="week">Для физических лиц</label>
 
 				<input id="month" name="view" value="legal-entity" type="radio">
-				<label for="month" onclick="">Для юридичеких лиц</label>
+				<label for="month">Для юридичеких лиц</label>
 
-				<a></a>
+				<a class="anchor-label-switch"></a>
 			</span>
 		</div>
 		<section class="col-sm-12 payment-type" id="individual-person">
