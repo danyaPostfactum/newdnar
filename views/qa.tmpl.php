@@ -1,5 +1,5 @@
 <?php 
-	$title = 'Вопросы и ответы';
+	$title = $resource->get('pagetitle') . ' / ' . 'Вопросы и ответы';
 	$description = 'test1';
 	$keywords = 'test2';
 	include(ROOT_PATH . '_partials/header.php') 

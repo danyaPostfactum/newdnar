@@ -41,7 +41,7 @@ require("modx/api.php");
 if (isset($modx)) {
 	/** @var $qaResource modResource */
 	$qaResource = $modx->getObject('modResource', 1);
-	$qaChapters = $qaResource->getMany('Children');
+	$qaChapters = $qaResource->getMany('Children', array('published' => true));
 } else {
 	//$qaChapters = array();
 }
