@@ -4,8 +4,100 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "74c3ba521caf46a2e8562f11794e8d16",
+    "hash": "a454bb9dee691bdacb78bbf05cfac578",
     "packages": [
+        {
+            "name": "phois/whois",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "http://github.com/regru/php-whois",
+                "reference": "552075045ea2b426423a108f37c00f66b0b6f439"
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Phois\\Whois": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Rivera",
+                    "email": "David.R.Rivera193@gmail.com",
+                    "homepage": "http://www.protodx.com",
+                    "role": "Systems Developer"
+                }
+            ],
+            "description": "Whois client.",
+            "keywords": [
+                "whois"
+            ],
+            "time": "2014-10-21 03:46:00"
+        },
+        {
+            "name": "phpwhois/phpwhois",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpWhois/phpWhois.git",
+                "reference": "76cc06f54fe704a0fc7aedd9b37f99617b7431c8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpWhois/phpWhois/zipball/76cc06f54fe704a0fc7aedd9b37f99617b7431c8",
+                "reference": "76cc06f54fe704a0fc7aedd9b37f99617b7431c8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "suggest": {
+                "lib-openssl": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/whois.main.php",
+                    "src/whois.utils.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Jeftovic",
+                    "email": "markjr@easydns.com"
+                },
+                {
+                    "name": "David Saez Padros",
+                    "email": "david@ols.es"
+                },
+                {
+                    "name": "Ross Golder",
+                    "email": "ross@golder.org"
+                },
+                {
+                    "name": "Dmitry Lukashin",
+                    "email": "dmitry@lukashin.ru"
+                }
+            ],
+            "description": "phpWhois - library for querying whois services and parsing results. Based on phpwhois.org",
+            "homepage": "http://phpwhois.pw",
+            "keywords": [
+                "php",
+                "phpwhois",
+                "whois"
+            ],
+            "time": "2014-10-20 05:09:31"
+        },
         {
             "name": "true/punycode",
             "version": "1.0.1",
@@ -57,7 +149,10 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "phpwhois/phpwhois": 20,
+        "phois/whois": 20
+    },
     "prefer-stable": false,
     "platform": {
         "php": ">=5.3.2"
