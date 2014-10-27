@@ -51,14 +51,12 @@
 					var $mix = $(".mix");
 					var $ranges = $('.range-filter');
 					var rangeFilter = function() {
-						console.log('keyup!');
 						$.each($mix, function(index, element) {
 							var elem = $(element);
 							elem.removeClass('filter-outofrange');
 							elem.addClass('filter-not-outofrange');
 						});
 						$.each($ranges, function(index, element) {
-							console.log(element);
 							var wrapper = $(element);
 							var minValue = parseInt(wrapper.find(".lower-range").val(), 10) || 0;
 							var maxValue = parseInt(wrapper.find(".upper-range").val(), 10) || 0;
@@ -81,12 +79,12 @@
 								}
 							});
 						});
-						console.log('applying mixitup to ranges');
 						dropdownFilter.parseFilters();
 					};
 
 					$ranges.on('keyup', function() {
-						setTimeout(rangeFilter, 500);
+						delay(rangeFilter, 500);
+						// setTimeout(rangeFilter, 500);
 					});
 				});
 			</script>

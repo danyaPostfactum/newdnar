@@ -44,8 +44,6 @@
 	<div class="row">
 		<article class="col-sm-8" id="Container">
 
-			
-
 			<?php foreach ($pricing_options as $pricing_option) { 
 				$price = $pricing_option['price'];
 				$tarif_url = $pricing_option['url'];
@@ -179,23 +177,31 @@
 				<form id="Filters">
 					<section class="card-wrapper settings-card range-filter" data-filtername="priceorder">
 						<h4 class="order-settings-header">Ежемесячная плата</h4>
-						от <input class="interval-input lower-range" type="text"> до
-						<input class="interval-input upper-range" type="text"> <i class="icon-ruble"></i>
+						<p class="range-line">
+							от <input class="interval-input lower-range" type="text"> до
+							<input class="interval-input upper-range" type="text"> <i class="icon-ruble"></i>
+						</p>
 					</section>
 					<section class="card-wrapper settings-card range-filter" data-filtername="webspace">
 						<h4 class="order-settings-header">Дисковое пространство</h4>
-						от <input class="interval-input lower-range" type="text"> до
-						<input class="interval-input upper-range" type="text"> Гб
+						<p class="range-line">
+							от <input class="interval-input lower-range" type="text"> до
+							<input class="interval-input upper-range" type="text"> Гб
+						</p>
 					</section>
 					<section class="card-wrapper settings-card range-filter" data-filtername="domainamount">
 						<h4 class="order-settings-header">Количество сайтов</h4>
-						от <input class="interval-input lower-range" type="text"> до
-						<input class="interval-input upper-range" type="text"> шт.
+						<p class="range-line">
+							от <input class="interval-input lower-range" type="text"> до
+							<input class="interval-input upper-range" type="text"> шт.
+						</p>
 					</section>
 					<section class="card-wrapper settings-card range-filter" data-filtername="databases">
 						<h4 class="order-settings-header">Количество баз данных</h4>
-						от <input class="interval-input lower-range" type="text"> до
-						<input class="interval-input upper-range" type="text"> шт.
+						<p class="range-line">
+							от <input class="interval-input lower-range" type="text"> до
+							<input class="interval-input upper-range" type="text"> шт.
+						</p>
 					</section>
 
 
