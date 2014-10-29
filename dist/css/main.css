@@ -6179,11 +6179,10 @@ body {
 .square-featurette {
   padding: 15px 20px;
   color: #ffffff;
-  min-width: 207px;
-  width: 45%;
-  font-size: 13px;
+  min-width: 220px;
+  width: 48%;
   float: left;
-  margin-right: 4%;
+  margin-right: 2%;
   height: 260px;
 }
 .square-featurette:last-child {
