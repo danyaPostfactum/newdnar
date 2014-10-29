@@ -28,7 +28,7 @@
 			<h4 class="setting-name">Упорядочить по</h4>
 			<a class="sort" href="#" data-sort="priceorder:asc">Цене</a>
 			<a class="sort" href="#" data-sort="webspace:desc">Дисковому пространству</a>
-			<a class="sort" href="#" data-sort="domainamount:desc">Количеству доменов</a>
+			<a class="sort" href="#" data-sort="domainamount:desc">Количеству сайтов</a>
 			<a class="sort" href="#" data-sort="databases:desc">Количеству баз данных</a>
 		</div>
 

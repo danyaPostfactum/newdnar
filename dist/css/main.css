@@ -5850,6 +5850,9 @@ body {
 .container {
   position: relative;
 }
+.justify {
+  text-align: justify;
+}
 .navbar-brand {
   margin-top: -9px;
 }

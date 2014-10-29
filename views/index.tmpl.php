@@ -30,7 +30,7 @@
 					  <li class="active"><a href="#main" role="tab" data-toggle="tab">Поиск и проверка домена</a></li>
 					  <li><a href="#payment" role="tab" data-toggle="tab">Как оплатить</a></li>
 					  <li><a href="#questions-and-answers" role="tab" data-toggle="tab">Вопросы и ответы</a></li>
-					  <li><a href="#advantages" role="tab" data-toggle="tab">Почему DNAR</a></li>
+					  <!--<li><a href="#advantages" role="tab" data-toggle="tab">Почему DNAR</a></li>-->
 					  <li><a href="#move-domain" role="tab" data-toggle="tab">Перенести домен к нам</a></li>
 					</ul>
 				</nav>
