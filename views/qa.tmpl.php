@@ -8,10 +8,10 @@
 <div class="jumbotron">
 	<div class="container">
 		<div class="row">
-            <div class="col-sm-7">
+            <div class="col-sm-8">
                 <h1><?= $resource->get('pagetitle') ?></h1>
             </div>
-            <div class="hidden-xs col-sm-5">
+            <div class="hidden-xs col-sm-4">
 						<img src="<?php echo BASE_URL; ?>dist/assets/img/qanda.png" class="pull-right" alt="">
             </div>			
 		</div>
@@ -19,7 +19,7 @@
 	</div>
 </div>
 
-<div class="container">
+<div class="container justify">
 <?= $resource->get('content') ?>
 
 

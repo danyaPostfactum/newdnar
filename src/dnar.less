@@ -7,6 +7,7 @@
 body {
 	padding-top: @navbar-height;
     overflow-y: scroll;
+    font-size: 14px;
 }
 
 .invisible {
@@ -19,6 +20,11 @@ body {
 	// padding-right: 60px;
 	// padding-left: 60px;
 }
+
+.justify {
+    text-align: justify;
+} 
+
 // Navigations
 
 .navbar-brand {
@@ -392,7 +398,7 @@ body {
 	right: 0;
 	display: inline-block;
 }
-
+ 
 // Featurettes
 .registration-rules {
 	margin-top: 40px;
@@ -403,9 +409,11 @@ body {
 .square-featurette {
 	padding: 15px 20px;
 	color: @text-inverse;
-	width: 45%;
+	min-width: 207px;
+    width: 45%;
+    font-size: 13px;
 	float: left;
-	margin-right: 5%;
+	margin-right: 4%; //5%;
     height: 260px;
 	&:last-child { 
 		margin-right: 0;

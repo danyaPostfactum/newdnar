@@ -5841,6 +5841,7 @@ a.list-group-item-danger.active:focus {
 body {
   padding-top: 90px;
   overflow-y: scroll;
+  font-size: 14px;
 }
 .invisible {
   display: none;
@@ -5849,6 +5850,9 @@ body {
 }
 .container {
   position: relative;
+}
+.justify {
+  text-align: justify;
 }
 .navbar-brand {
   margin-top: -9px;
@@ -6175,9 +6179,11 @@ body {
 .square-featurette {
   padding: 15px 20px;
   color: #ffffff;
+  min-width: 207px;
   width: 45%;
+  font-size: 13px;
   float: left;
-  margin-right: 5%;
+  margin-right: 4%;
   height: 260px;
 }
 .square-featurette:last-child {
@@ -6535,7 +6541,7 @@ a.sort:hover {
   color: #adadae;
 }
 .table > tbody > tr > td {
-  font-size: 13px;
+  font-size: 14px;
 }
 .dhost .dhfirst {
   text-align: left;
