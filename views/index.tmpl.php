@@ -171,7 +171,7 @@
 									</figure>
 
 								</div>
-								<div class="col-sm-6">
+								<div class="col-sm-6" style="padding-left: 0px;">
 <h3>Зарегистировавшись у нас - вы получите</h3>
 <ul>
     <li>удобную и современную панелью управления;</li>

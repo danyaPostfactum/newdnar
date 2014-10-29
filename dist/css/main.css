@@ -6179,7 +6179,9 @@ body {
 .square-featurette {
   padding: 15px 20px;
   color: #ffffff;
-  width: 48%;
+  min-width: 207px;
+  width: 45%;
+  font-size: 13px;
   float: left;
   margin-right: 4%;
   height: 260px;
