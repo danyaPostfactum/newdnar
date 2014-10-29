@@ -6178,9 +6178,9 @@ body {
 .square-featurette {
   padding: 15px 20px;
   color: #ffffff;
-  width: 45%;
+  width: 48%;
   float: left;
-  margin-right: 5%;
+  margin-right: 4%;
   height: 260px;
 }
 .square-featurette:last-child {
@@ -6538,7 +6538,7 @@ a.sort:hover {
   color: #adadae;
 }
 .table > tbody > tr > td {
-  font-size: 13px;
+  font-size: 14px;
 }
 .dhost .dhfirst {
   text-align: left;
