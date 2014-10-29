@@ -22,8 +22,8 @@
 
 <div class="container">
 
+	<h2>Рекламные услуги</h2>
 	<div class="row">
-		<h2>Рекламные услуги</h2>
 		<div class="col-sm-3 col-xs-6">
 			<div class="thumbnail support-link-item">
 				<a href="<?php echo BASE_URL; ?>support/adspy">
