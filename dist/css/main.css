@@ -6183,6 +6183,7 @@ body {
   width: 48%;
   float: left;
   margin-right: 2%;
+  margin-bottom: 6px;
   height: 260px;
 }
 .square-featurette:last-child {
