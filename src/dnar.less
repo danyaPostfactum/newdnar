@@ -27,15 +27,13 @@ body {
 
 // Navigations
 
-.navbar-brand {
-	margin-top: -9px;
-}
+
 .navbar {
 	a {
 		text-transform: uppercase;
 	}
 	a, .btn {
-		font-size: @nav-font-size;
+		font-size: 13px;//@nav-font-size;
 	}
 }
 .navbar-form {
@@ -64,8 +62,12 @@ body {
 	background-color: @nav-bg;
 	border: none;
 	.navbar-brand {
-		color: @text-color;
-		font-weight: @navbar-brand-weight; 
+		//color: @text-color;
+		//font-weight: @navbar-brand-weight; 
+        margin-top: -9px;
+        img {
+            height: 36px;
+        }
 	}
 	
 }

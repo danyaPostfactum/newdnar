@@ -5854,15 +5854,12 @@ body {
 .justify {
   text-align: justify;
 }
-.navbar-brand {
-  margin-top: -9px;
-}
 .navbar a {
   text-transform: uppercase;
 }
 .navbar a,
 .navbar .btn {
-  font-size: 12px;
+  font-size: 13px;
 }
 .navbar-form {
   padding: 0;
@@ -5888,8 +5885,10 @@ body {
   border: none;
 }
 .navbar-default .navbar-brand {
-  color: #343437;
-  font-weight: 700;
+  margin-top: -9px;
+}
+.navbar-default .navbar-brand img {
+  height: 36px;
 }
 @media (max-width: 767px) {
   .navbar-collapse {
