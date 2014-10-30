@@ -10,7 +10,7 @@
 		<div class="row">
             <div class="col-sm-8">
                 <h1>Поисковая оптимизация и продвижение сайтов</h1>
-				<p>Можешь этим заняться )</p>
+				<p>Поисковая оптимизация – старый проверенный способ вырастить кривую продаж. Правда, в наше время поисковые системные алгоритмы становятся все изощреннее, и простая простановка везде, где можно ключевых слов скорее вредит продвижению. </p>
             </div>
             <div class="hidden-xs col-sm-4">
 						<img src="<?php echo BASE_URL; ?>dist/assets/img/support/seo.png" class="pull-right" alt="">
@@ -22,7 +22,22 @@
 
 <div class="container">
 
-			<p>Lorem ipsum dolor sit amet, error sunt. Blanditiis unde assumenda explicabo voluptatem cumque iusto aspernatur a reiciendis repellendus laboriosam! Magnam molestias eos velit ullam, quos officia nulla odio, minima voluptate provident. Tempore, cum repellat. Ab quam, nam neque molestiae quasi ratione cupiditate similique eum non adipisci repudiandae id sunt, sapiente est at. Fugiat beatae, reprehenderit modi aliquam totam quidem deserunt cumque commodi expedita recusandae possimus sit, sunt laborum maiores assumenda doloremque, sint velit est alias repellendus, veritatis rem ducimus officia autem. Optio reprehenderit odit distinctio eum dolore. Odit mollitia odio, magni distinctio, iure officiis aliquid consequuntur dolores. Perferendis nisi ducimus possimus autem iure eveniet, magni assumenda totam deleniti esse voluptatibus, quod nam asperiores facere. Beatae.</p>
+			<p>
+Мир изменился. SEO уже далеко не главный инструмент продвижения в интернете. Поисковые системы изменили политику выдачи: теперь «ключи» далеко не так важны, как еще пять лет назад. 
+ <br><br>
+В итоге SEO не исчезло, просто стало сложным искусством. Новички и фрилансеры-оптимизаторы средней руки уже не могут дать прежнего эффекта. Единственный выход – использовать опыт и мощности профессионалов. 
+<br><br>
+Мы 6 лет занимаемся оптимизацией сайтов и следим за изменениями в поисковых алгоритмах. Поэтому мы не будем давать несбыточных обещаний – просто сделаем все для успешного умного продвижения вашего сайта в новых условиях. ТОП все еще достижим – просто нужно знать, как это делается. 
+<br><br>
+<b>Мы влияем на следующие параметры seo-продвижения от Яндекс: </b>
+<ul>
+    <li>объем контента (и его качество);</li>
+    <li>авторитетность (количество внешних ссылок);</li>
+    <li>нужное количество ключевых запросов;</li>
+    <li>скорость и стабильность работы самого сайта, отсутствие угроз;</li>
+    <li>поведение пользователей.</li>
+</ul>
+Правила игры изменились. Но в остальном сайт в ТОПе – это все так же круто: первые десять сайтов забирают себе 80% потенциальных клиентов. Приходите к нам, и мы поднимем вас в выдаче! </p>
 
 			<table class="table">
 				<thead>

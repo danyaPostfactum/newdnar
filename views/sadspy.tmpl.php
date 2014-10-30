@@ -174,7 +174,7 @@
                                 </div>
                                 
                                 <div class="row">
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-6 compamounts">
                                         <label for="compAmount">Количество конкурентов</label> <input form="orderForm" type="text" class="num-input" name="compAmount" id="compAmount" value="10">
                                         <span class="increase glyphicon glyphicon-arrow-up"></span>
                                         <span class="increase glyphicon glyphicon-arrow-down"></span>

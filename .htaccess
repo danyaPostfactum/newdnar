@@ -22,7 +22,7 @@ RewriteRule ^hostings/dnar$ dhost.php
 RewriteRule ^support/seo$ sseo.php
 RewriteRule ^support/ppc$ sppc.php
 RewriteRule ^support/adspy$ sadspy.php
-RewriteRule ^support/text$ stext.php
+RewriteRule ^support/site$ ssite.php
 RewriteRule ^support/usability$ susability.php
 RewriteRule ^support/virus$ svirus.php
 RewriteRule ^support/support$ ssupport.php

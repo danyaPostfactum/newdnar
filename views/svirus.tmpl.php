@@ -10,7 +10,7 @@
 		<div class="row">
             <div class="col-sm-8">
                 <h1>Поиск и удаление <br>вирусов на сайте</h1>
-				<p>Можешь этим заняться )</p>
+				<p>Опознаем, определяем и устраняем вирусы различного типа на сайте. Зараженный сайт труднодоступен посетителям и определяется как опасный для поисковиков. Обращайтесь немедленно!</p>
             </div>
             <div class="hidden-xs col-sm-4">
 						<img src="<?php echo BASE_URL; ?>dist/assets/img/support/virus.png" class="pull-right" alt="">
@@ -22,7 +22,14 @@
 
 <div class="container">
 
-			<p>Lorem ipsum dolor sit amet, error sunt. Blanditiis unde assumenda explicabo voluptatem cumque iusto aspernatur a reiciendis repellendus laboriosam! Magnam molestias eos velit ullam, quos officia nulla odio, minima voluptate provident. Tempore, cum repellat. Ab quam, nam neque molestiae quasi ratione cupiditate similique eum non adipisci repudiandae id sunt, sapiente est at. Fugiat beatae, reprehenderit modi aliquam totam quidem deserunt cumque commodi expedita recusandae possimus sit, sunt laborum maiores assumenda doloremque, sint velit est alias repellendus, veritatis rem ducimus officia autem. Optio reprehenderit odit distinctio eum dolore. Odit mollitia odio, magni distinctio, iure officiis aliquid consequuntur dolores. Perferendis nisi ducimus possimus autem iure eveniet, magni assumenda totam deleniti esse voluptatibus, quod nam asperiores facere. Beatae.</p>
+			<p>
+Люди не могут нормально пользоваться вашим сайтом? Все тормозит? Google и Яндекс выдают предупреждение «сайт может угрожать безопасности вашего компьютера или мобильного устройства»? 
+<br><br>
+Сразу понятно – налицо заражение вирусом. Следовательно, вы подвергаетесь опасности. Персональные данные клиентов, скорость и стабильность работы, репутация вашей Компании в сети, а в худшем случае и утечка денег – возможные последствия вируса. 
+<br><br>
+Даже если нет предупреждений и сайт стабильно работает, вовсе не факт, что в недрах сайта не сидит вирусное или шпионское ПО. Мы досконально проверим сайт, определим и устраним все угрозы. Воспользуйтесь помощью профессионалов! Многие онлайн-сканеры и пользовательские антивирусы не могут обнаружить опасность. В услугу включена и консультация по безопасности вашего сайта. 
+<br><br>
+Советуем всегда своевременно устранять вирусы, так как существует высокая вероятность блокировки портала в поисковых системах. А каждый день неработающий сайт теряет клиентов. К чему вам лишние проблемы?</p>
 
 			<table class="table">
 				<thead>

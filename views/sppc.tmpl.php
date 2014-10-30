@@ -10,7 +10,7 @@
 		<div class="row">
             <div class="col-sm-8">
                 <h1>Контекстная реклама</h1>
-				<p>Можешь этим заняться )</p>
+				<p>Продвижение вашего сайта в системах контекстной рекламы – один из самых эффективных методов рекламы в сети. Мы поможем вам привлекать клиентов по целевым запросам, увеличить продажи и при этом – практически с первого дня размещения объявлений.</p>
             </div>
             <div class="hidden-xs col-sm-4">
 						<img src="<?php echo BASE_URL; ?>dist/assets/img/support/ppc.png" class="pull-right" alt="">
@@ -22,7 +22,26 @@
 
 <div class="container">
 
-			<p>Lorem ipsum dolor sit amet, error sunt. Blanditiis unde assumenda explicabo voluptatem cumque iusto aspernatur a reiciendis repellendus laboriosam! Magnam molestias eos velit ullam, quos officia nulla odio, minima voluptate provident. Tempore, cum repellat. Ab quam, nam neque molestiae quasi ratione cupiditate similique eum non adipisci repudiandae id sunt, sapiente est at. Fugiat beatae, reprehenderit modi aliquam totam quidem deserunt cumque commodi expedita recusandae possimus sit, sunt laborum maiores assumenda doloremque, sint velit est alias repellendus, veritatis rem ducimus officia autem. Optio reprehenderit odit distinctio eum dolore. Odit mollitia odio, magni distinctio, iure officiis aliquid consequuntur dolores. Perferendis nisi ducimus possimus autem iure eveniet, magni assumenda totam deleniti esse voluptatibus, quod nam asperiores facere. Beatae.</p>
+			<p>
+Самостоятельная настройка рекламной кампании часто разочаровывает: напрасные траты, непонятный механизм и слабый результат. В то же время контекстная реклама отлично работает при верной настройке и понимающей аналитике. Обратитесь к нам и получите гибкую профессиональную настройку контекстных объявлений – и новых клиентов! 
+<br><br>
+                <b>Что входит в ведение кампании?</b>
+<ul>
+    <li>Планирование – разработка кампании: ключевые слова, план размещения, прогноз количества откликов за определенный период. </li>
+    <li>Подготовка кампании – составление продающих текстов объявлений. </li>
+    <li>Размещение объявлений в поисковых системах и в социальных сетях: Яндекс, Бегун, Google, Вконтакте, Facebook.</li>
+    <li>Мониторинг, точечная оптимизация, подробная отчетность по всей кампании.</li>
+</ul>
+
+<b>Что вы получите с помощью контекстной рекламы? </b>
+<ul>
+    <li>Целевую аудиторию – объявления показываются только нужным людям. </li>
+    <li>Быстрая отдача – даже без сайта вы получите звонки и заказы. </li>
+    <li>Прогнозируемый эффект. </li>
+    <li>Полный контроль.</li>
+</ul>    
+    
+    </p>
 
 			<table class="table">
 				<thead>

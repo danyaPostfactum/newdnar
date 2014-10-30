@@ -90,16 +90,16 @@
 			</div>
 		</div>
 
-		<!--<div class="col-sm-3 col-xs-6">
+		<div class="col-sm-3 col-xs-6">
 			<div class="thumbnail support-link-item">
-				<a href="<?php echo BASE_URL; ?>support/text">
-					<img src="<?php echo BASE_URL; ?>dist/assets/img/support/text.png" alt="Написание текстов для сайта">
+				<a href="<?php echo BASE_URL; ?>support/site">
+					<img src="<?php echo BASE_URL; ?>dist/assets/img/support/site.png" alt="Разработка сайта">
 					<div class="caption">
-						<p>Написание текстов для сайта</p>
+						<p>Разработка сайта</p>
 					</div>
 				</a>
 			</div>
-		</div>	-->		
+		</div>	
 	</div>
 
 

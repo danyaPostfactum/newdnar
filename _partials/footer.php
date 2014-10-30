@@ -32,7 +32,7 @@
 		<?php } ?>
 		
 		
-        <?php if ($page_name == 'sppc' or $page_name == 'susability' or $page_name == 'sseo' or $page_name == 'stext' or $page_name == 'svirus' or $page_name == 'ssupport')  { ?>
+        <?php if ($page_name == 'sppc' or $page_name == 'susability' or $page_name == 'sseo' or $page_name == 'ssite' or $page_name == 'svirus' or $page_name == 'ssupport')  { ?>
 			<div class="row payment-icons-row-wrapper">
 				<div class="col-sm-12">
                     <center><form action="sendform.php" method="post" class="card-wrapper feedback-form" id="supportForm">

@@ -319,12 +319,12 @@
 .adspy label.ch-bx:before {
   content: "";
   display: inline-block;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   margin-right: 10px;
   position: absolute;
-  left: 0;
-  top: 2px;
+  left: 4px;
+  top: 0;
   background-color: #969696;
   /* box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.3), 0px 1px 0px 0px rgba(255, 255, 255, 0.8) */
 }
@@ -361,6 +361,9 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+.adspy .compamounts {
+  margin-top: 15px;
 }
 .adspy .num-input {
   color: black;

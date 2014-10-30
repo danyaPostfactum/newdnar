@@ -10,7 +10,7 @@
 		<div class="row">
             <div class="col-sm-8">
                 <h1>Поддержка и сопровождение сайтов</h1>
-				<p>Можешь этим заняться )</p>
+				<p>Решение мелких и крупных проблем: администрирование, устранение неполадок, вирусов, помощь в установке компонентов, гибкая настройка. Удаленно или с выездом к вам. Сайт будет работать – факт!»</p>
             </div>
             <div class="hidden-xs col-sm-4">
 						<img src="<?php echo BASE_URL; ?>dist/assets/img/support/support.png" class="pull-right" alt="">
@@ -22,7 +22,14 @@
 
 <div class="container">
 
-			<p>Lorem ipsum dolor sit amet, error sunt. Blanditiis unde assumenda explicabo voluptatem cumque iusto aspernatur a reiciendis repellendus laboriosam! Magnam molestias eos velit ullam, quos officia nulla odio, minima voluptate provident. Tempore, cum repellat. Ab quam, nam neque molestiae quasi ratione cupiditate similique eum non adipisci repudiandae id sunt, sapiente est at. Fugiat beatae, reprehenderit modi aliquam totam quidem deserunt cumque commodi expedita recusandae possimus sit, sunt laborum maiores assumenda doloremque, sint velit est alias repellendus, veritatis rem ducimus officia autem. Optio reprehenderit odit distinctio eum dolore. Odit mollitia odio, magni distinctio, iure officiis aliquid consequuntur dolores. Perferendis nisi ducimus possimus autem iure eveniet, magni assumenda totam deleniti esse voluptatibus, quod nam asperiores facere. Beatae.</p>
+			<p>
+Вы не разбираетесь во всех нюансах администрирования корпоративной сети, не умеете чинить поломки на сайте-продавце или вам просто некогда этим заниматься? Мы возьмем на себя решение всех возникающих вопросов в области отладки и администрирования ваших сайтов. 
+<br><br>
+Неполадки, установка и настройка приложений, компонентов, безопасность персональных и финансовых данных, проходящих через сайт, отлаженная бесперебойная работа, приносящая доход – все это в нашей компетенции. От установки простейших приложений вроде просмотра видео, блоговой платформы до редактирования кода движка вашего портала. Устраняем проблемы, помогаем работать эффективнее. 
+<br><br>
+Поддержка сайта осуществляется по тарифным планам с почасовой оплатой. Это очень удобно: вы платите нам только тогда, когда наша помощь реально необходима. В то же время удобно и взять пакет на полное обслуживание, чтобы уже полностью закрыть вопрос неполадок с сайтом.
+<br><br>
+Это сохраняет время, деньги, нервы и вашу репутацию. Даже один вовремя не отправленный заказ может принести всевозможные убытки. С нами ваш сайт всегда будет работать:  быстро, надежно, безопасно. Решите проблему одним кликом!</p>
 
 			<table class="table">
 				<thead>
