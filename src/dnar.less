@@ -409,14 +409,14 @@ body {
 .square-featurette {
 	padding: 15px 20px;
 	color: @text-inverse;
+    min-width: 220px;
     width: 48%;
-    font-size: 13px;
 	float: left;
-	margin-right: 15px; //5%;
-	margin-bottom: 20px;
+	margin-right: 2%;
+    margin-bottom: 6px;
     height: 260px;
 	&:last-child { 
-		margin-right: 35px;
+		margin-right: 0;
 	}
 	&:nth-child(2n+1) {
 		background-color: @brand-secondary;
@@ -428,7 +428,9 @@ body {
 		margin: 15px 0;
 	}
 	.featurette-list {
-		.clear-ul();
+		//.clear-ul();
+        padding: 0;
+        margin-left: 5px;
 	}
 }
 .square-featurette-text {
@@ -438,46 +440,20 @@ body {
 	font-size: 50px;
 }
 .main-reasons-list {
-	.aligned-list();
+	//.aligned-list();
 }
-@media (min-width: 768px) {
-	.square-featurette {
-		margin-right: 4%;
-		margin-bottom: 0;
-		&:last-child { 
-			margin-right: 0;
-		}
-	}
+
+@media (max-width: 990px) and (min-width: 480px) {
+    .featurette {
+        width: 220px;
+    }
+    .reg-us {
+        width: 520px;
+        padding-left: 45px;
+    }
+
 }
-@media (max-width: 991px) {
-	.big-feature-icon {
-		font-size: 35px;
-	}
-	.square-featurette {
-		.featurette-heading {
-			margin: 5px 0;
-		}
-	}
-}
-@media (min-width: 480px) and (max-width: 767px) {
-	.square-featurette {
-		width: 190px;
-		height: 240px;
-	}
-	.big-feature-icon {
-		font-size: 30px;
-	}
-}
-@media (max-width: 480px) {
-	.square-featurette {
-		margin-right: 2%;
-		height: 250px;
-		padding: 15px 13px;
-		&:last-child { 
-			margin-right: 0;
-		}
-	}
-}
+
 
 
 // Payment Info
@@ -727,7 +703,7 @@ a.sort {
 }
 
 .advice-list {
-	.aligned-list();
+	//.aligned-list();
 }
 
 // Icon Tabs

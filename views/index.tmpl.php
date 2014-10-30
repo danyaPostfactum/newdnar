@@ -152,7 +152,7 @@
 							</div>
 
 							<div class="row registration-rules heading-section">
-								<div class="col-sm-6">
+								<div class="col-sm-6 featurette">
 									<figure class="square-featurette">
 										<span class="big-feature-icon"><span class="icon-ruble"></span></span>
 										<h3 class="featurette-heading">Лучшие цены</h3>
@@ -171,7 +171,7 @@
 									</figure>
 
 								</div>
-								<div class="col-sm-6">
+								<div class="col-sm-6 reg-us">
 									<h3>Зарегистировавшись у нас, вы получите</h3>
 									<ul class="main-reasons-list">
 									    <li>удобную и современную панелью управления;</li>
@@ -186,7 +186,7 @@
 									<p>У Вас еще остались сомнения где зарегистрировать домен? Не нужно раздумывать – просто зарегистрируйтесь и сразу же получите возможность моментально регистрировать домены на Ваши данные всего за 95 рублей! <a href="#" class="show-more">Подробнее</a></p>
 									<div class="show-more-content">
 										<p>Регистрация дешевых доменов – это реальность. Вам нужно только пройти легкую процедуру регистрации и домен Ваш!</p>
-										<a class="btn btn-default" role="button" href="http://domain.dnar.ru/OFFERTA/offerta_add_select_type.khtml">Зарегистрироваться</a>
+                                        <center><a class="btn btn-default" role="button" href="http://domain.dnar.ru/OFFERTA/offerta_add_select_type.khtml">Зарегистрироваться</a></center>
 									</div>
 								</div>
 							</div>
