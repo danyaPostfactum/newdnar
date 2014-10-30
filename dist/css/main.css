@@ -6207,7 +6207,7 @@ body {
 .big-feature-icon {
   font-size: 50px;
 }
-@media (max-width: 990px) and (min-width: 480px) {
+@media (max-width: 990px) and (min-width: 570px) {
   .featurette {
     width: 220px;
   }
