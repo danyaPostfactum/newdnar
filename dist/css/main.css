@@ -6696,31 +6696,38 @@ footer {
   background-color: #F2EFF1;
   width: 100%;
   float: right;
-  height: 60px;
-  padding-top: 16px;
-}
-.payment-icons-row img {
-  margin-left: 32px;
+  padding: 16px 0 10px;
+  line-height: 32px;
 }
 .payment-icons-row a {
   color: #000;
 }
-.payment-icons-row span {
+.payment-icons-row .payment-icons-row-desc {
   font-size: 14px;
   text-transform: uppercase;
-}
-.payment-icons-row .payment-icons-row-desc {
+  white-space: nowrap;
   margin-right: 10px;
   margin-left: 15px;
+  margin-bottom: 10px;
 }
 .payment-icons-row .payment-icons-row-img {
   text-align: center;
+  line-height: 1;
 }
-.payment-icons-row .payment-icons-row-link {
-  float: right;
-  margin-right: 15px;
-  margin-left: 10px;
-  margin-top: 5px;
+@media (min-width: 768px) {
+  .payment-icons-row .payment-icons-row-desc {
+    margin-bottom: 0;
+  }
+  .payment-icons-row .payment-icons-row-link {
+    float: right;
+  }
+}
+.row-justified {
+  width: 100%;
+}
+.row-justified .justified-item {
+  display: table-cell;
+  width: 1%;
 }
 .domains-img {
   margin-right: 20px;

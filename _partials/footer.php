@@ -4,21 +4,28 @@
 				<span class="scroll-top-item"><span class="glyphicon glyphicon-chevron-up"></span></span>
 			</div>
 		<?php if ($page_name == 'domains' or $page_name == 'dhost' or $page_name == 'domains_info')  { ?>
+
 			<div class="row payment-icons-row-wrapper">
 				<div class="col-sm-12">
 					<div class="payment-icons-row">
-						<span class="payment-icons-row-desc">Принимаем к оплате</span>
-						<span class="payment-icons-row-img">	
-							<img src="<?php echo BASE_URL; ?>dist/assets/img/payment/visa_logo2.png" alt="Visa" title="Visa">
-							<img src="<?php echo BASE_URL; ?>dist/assets/img/payment/mastercard_logo2.png" alt="MasterCard" title="MasterCard">
-							<img src="<?php echo BASE_URL; ?>dist/assets/img/payment/sberbank_logo2.png" alt="Сбербанк" title="Сбербанк">
-                            <a href="https://money.yandex.ru" target="_blank" rel="nofollow"><img src="<?php echo BASE_URL; ?>dist/assets/img/payment/yandex-money.png" alt="Я принимаю Яндекс.Деньги" title="Я принимаю Яндекс.Деньги"></a>
-                            <a href="http://www.megastock.ru/" target="_blank" rel="nofollow"><img src="<?php echo BASE_URL; ?>dist/assets/img/payment/webmoney.png" alt="WebMoney" title="WebMoney"></a>
-							<img src="<?php echo BASE_URL; ?>dist/assets/img/payment/qiwi.png" style="margin-top:2px;" alt="Qiwi" title="Qiwi">
-							<img src="<?php echo BASE_URL; ?>dist/assets/img/payment/rbk_logo2.png" alt="RBK Money" title="RBK Money">
-							<img src="<?php echo BASE_URL; ?>dist/assets/img/payment/bank-icon2.png" alt="Безналичный расчет" title="Безналичный расчет">
-						</span>	
-						<span class="payment-icons-row-link"><a href="../#payment">Все способы оплаты</a></span>
+						<div class="col-sm-3">
+							<p class="payment-icons-row-desc">Принимаем к оплате</p>
+						</div>
+						<div class="col-sm-6">
+							<p class="payment-icons-row-img row-justified">	
+								<a class="justified-item" href="#"><img src="<?php echo BASE_URL; ?>dist/assets/img/payment/visa_logo2.png" alt="Visa" title="Visa"></a>
+								<a class="justified-item" href="#"><img src="<?php echo BASE_URL; ?>dist/assets/img/payment/mastercard_logo2.png" alt="MasterCard" title="MasterCard"></a>
+								<a class="justified-item" href="#"><img src="<?php echo BASE_URL; ?>dist/assets/img/payment/sberbank_logo2.png" alt="Сбербанк" title="Сбербанк"></a>
+								<a class="justified-item" href="https://money.yandex.ru" target="_blank" rel="nofollow"><img src="<?php echo BASE_URL; ?>dist/assets/img/payment/yandex-money.png" alt="Я принимаю Яндекс.Деньги" title="Я принимаю Яндекс.Деньги"></a>
+								<a class="justified-item" href="http://www.megastock.ru/" target="_blank" rel="nofollow"><img src="<?php echo BASE_URL; ?>dist/assets/img/payment/webmoney.png" alt="WebMoney" title="WebMoney"></a>
+								<a class="justified-item" href=""><img src="<?php echo BASE_URL; ?>dist/assets/img/payment/qiwi.png" style="margin-top:2px;" alt="Qiwi" title="Qiwi"></a>
+								<a class="justified-item" href=""><img src="<?php echo BASE_URL; ?>dist/assets/img/payment/rbk_logo2.png" alt="RBK Money" title="RBK Money"></a>
+								<a class="justified-item" href=""><img src="<?php echo BASE_URL; ?>dist/assets/img/payment/bank-icon2.png" alt="Безналичный расчет" title="Безналичный расчет"></a>
+							</p>	
+						</div>
+						<div class="col-sm-3">
+							<p class="payment-icons-row-desc payment-icons-row-link"><a href="../#payment">Все способы оплаты</a></p>	
+						</div>
 					</div>
 				</div>
 			</div>
