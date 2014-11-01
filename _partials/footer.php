@@ -1,4 +1,3 @@
-
 			<a href="http://help.dnar.ru" target="_blank" class="btn btn-default scroll-top absolutely scroll-btn">Задать вопрос</a>
 			<div class="scroll-top">
 				<span class="scroll-top-item"><span class="glyphicon glyphicon-chevron-up"></span></span>
@@ -30,36 +29,6 @@
 				</div>
 			</div>
 		<?php } ?>
-		
-		
-        <?php if ($page_name == 'sppc' or $page_name == 'susability' or $page_name == 'sseo' or $page_name == 'ssite' or $page_name == 'svirus' or $page_name == 'ssupport')  { ?>
-			<div class="row payment-icons-row-wrapper">
-				<div class="col-sm-12">
-                    <center><form action="sendform.php" method="post" class="card-wrapper feedback-form" id="supportForm">
-				        <div class="form-group">
-				        	<input name="name" type="text" class="form-control" id="name" placeholder="Как вас зовут?">
-				        </div>
-				        <div class="form-group">
-				        	<input name="phone-email" type="text" class="form-control" id="phone_email" placeholder="Ваш телефон или e-mail">
-				        </div>
-				        <div class="form-group address-input">
-					        <input name="address" type="text" class="form-control" id="address" placeholder="Не заполняйте это поле">
-				        </div>
-				        <div class="form-group">
-					        <textarea name="message" class="form-control" id="message" placeholder="Сообщение"></textarea>
-				        </div>
-
-				        <button type="submit" class="btn btn-default btn-wide">Отправить сообщение</button>
-	
-				    <!-- <span class="help-block help-block-attach small text-center"><a href="#">Можно прикрепить файл</a></span> -->
-				        <div class="form-success-text">
-				        	<p>Stuff</p>
-				        </div>
-                        </form></center>
-				</div>
-			</div>
-		<?php } ?>
-		
 		
 		
 		

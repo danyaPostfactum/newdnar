@@ -5851,6 +5851,17 @@ body {
 .container {
   position: relative;
 }
+@media (min-width: 828px) and (max-width: 1052px) {
+  .jumbotron + .container {
+    padding-right: 60px;
+  }
+}
+@media (max-width: 828px) {
+  .scroll-top,
+  .scroll-top-item {
+    display: none !important;
+  }
+}
 .justify {
   text-align: justify;
 }
@@ -6021,7 +6032,7 @@ body {
   -webkit-box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.1);
   position: relative;
   max-width: 50%;
-  margin-right: 80px;
+  margin: 50px auto 0;
   padding: 30px !important;
 }
 @media (min-width: 650px) {
@@ -6198,14 +6209,27 @@ body {
   margin: 15px 0;
 }
 .square-featurette .featurette-list {
+  padding-left: 1em;
+  list-style-position: inside;
   padding: 0;
   margin-left: 5px;
+}
+.square-featurette .featurette-list > li {
+  text-indent: -1em;
 }
 .square-featurette-text {
   line-height: 1.6;
 }
 .big-feature-icon {
   font-size: 50px;
+}
+.main-reasons-list {
+  padding: 0;
+  padding-left: 1em;
+  list-style-position: inside;
+}
+.main-reasons-list > li {
+  text-indent: -1em;
 }
 @media (max-width: 990px) and (min-width: 570px) {
   .featurette {
@@ -6397,6 +6421,11 @@ a.sort:hover {
   padding: 0;
   line-height: 1.6;
 }
+@media (max-width: 992px) {
+  .specs-table-wrapper:last-child {
+    padding-left: 0;
+  }
+}
 .settings-card {
   border-bottom: 1px dotted #d0d0cf;
   padding-bottom: 10px;
@@ -6426,6 +6455,16 @@ a.sort:hover {
 .interval-input {
   display: inline-block;
   width: 35%;
+}
+.advice-list,
+.hostings-hints-list {
+  padding: 0;
+  padding-left: 1em;
+  list-style-position: inside;
+}
+.advice-list > li,
+.hostings-hints-list > li {
+  text-indent: -1em;
 }
 .tabs-row {
   margin: 0;

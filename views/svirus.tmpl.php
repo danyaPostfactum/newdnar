@@ -56,6 +56,7 @@
 				</tr>
 
 			</table>
+			<?php include(ROOT_PATH . "views/partial_views/request-form.php"); ?>
 
 
 
