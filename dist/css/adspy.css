@@ -335,7 +335,7 @@
   font-family: 'Glyphicons Halflings';
   -webkit-font-smoothing: antialiased;
   /*text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);*/
-  font-size: 21px;
+  font-size: 13px;
   color: white;
   /* #13a100;*/
   text-align: center;
@@ -363,6 +363,7 @@
   user-select: none;
 }
 .adspy .compamounts {
+  white-space: nowrap;
   margin-top: 15px;
 }
 .adspy .num-input {
@@ -557,7 +558,7 @@
   text-align: center;
 }
 .adspy .calculator-submit-dialog .submit-section .assure {
-  font-size: 14px;
+  font-size: 11px;
   margin-top: 10px;
 }
 @media (min-width: 1200px) {
@@ -610,6 +611,19 @@
   }
   .adspy .clock {
     width: 268px;
+  }
+}
+@media (max-width: 450px) {
+  .adspy .compamounts {
+    width: 100%;
+  }
+  .adspy p.submit-row button {
+    float: none;
+    display: block;
+    margin-top: 15px;
+  }
+  .adspy p.final-sum {
+    text-align: left;
   }
 }
 .adspy .counter p {

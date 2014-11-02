@@ -43,7 +43,7 @@ var delay = (function(){
 	var $scrollElement = $('.scroll-top-item');
 	var $scrollQuestion = $('.scroll-btn');
 	var $navbar = $("#navbar");
-	var $jumbotron = $('.jumbotron')
+	var $jumbotron = $('.jumbotron');
 
 	var navbarHeight = $navbar.height();
 	var jumbotronHeight = $jumbotron.height() + parseInt($jumbotron.css('padding-top')) + parseInt($jumbotron.css('padding-bottom'));
@@ -95,10 +95,18 @@ var delay = (function(){
 
 	// position modal to be vertically centered ======================
 	$("button[data-toggle='modal']").on('click', function() {
-		var $modal = $(".modal-dialog");
-		var winHeight = ($(window).height());
+		var el = $(this);
+		var elementName = el[0].name;
+		var targetID = el.data('target');
+		console.log(elementName, targetID);
+		var $modal = $(targetID).find(".modal-dialog");
+		console.log($modal);
+		var winHeight = $(window).height();
 		var offsetDist = (winHeight / 2) - 180; // 180 is approximately half the height of the modal
 		offsetDist = (offsetDist < 10) ? 20 : offsetDist;
+		if (elementName === "services-submit") {
+			offsetDist = 30;
+		}
 		$modal.css({
 			'margin-top': offsetDist,
 			'margin-left': 'auto',

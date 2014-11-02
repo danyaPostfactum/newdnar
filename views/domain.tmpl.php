@@ -90,5 +90,5 @@
 
 <?php } ?>
 
-<?php include("_partials/footer.php") ?>
+<?php include(ROOT_PATH . "_partials/footer.php") ?>
 

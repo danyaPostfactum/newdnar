@@ -134,5 +134,5 @@ Dnar.Ru предоставляет услуги профессиональног
     <li>Мы не отключаем неоплаченный хостинг в выходные и праздничные дни. Отдыхайте спокойно!</li>
 </ul>
 
-<?php include("_partials/footer.php") ?>
+<?php include(ROOT_PATH . "_partials/footer.php") ?>
 

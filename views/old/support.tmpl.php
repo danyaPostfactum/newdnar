@@ -1,4 +1,4 @@
-<?php 
+card-wrapper<?php 
 	$title = 'Поддержка сайтов';
 	$description = 'test1';
 	$keywords = 'test2';
@@ -196,5 +196,5 @@
 		</aside> -->
 	</div>
 
-<?php include("_partials/footer.php") ?>
+<?php include(ROOT_PATH . "_partials/footer.php") ?>
 

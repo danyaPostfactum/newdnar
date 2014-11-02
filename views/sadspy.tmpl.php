@@ -116,82 +116,82 @@
     </div>
     
     <div class="container">
+        <div class="row">
+            <!-- <a name="calcAnchor"></a> -->
+            <h1 class="calc-header" name="calcAnchor">Рассчитать стоимость</h1>
+            <div class="col-sm-12 calculator-section">
+                <h4>У нас нет готовых тарифов, стоимость услуги подбирается для каждого клиента в отдельности. Платите только за то, что нужно вам.</h4>
+                <h2>Выберите, что вам нужно узнать</h2>
+                <form class="analyze" id="servicesCalc">
+
+                    <div class="chk-inline">
+                        <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[top50Yand]" id="top50Yand" value="Запросы, по которым конкуренты в Топ 50 в поисковой системе Яндекс, а также сниппеты и url страниц">
+                        <label class="inline-label ch-bx" for="top50Yand">Запросы, по которым конкуренты в Топ 50 в поисковой системе Яндекс, а также сниппеты и url страниц</label>
+                    </div>
+                    <div class="chk-inline sublevel">
+                        <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[top10Yand]" id="top10Yand" value="Рассчитать потенциальный трафик запросов из Топ 10 для Яндекс">
+                        <label class="inline-label ch-bx" for="top10Yand">Рассчитать потенциальный трафик запросов из Топ 10 для Яндекс</label>
+                    </div>
+                    <div class="chk-inline sublevel">
+                        <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[yandPos]" id="yandPos" value="Снять точные позиции конкурентов по запросам на день проведения аудита">
+                        <label class="inline-label ch-bx" for="yandPos">Снять точные позиции конкурентов по запросам на день проведения аудита</label>
+                    </div>
+
+                    <div class="chk-inline">
+                        <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[top50Google]" id="top50Google" value="Запросы, по которым конкуренты в Топ 50 в поисковой системе Google, а также сниппеты и url страниц">
+                        <label class="inline-label ch-bx" for="top50Google">Запросы, по которым конкуренты в Топ 50 в поисковой системе Google, а также сниппеты и url страниц</label>
+                    </div>
+                    <div class="chk-inline sublevel">
+                        <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[top10Google]" id="top10Google" value="Рассчитать потенциальный трафик запросов из Топ 10 для Google">
+                        <label class="inline-label ch-bx" for="top10Google">Рассчитать потенциальный трафик запросов из Топ 10 для Google</label>
+                    </div>
+                    <div class="chk-inline sublevel">
+                        <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[googlePos]" id="googlePos" value="Снять точные позиции конкурентов по запросам на день проведения аудита">
+                        <label class="inline-label ch-bx" for="googlePos">Снять точные позиции конкурентов по запросам на день проведения аудита</label>
+                    </div>
+
+                    <div class="chk-inline">
+                        <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[queryYandDirect]" id="queryYandDirect" value="Запросы, по которым конкуренты дают рекламу в Яндекс Директ, а также позиции и тексты объявлений">
+                        <label class="inline-label ch-bx" for="queryYandDirect">Запросы, по которым конкуренты дают рекламу в Яндекс Директ, а также позиции и тексты объявлений</label>
+                    </div>
+                    <div class="chk-inline sublevel">
+                        <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[calcBudgetYand]" id="calcBudgetYand" value="Рассчитать примерные бюджеты конкурентов в Яндекс Директ">
+                        <label class="inline-label ch-bx" for="calcBudgetYand">Рассчитать примерные бюджеты конкурентов в Яндекс Директ</label>
+                    </div>
+
+                    <div class="chk-inline">
+                        <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[contextAdwordsBox]" id="contextAdwordsBox" value="Запросы, по которым конкуренты дают рекламу в Google Adwords, а также позиции и тексты объявлений">
+                        <label class="inline-label ch-bx" for="contextAdwordsBox">Запросы, по которым конкуренты дают рекламу в Google Adwords, а также позиции и тексты объявлений</label>
+                    </div>
+                    <div class="chk-inline sublevel">
+                        <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[calcBudgetGoogle]" id="calcBudgetGoogle" value="Рассчитать примерные бюджеты конкурентов в Google Adwords">
+                        <label class="inline-label ch-bx" for="calcBudgetGoogle">Рассчитать примерные бюджеты конкурентов в Google Adwords</label>
+                    </div>
+
+                    <div class="chk-inline">
+                        <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[contextVKBox]" id="contextVKBox" value="Какие объявления дают конкуренты в ВКонтакте, а также количество показов и на какую аудиторию">
+                        <label class="inline-label ch-bx" for="contextVKBox">Какие объявления дают конкуренты в ВКонтакте, а также количество показов и на какую аудиторию</label>
+                    </div>
+                    
                     <div class="row">
-                        <!-- <a name="calcAnchor"></a> -->
-                        <h1 class="calc-header" name="calcAnchor">Рассчитать стоимость</h1>
-                        <div class="col-sm-12 calculator-section">
-                            <h4>У нас нет готовых тарифов, стоимость услуги подбирается для каждого клиента в отдельности. Платите только за то, что нужно вам.</h4>
-                            <h2>Выберите, что вам нужно узнать</h2>
-                            <form class="analyze" id="servicesCalc">
-    
-                                <div class="chk-inline">
-                                    <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[top50Yand]" id="top50Yand" value="Запросы, по которым конкуренты в Топ 50 в поисковой системе Яндекс, а также сниппеты и url страниц">
-                                    <label class="inline-label ch-bx" for="top50Yand">Запросы, по которым конкуренты в Топ 50 в поисковой системе Яндекс, а также сниппеты и url страниц</label>
-                                </div>
-                                <div class="chk-inline sublevel">
-                                    <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[top10Yand]" id="top10Yand" value="Рассчитать потенциальный трафик запросов из Топ 10 для Яндекс">
-                                    <label class="inline-label ch-bx" for="top10Yand">Рассчитать потенциальный трафик запросов из Топ 10 для Яндекс</label>
-                                </div>
-                                <div class="chk-inline sublevel">
-                                    <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[yandPos]" id="yandPos" value="Снять точные позиции конкурентов по запросам на день проведения аудита">
-                                    <label class="inline-label ch-bx" for="yandPos">Снять точные позиции конкурентов по запросам на день проведения аудита</label>
-                                </div>
-    
-                                <div class="chk-inline">
-                                    <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[top50Google]" id="top50Google" value="Запросы, по которым конкуренты в Топ 50 в поисковой системе Google, а также сниппеты и url страниц">
-                                    <label class="inline-label ch-bx" for="top50Google">Запросы, по которым конкуренты в Топ 50 в поисковой системе Google, а также сниппеты и url страниц</label>
-                                </div>
-                                <div class="chk-inline sublevel">
-                                    <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[top10Google]" id="top10Google" value="Рассчитать потенциальный трафик запросов из Топ 10 для Google">
-                                    <label class="inline-label ch-bx" for="top10Google">Рассчитать потенциальный трафик запросов из Топ 10 для Google</label>
-                                </div>
-                                <div class="chk-inline sublevel">
-                                    <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[googlePos]" id="googlePos" value="Снять точные позиции конкурентов по запросам на день проведения аудита">
-                                    <label class="inline-label ch-bx" for="googlePos">Снять точные позиции конкурентов по запросам на день проведения аудита</label>
-                                </div>
-    
-                                <div class="chk-inline">
-                                    <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[queryYandDirect]" id="queryYandDirect" value="Запросы, по которым конкуренты дают рекламу в Яндекс Директ, а также позиции и тексты объявлений">
-                                    <label class="inline-label ch-bx" for="queryYandDirect">Запросы, по которым конкуренты дают рекламу в Яндекс Директ, а также позиции и тексты объявлений</label>
-                                </div>
-                                <div class="chk-inline sublevel">
-                                    <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[calcBudgetYand]" id="calcBudgetYand" value="Рассчитать примерные бюджеты конкурентов в Яндекс Директ">
-                                    <label class="inline-label ch-bx" for="calcBudgetYand">Рассчитать примерные бюджеты конкурентов в Яндекс Директ</label>
-                                </div>
-    
-                                <div class="chk-inline">
-                                    <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[contextAdwordsBox]" id="contextAdwordsBox" value="Запросы, по которым конкуренты дают рекламу в Google Adwords, а также позиции и тексты объявлений">
-                                    <label class="inline-label ch-bx" for="contextAdwordsBox">Запросы, по которым конкуренты дают рекламу в Google Adwords, а также позиции и тексты объявлений</label>
-                                </div>
-                                <div class="chk-inline sublevel">
-                                    <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[calcBudgetGoogle]" id="calcBudgetGoogle" value="Рассчитать примерные бюджеты конкурентов в Google Adwords">
-                                    <label class="inline-label ch-bx" for="calcBudgetGoogle">Рассчитать примерные бюджеты конкурентов в Google Adwords</label>
-                                </div>
-    
-                                <div class="chk-inline">
-                                    <input form="orderForm" type="checkbox" class="chbx-hide" name="analyze[contextVKBox]" id="contextVKBox" value="Какие объявления дают конкуренты в ВКонтакте, а также количество показов и на какую аудиторию">
-                                    <label class="inline-label ch-bx" for="contextVKBox">Какие объявления дают конкуренты в ВКонтакте, а также количество показов и на какую аудиторию</label>
-                                </div>
-                                
-                                <div class="row">
-                                    <div class="col-sm-6 compamounts">
-                                        <label for="compAmount">Количество конкурентов</label> <input form="orderForm" type="text" class="num-input" name="compAmount" id="compAmount" value="10">
-                                        <span class="increase glyphicon glyphicon-arrow-up"></span>
-                                        <span class="increase glyphicon glyphicon-arrow-down"></span>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <p class="final-sum">Итого: 
-                                            <output form="orderForm" name="price" style="display:inline">0</output> <i class="icon-ruble"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                                <p class="submit-row">
-                                    <span class="min-price-show">Минимальная сумма заказа <span class="min-price-value"></span> <i class="icon-ruble"></i></span>
-                                    <button type="button" name="services-submit" class="btn btn-default order-box" data-toggle="modal" data-target="#orderModal">Заказать</button></p>
-                            </form>
+                        <div class="col-xs-6 compamounts">
+                            <label for="compAmount">Количество конкурентов</label> <input form="orderForm" type="text" class="num-input" name="compAmount" id="compAmount" value="10">
+                            <span class="increase glyphicon glyphicon-arrow-up"></span>
+                            <span class="increase glyphicon glyphicon-arrow-down"></span>
+                        </div>
+                        <div class="col-xs-6">
+                            <p class="final-sum">Итого: 
+                                <output form="orderForm" name="price" style="display:inline">0</output> <i class="icon-ruble"></i>
+                            </p>
                         </div>
                     </div>
-                </div>
+                    <p class="submit-row">
+                        <span class="min-price-show">Минимальная сумма заказа <span class="min-price-value"></span> <i class="icon-ruble"></i></span>
+                        <button type="button" name="services-submit" class="btn btn-default order-box" data-toggle="modal" data-target="#adspyModal">Заказать</button></p>
+                </form>
+            </div>
+        </div>
+    </div>
     
     <div class="container reports">
         <div class="row">
@@ -209,49 +209,47 @@
     </div>
     
     <!-- Modal -->
-    <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="adspyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog calculator-response-dialog">
-          <div class="modal-content">
-            <div class="modal-body">
-              <p></p>
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p></p>
+                </div>
             </div>
-          </div>
         </div>
-      <div class="modal-dialog calculator-submit-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <span data-dismiss="modal" class="modal-close"><span class="glyphicon glyphicon-remove"></span></span>
-            <h3 class="modal-title" id="myModalLabel">ОТПРАВЬТЕ ЗАЯВКУ<!--  НА ПОЛУЧЕНИЕ КОММЕРЧЕСКОГО ПРЕДЛОЖЕНИЯ И УСЛОВИЙ РАБОТЫ --></h3>
-          </div>
-          <div class="modal-body">
-            <form name="orderForm" id="orderForm" action="" method="POST">
-                <div class="form-group">
-                    <input class="form-control" type="text" name="name" placeholder="Как вас зовут?" required="" />
+        <div class="modal-dialog calculator-submit-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span data-dismiss="modal" class="modal-close"><span class="glyphicon glyphicon-remove"></span></span>
+                    <h3 class="modal-title" id="myModalLabel">ОТПРАВЬТЕ ЗАЯВКУ<!--  НА ПОЛУЧЕНИЕ КОММЕРЧЕСКОГО ПРЕДЛОЖЕНИЯ И УСЛОВИЙ РАБОТЫ --></h3>
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="email" name="email" placeholder="Введите email для связи" required="" />
+                <div class="modal-body">
+                    <form name="orderForm" id="orderForm" action="" method="POST">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="name" placeholder="Как вас зовут?" required="" />
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="email" name="email" placeholder="Введите email для связи" required="" />
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="website" placeholder="Ваш сайт" />
+                        </div>
+                        <div class="form-group">
+                            <p class="payment-label"><b>Предпочтительный способ оплаты:</b></p>
+                            <label><input class="radio-btn" type="radio" name="payMethod" value="bankCard">Банковской картой или электронными деньгами</label>
+                            <label><input class="radio-btn" type="radio" name="payMethod" value="cashless">Безналичный расчёт</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="comments" placeholder="Список ваших конкурентов. Также вы можете оставить дополнительные вопросы"></textarea>
+                        </div>
+                        <section class="submit-section">
+                            <button type="submit" class="btn btn-default">Отправить заявку</button>
+                            <p class="assure">Ваши данные в безопасности и не будут переданы третьим лицам</p>
+                        </section>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="tel" name="phone" placeholder="Введите номер телефона" required="" />
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="website" placeholder="Ваш сайт" />
-                </div>
-                <div class="form-group">
-                    <label><input class="radio-btn" type="radio" name="payMethod" value="bankCard">Оплата банковской картой или электронными деньгами</label>
-                    <label><input class="radio-btn" type="radio" name="payMethod" value="cashless">Безналичный расчёт</label>
-                </div>
-                <div class="form-group">
-                    <textarea class="form-control" name="comments" placeholder="Список ваших конкурентов. Также вы можете оставить дополнительные вопросы"></textarea>
-                </div>
-                <section class="submit-section">
-                    <button type="submit" class="btn btn-default">Отправить заявку</button>
-                    <p class="assure">Ваши данные в безопасности и не будут переданы третьим лицам</p>
-                </section>
-            </form>
-          </div>
+            </div>
         </div>
-      </div>
     </div>
 </div>
 <div class="container">
