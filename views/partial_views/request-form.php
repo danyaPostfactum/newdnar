@@ -1,6 +1,10 @@
 <div class="row plane-form">
 	<div class="col-sm-12">
+	    
 		<form action="sendform.php" method="post" class="card-wrapper feedback-form" id="supportForm">
+		    
+		    <h3 class="feedback-form-head">Заказать услугу</h3>
+		
 			<div class="form-group">
 				<input name="name" type="text" class="form-control" id="name" placeholder="Как вас зовут?">
 			</div>
@@ -14,12 +18,15 @@
 				<textarea name="message" class="form-control" id="message" placeholder="Сообщение"></textarea>
 			</div>
 
-			<button type="submit" class="btn btn-default btn-wide">Отправить сообщение</button>
+			<button type="submit" class="btn btn-default btn-wide">Отправить заявку</button>
+			
+            <p class="feedback-form-privacy">Ваши данные в безопасности и не будут переданы третьим лицам</p>
 
 			<!-- <span class="help-block help-block-attach small text-center"><a href="#">Можно прикрепить файл</a></span> -->
 			<div class="form-success-text">
 				<p>Stuff</p>
 			</div>
 		</form>
+		
 	</div>
 </div>
