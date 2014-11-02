@@ -5853,7 +5853,7 @@ body {
 }
 @media (min-width: 828px) and (max-width: 1052px) {
   .jumbotron + .container {
-    padding-right: 60px;
+    padding-right: 30px;
   }
 }
 @media (max-width: 828px) {
