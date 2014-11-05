@@ -12,7 +12,7 @@
             <? $qaSubchapters = $qaChapter->getMany('Children', array('published' => true)); ?>
             <? foreach ($qaSubchapters as $subchapter) { ?>
                         <h4 class="show-more-question"><a href="#" class="show-more"><?= $subchapter->get('pagetitle') ?></a></h4>
-                        <div class="show-more-content show-more-answer">
+                        <div class="show-more-answer">
                             <ul>
                 <? $links = $subchapter->getMany('Children', array('published' => true)); ?>
                 <? foreach ($links as $link) { ?>

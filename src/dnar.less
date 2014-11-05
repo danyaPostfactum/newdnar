@@ -139,6 +139,11 @@ body {
 	margin-top: 10px;
     line-height: 1.2;
 }
+
+.show-more-answer { 
+	display: none;
+}
+
 .show-more-content { // hide by default
 	display: none;
 }
@@ -350,7 +355,9 @@ body {
 }
 
 .domain-item-taken {
-	//color: @domain-taken;
+	color: @domain-taken;
+}
+.domain-item-taken-move {
     color: @domain-free;
 }
 .domain-item-free {
@@ -358,6 +365,11 @@ body {
 }
 
 .more-whois-content { 
+	color: @base-font-color;
+	display: none;
+}
+
+.more-whois-content-move { 
 	color: @base-font-color;
 	//display: none;
 }
@@ -1052,7 +1064,7 @@ footer {
 }
 
 .move-info {
-    font-size: 40px;
+    font-size: 42px;
     color: #1790DD;
     float: left;
     margin-right: 12px;

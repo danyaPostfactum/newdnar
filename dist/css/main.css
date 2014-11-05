@@ -5953,6 +5953,9 @@ body {
   margin-top: 10px;
   line-height: 1.2;
 }
+.show-more-answer {
+  display: none;
+}
 .show-more-content {
   display: none;
 }
@@ -6136,12 +6139,19 @@ body {
   margin: 0;
 }
 .domain-item-taken {
+  color: #d9534f;
+}
+.domain-item-taken-move {
   color: #5cb85c;
 }
 .domain-item-free {
   color: #5cb85c;
 }
 .more-whois-content {
+  color: #343437;
+  display: none;
+}
+.more-whois-content-move {
   color: #343437;
 }
 .raw-domain-wrapper {
@@ -6757,7 +6767,7 @@ footer {
   width: 50%;
 }
 .move-info {
-  font-size: 40px;
+  font-size: 42px;
   color: #1790DD;
   float: left;
   margin-right: 12px;

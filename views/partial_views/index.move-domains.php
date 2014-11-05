@@ -52,7 +52,7 @@
 						{{#if available}}
 						<li class="list-group-item domain-item domain-item-free">
 						{{else}}
-						<li class="list-group-item domain-item domain-item-taken">
+						<li class="list-group-item domain-item domain-item-taken-move">
 						{{/if}}
 							<strong>{{parseRf domain.name}}</strong>
 							{{#if_unknown available}}
@@ -63,7 +63,7 @@
 							<p class="item-description">
 								{{#if available}}<a href="#" data-toggle="modal" data-target="#dnarLoginModal">Зарегистрировать</a><span style="float:right;">Домен свободен</span>
 								{{else}}<span style="float:right;">Стоимость продления у нас</span>
-								<div class="more-whois-content">
+								<div class="more-whois-content-move">
 									{{#if_RuSuRf domain.tld}}
 									<p><br>Текущий Регистратор Вашего домена: <strong><code style="color: #328bf4">{{regyinfo.registrar}}</code></strong><br><br>
 									{{#if_R01 regyinfo.registrar}}
