@@ -35,15 +35,14 @@
 			<hr class="footer-line">
 
 			<footer>
-				<div class="">
+				<div class="col-sm-6">
 					<p>&copy; 2008-<?php echo date('Y'); ?> Dnar.Ru<br>
 					<img style="margin: -3px 2px 0px -3px; border: 0;" src="http://www.gemagency.ru/rubin.png" alt="Креативное агентство Джем" /><a href="http://www.gemagency.ru/" target="_blank">Проект креативного агентства Джем</a></p>
 				</div>
-				<div class="col-sm-9">
-					<p class="">
-					
-
-
+				<div class="col-sm-6">
+					<p style="float:right;">
+                        <a href="<?php echo BASE_URL; ?>offer">Публичная оферта</a><br>
+                        <a href="<?php echo BASE_URL; ?>map">Карта сайта</a>
 					</p>
 				</div>
 			</footer>

@@ -90,6 +90,11 @@
 			</div>
 		</div>
 
+
+	</div>
+
+	<div class="row">
+		<h2>Разработка</h2>
 		<div class="col-sm-3 col-xs-6">
 			<div class="thumbnail support-link-item">
 				<a href="<?php echo BASE_URL; ?>support/site">
@@ -100,10 +105,7 @@
 				</a>
 			</div>
 		</div>	
-	</div>
-
-
-
+    </div>
 
 <?php include(ROOT_PATH . "_partials/footer.php") ?>
 

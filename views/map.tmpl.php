@@ -1,5 +1,5 @@
 <?php 
-	$title = '404 - Страница не найдера';
+	$title = 'Карта сайта';
 	$description = 'test1';
 	$keywords = 'test2';
 	include(ROOT_PATH . '_partials/header.php') 
@@ -9,11 +9,11 @@
 	<div class="container">
 		<div class="row">
             <div class="col-sm-8">
-                <h1>404 ошибка</h1>
-				<p>Cтраница не существует</p>
+                <h1>Карта сайта</h1>
+				<p></p>
             </div>
             <div class="hidden-xs col-sm-4">
-						<img src="<?php echo BASE_URL; ?>dist/assets/img/404.png" class="pull-right" width="200px" height="200px" alt="404 ошибка">
+						<img src="<?php echo BASE_URL; ?>dist/assets/img/map.png" class="pull-right" width="200px" height="200px" alt="Карта сайта">
             </div>			
 		</div>
 		

@@ -502,6 +502,8 @@ RewriteRule ^rr_for_www.html$ http://dnar.ru/qa/www-not-open [R=301,L]
 RewriteRule ^faq_cidr.html$ http://dnar.ru/qa/restricting-access-ip [R=301,L]
 RewriteRule ^18.html$ http://dnar.ru/qa/private-person [R=301,L]
 RewriteRule ^manage_mx_rr.html$ http://dnar.ru/qa/dns-mx [R=301,L]
+RewriteRule ^map.html$ http://dnar.ru/map [R=301,L]
+
 
 # Редиректы реферальных ссылок :)
 RewriteRule ^hostings/timeweb$ http://timeweb.com/ru/services/hosting/?i=3591&a=0006 [R=301,L]
