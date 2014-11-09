@@ -507,4 +507,11 @@ RewriteRule ^map.html$ http://dnar.ru/map [R=301,L]
 
 # Редиректы реферальных ссылок :)
 RewriteRule ^hostings/timeweb$ http://timeweb.com/ru/services/hosting/?i=3591&a=0006 [R=301,L]
-
+RewriteRule ^hostings/beget$ http://beget.ru/host?id=147261 [R=301,L]
+RewriteRule ^hostings/hts$ http://www.hts.ru/ru/service/tariffs/?affid=61625 [R=301,L]
+RewriteRule ^hostings/hostland$ http://www.hostland.ru/order/hosting/?r=123b24b3 [R=301,L]
+RewriteRule ^hostings/ihc$ http://www.ihc.ru/hosting.html?ref=148849 [R=301,L]
+RewriteRule ^hostings/p_ihc$ http://www.ihc.ru/hosting-premium.html?ref=148849 [R=301,L]
+RewriteRule ^hostings/fullspace$ http://fullspace.ru/services/hosting/?pnum=7050 [R=301,L]
+RewriteRule ^hostings/sprinthost$ http://sprinthost.ru/c9727/tariffs/ [R=301,L]
+RewriteRule ^hostings/p_sprinthost$ http://sprinthost.ru/c9727/tariffs/premium.html [R=301,L]
