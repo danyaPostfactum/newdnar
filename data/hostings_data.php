@@ -40,7 +40,7 @@ $hosters['fullspace'] = array(
 $hosters['sprinthost'] = array(
 	'name' => 'sprinthost',
 	'img' => 'dist/assets/img/hostings/sprinthost.ico',
-	'url' => 'http://sprinthost.ru/c9727/tariffs'
+	'url' => 'http://sprinthost.ru/s9727/tariffs/'
 );
 
 

@@ -513,5 +513,5 @@ RewriteRule ^hostings/hostland$ http://www.hostland.ru/order/hosting/?r=123b24b3
 RewriteRule ^hostings/ihc$ http://www.ihc.ru/hosting.html?ref=148849 [R=301,L]
 RewriteRule ^hostings/p_ihc$ http://www.ihc.ru/hosting-premium.html?ref=148849 [R=301,L]
 RewriteRule ^hostings/fullspace$ http://fullspace.ru/services/hosting/?pnum=7050 [R=301,L]
-RewriteRule ^hostings/sprinthost$ http://sprinthost.ru/c9727/tariffs/ [R=301,L]
-RewriteRule ^hostings/p_sprinthost$ http://sprinthost.ru/c9727/tariffs/premium.html [R=301,L]
+RewriteRule ^hostings/sprinthost$ http://sprinthost.ru/s9727/tariffs/ [R=301,L]
+RewriteRule ^hostings/p_sprinthost$ http://sprinthost.ru/s9727/tariffs/premium.html [R=301,L]
