@@ -303,20 +303,21 @@ if (!function_exists('http_parse_headers'))
 
 			if (isset($h[1]))
 			{
-				if (!isset($headers[$h[0]]))
-					$headers[$h[0]] = trim($h[1]);
-				elseif (is_array($headers[$h[0]]))
-				{
-					// $tmp = array_merge($headers[$h[0]], array(trim($h[1]))); // [-]
-					// $headers[$h[0]] = $tmp; // [-]
-					$headers[$h[0]] = array_merge($headers[$h[0]], array(trim($h[1]))); // [+]
-				}
-				else
-				{
-					// $tmp = array_merge(array($headers[$h[0]]), array(trim($h[1]))); // [-]
-					// $headers[$h[0]] = $tmp; // [-]
-					$headers[$h[0]] = array_merge(array($headers[$h[0]]), array(trim($h[1]))); // [+]
-				}
+				$headers[$h[0]] = trim($h[1]);
+				//if (!isset($headers[$h[0]]))
+				//	$headers[$h[0]] = trim($h[1]);
+				//elseif (is_array($headers[$h[0]]))
+				//{
+				//	// $tmp = array_merge($headers[$h[0]], array(trim($h[1]))); // [-]
+				//	// $headers[$h[0]] = $tmp; // [-]
+				//	$headers[$h[0]] = array_merge($headers[$h[0]], array(trim($h[1]))); // [+]
+				//}
+				//else
+				//{
+				//	// $tmp = array_merge(array($headers[$h[0]]), array(trim($h[1]))); // [-]
+				//	// $headers[$h[0]] = $tmp; // [-]
+				//	$headers[$h[0]] = array_merge(array($headers[$h[0]]), array(trim($h[1]))); // [+]
+				//}
 
 				$key = $h[0]; // [+]
 			}
