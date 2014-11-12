@@ -211,11 +211,16 @@ function getHttpInfo($url) {
 		$header_raw = substr($response, 0, $header_size);
 		$headers = http_parse_headers($header_raw);
 
+		// XXX Регистрозависимость???
+		$contentType = isset($headers['Content-Type']) ? $headers['Content-Type'] : '';
+
 		$favUrl = '/favicon.ico';
 
 		$body = substr($response, $header_size);
 		$dom = new DOMDocument();
+		// XXX Что если это не HTML? Надо проверять $contentType
 		if (@$dom->loadHTML($body)) {
+				// xPath тут лучше подойдет
 			$links = $dom->getElementsByTagName('link');
 			foreach ($links as $link) {
 				$rel = $link->getAttribute('rel');
@@ -226,6 +231,30 @@ function getHttpInfo($url) {
 					}
 				}
 			}
+			$charset = '';
+			// если заголовка Content-Type нет - берем из html
+			// XXX если кодировка в Content-Type не задана, то помоему она должна браться из <meta charset=*>
+			if (!$contentType) {
+				// xPath тут лучше подойдет
+				$metas = $dom->getElementsByTagName('meta');
+				foreach ($metas as $meta) {
+					$httpEquiv = $meta->getAttribute('http-equiv');
+					//XXX У кого приоритет?
+					$charset = $meta->getAttribute('charset');
+					if (strcasecmp($httpEquiv, 'Content-Type') === 0) {
+						$content = $link->getAttribute('content');
+						if ($content) {
+							$contentType = $conten;
+						}
+					}
+				}
+			}
+
+			// Сработает если есть http заголовок, либо нет <meta charset>, но есть <meta http-eqiv="Content-Type">
+			if ($contentType && !$charset) {
+				$parsedContentType = parseContentType($contentType);
+				$charset = isset($parsedContentType['charset']) ? $parsedContentType['charset'] : '';
+			}
 		}
 
 		$favUrl = getAbsoluteURL($url, $favUrl);
@@ -235,7 +264,18 @@ function getHttpInfo($url) {
 			$favUrl = false;
 	}
 	curl_close($ch);
-	return array('status' => $status, 'headers' => $headers, 'favicon' => $favUrl);
+	return array('status' => $status, 'headers' => $headers, 'favicon' => $favUrl, 'charset' => $charset);
+}
+
+function parseContentType($contentType) {
+	$parts = explode(';', $contentType);
+	array_shift($parts); // Пропускаем mime
+	$data = array();
+	foreach ($parts as $part) {
+		list($key, $value) = explode('=', trim($part));
+		$data[$key] = $value;
+	}
+	return $data;
 }
 
 function getDnsRecords($host) {

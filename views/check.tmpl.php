@@ -126,6 +126,11 @@
 					<div>Язык программирования: {{headers.X-Powered-By}}</div>
 				</li>
 			{{/if}}
+			{{#if charset}}
+				<li>
+					<div>Кодировка сайта: {{charset}}</div>
+				</li>
+			{{/if}}
 		{{else}}
 			<li><span class="glyphicon glyphicon-remove"></span> Сервер не отвечает</li>
 		{{/if}}
