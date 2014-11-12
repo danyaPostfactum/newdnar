@@ -26,7 +26,7 @@ var WhoisSearch = {
 		});
 
 		Handlebars.registerHelper('if_R01', function(registrar, opts) {
-			if (registrar == 'R01-RU') {
+			if (registrar == 'R01-RU' || registrar == 'R01-REG-FID' || registrar == 'R01-REG-RF') {
 				return opts.fn(this)
 			} else {
 				return opts.inverse(this);
