@@ -213,6 +213,7 @@
 }
 .check-results{
 	min-height: 200px;
+	visibility: hidden;
 }
 .list-checks{
 	padding-left: 1.5em;

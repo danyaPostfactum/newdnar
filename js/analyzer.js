@@ -30,7 +30,7 @@ Handlebars.registerHelper('scoreLabel', function(a) {
 			this.abort();
 		});
 		$('#check-alert').hide();
-		$('.check-results').css({opacity: 1}).html($('#check-loading-template').html());
+		$('.check-results').css({visibility: 'visible', opacity: 1}).html($('#check-loading-template').html());
 		var whoisRequest = $.ajax({
 			data: 'get=whois&url=' + input,
 			success: function(response) {
